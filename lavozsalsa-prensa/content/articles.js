@@ -313,35 +313,145 @@ const pressArticles = [
     slug: 'adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa',
     legacyUrl: 'https://www.lavozsalsa.com/adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa/',
     category: 'Historia',
-    title: 'Adolescentes Orquesta: la huella de Porfi Baloa en la salsa romántica',
+    title: 'Adolescentes Orquesta: la historia verdadera de Porfi Baloa y sus 20 años de historia',
     excerpt:
-      'Una lectura del proyecto creado por Porfi Baloa y de por qué su sonido sigue siendo referencia obligada cuando se habla de salsa romántica hecha desde Venezuela.',
+      'Porfi Baloa, creador de Adolescentes Orquesta, repasa el origen del proyecto, sus 20 años de historia, la disputa por el nombre y la discografía que convirtió a la agrupación en referencia de la salsa romántica.',
     description:
-      'Adolescentes Orquesta y Porfi Baloa: una historia clave para entender la salsa romántica venezolana y su impacto en Latinoamérica.',
+      'La historia verdadera de Porfi Baloa y Adolescentes Orquesta: 20 años de historia, cantantes reconocidos, origen del proyecto, discografía y legado dentro de la salsa romántica venezolana.',
     featuredRank: 3,
-    readingTime: '7 min',
+    readingTime: '11 min',
     archiveLabel: 'Historia recuperada',
     updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: 'https://www.lavozsalsa.com/wp-content/uploads/2015/08/porfi-baloa.jpg',
+    coverAlt: 'Porfi Baloa en una foto histórica asociada a Adolescentes Orquesta',
     sections: [
       {
-        title: 'Un proyecto que marcó una época',
+        title: 'Porfi Baloa y sus Adolescentes Orquesta',
         paragraphs: [
-          'Adolescentes Orquesta se convirtió en una referencia inevitable para entender la salsa romántica hecha desde Venezuela. Más que una agrupación de moda, fue un proyecto con dirección clara, identidad melódica y una producción que logró entrar en la conversación salsera continental.',
-          'Detrás de esa identidad aparece el nombre de Porfi Baloa, arreglista, músico y arquitecto de un sonido que conectó con una generación completa de oyentes en América Latina.',
+          '“20 Años de Historia” fue presentado por el músico venezolano Porfi Baloa como un trabajo de recopilación que reúne buena parte de los éxitos de Adolescentes Orquesta a lo largo de dos décadas de carrera artística.',
+          'Más que una simple antología, este material funciona como una puerta de entrada al recorrido de una agrupación que marcó a varias generaciones de oyentes de salsa romántica en América Latina.',
         ],
       },
       {
-        title: 'La firma de Porfi Baloa',
+        title: 'Cantantes reconocidos en los 20 años de historia',
         paragraphs: [
-          'Hablar de Porfi Baloa es hablar de oído, criterio y dirección musical. Su papel no se limitó a producir canciones. También ayudó a estructurar una forma de hacer salsa romántica con intención comercial, sí, pero sin perder oficio musical.',
-          'Ese equilibrio entre melodía, sentimiento y factura sonora es parte de lo que explica por qué Adolescentes Orquesta sigue apareciendo en búsquedas, homenajes y listas esenciales del género.',
+          'En esta producción Porfi Baloa reunió a varias figuras reconocidas del género. Entre los nombres mencionados en el proyecto aparecen Óscar D’ León, Vladimir Lozano, Rodrigo Mendoza, Joseíto Rodríguez, Elio Pacheco, Memo Morales, Charlie Cardona, El Montuno, Marcial Istúriz y Ángel Flores, entre otros.',
+          'También participan voces ligadas directamente al catálogo histórico de Adolescentes Orquesta, lo que convierte esta recopilación en un material de colección para melómanos, activistas y defensores de la salsa romántica.',
+        ],
+        bullets: [
+          'Óscar D’ León',
+          'Vladimir Lozano',
+          'Rodrigo Mendoza',
+          'Joseíto Rodríguez',
+          'Elio Pacheco',
+          'Memo Morales',
+          'Charlie Cardona',
+          'Marcial Istúriz',
         ],
       },
       {
-        title: 'Por qué sigue importando hoy',
+        title: 'Álbum 20 años de historia',
         paragraphs: [
-          'La historia de Adolescentes Orquesta importa porque muestra cómo una agrupación puede construir repertorio, identidad y permanencia más allá del momento del hit. También recuerda que la salsa romántica no fue un fenómeno superficial, sino una escuela de interpretación, producción y conexión con la audiencia.',
-          'En esa memoria compartida, Porfi Baloa sigue ocupando un lugar central.',
+          'El álbum “20 Años de Historia” fue grabado entre 2014 y 2015 en el estudio personal Vereda 61, en Caracas, Venezuela. Allí Porfi Baloa decidió revisar parte del repertorio que acompañó el crecimiento internacional de la agrupación.',
+          'La selección recupera clásicos como “Latino”, “Dame una oportunidad”, “Señorita”, “Persona ideal”, “Si te marchas”, “Me negó”, “Virgen”, “Búscame”, “Mentirosa” y “Si supieras”, entre otros títulos muy ligados a la memoria del público salsero.',
+        ],
+        bullets: [
+          'Disco 1: Latino, Dame una oportunidad, Clase social, Paco, Decisión cruel, Ni llanto ni flores, Señorita, Me gusta, Mi error, Mosaico 3, Corazón corazón, Persona ideal y Mosaico 2.',
+          'Disco 2: Si te marchas / Hoy voy a tomar, Se acabó el amor, Mosaico 1, Panamericana, Virgen, Borrar, Búscame, Aquel lugar, Mentirosa, Pensar, Millón de primaveras, Confianza, Confesiones y Si supieras.',
+        ],
+      },
+      {
+        title: 'La historia de Porfi Baloa',
+        paragraphs: [
+          'Porfi Baloa, conocido como “El Beethoven de la Salsa”, creció bajo la influencia de la salsa gorda, la música cubana, la Fania y la Dimensión Latina. Entre sus referencias también estuvieron intérpretes populares como Juan Gabriel.',
+          'Según su propio relato, desde muy joven soñaba con construir una orquesta que respetara los arreglos, la clave y el sonido grande de la salsa. Por eso estudió música en el conservatorio, desarrolló habilidades de escritura y comenzó a tocar de noche mientras observaba cómo reaccionaba el público.',
+        ],
+      },
+      {
+        title: 'Salserín y el origen de Los Adolescentes',
+        paragraphs: [
+          'Porfi Baloa explicó que una de sus primeras grandes decepciones en la música estuvo relacionada con Salserín. Ese episodio terminó empujándolo a crear un nuevo proyecto con las canciones que había venido guardando para cuando tuviera su propio grupo.',
+          'A los 18 años comenzó a darle forma a la idea. El 15 de diciembre de 1993 sonó por primera vez Adolescentes Orquesta en la radio con la canción “Anhelo”, interpretada por Wilmer Lozano. La respuesta fue inmediata y confirmó que había un camino claro para seguir.',
+        ],
+      },
+      {
+        title: 'Persona Ideal y la narrativa de las canciones',
+        paragraphs: [
+          'Dentro del repertorio histórico, “Persona Ideal” aparece como una de las piezas más recordadas. Porfi Baloa contó que la canción surgió al imaginar la historia de una joven de buena posición económica que se enamora de un muchacho sin dinero y debe vivir la relación a escondidas por presión familiar.',
+          'Esa forma de construir relatos sentimentales, cercanos y fácilmente reconocibles ayudó a consolidar el lenguaje de Adolescentes Orquesta dentro de la salsa romántica.',
+        ],
+      },
+      {
+        title: 'El Negro Mendoza y el salto internacional',
+        paragraphs: [
+          'Porfi Baloa contó que conoció a Rodrigo “El Negro” Mendoza en Barranquilla, durante un concierto en el que también estaba Celia Cruz. Allí le mostró un cassette con “Anhelo” y Mendoza se interesó de inmediato por el proyecto.',
+          'De acuerdo con ese relato, fue Mendoza quien propuso el nombre “Adolescent’s Orquesta” y defendió la idea de que sonara en inglés porque el proyecto estaba destinado a volverse internacional.',
+        ],
+      },
+      {
+        title: 'La sociedad, la ruptura y el sonido original',
+        paragraphs: [
+          'Después de asociarse y trabajar juntos, Mendoza se encargó de mover canciones en radio mientras Porfi seguía concentrado en partituras, letras y dirección musical. Con el tiempo, Baloa afirmó que el nombre de la agrupación fue registrado a sus espaldas y que allí comenzó la fractura más conocida alrededor de Adolescentes Orquesta.',
+          'En su versión de los hechos, los músicos se quedaron con él y el otro proyecto siguió adelante con nuevos cantantes, pero usando arreglos, letras y canciones que él consideraba de su autoría. Porfi Baloa sostuvo que el sonido original de la agrupación nació de su visión creativa.',
+        ],
+      },
+      {
+        title: 'Entrevista a Porfi Baloa sobre Adolescentes Orquesta',
+        paragraphs: [
+          'Parte de esta historia se apoya en entrevistas y material de investigación recopilado por La Voz Salsa, incluyendo una conversación realizada en Medellín y otra emitida en México. Ese registro ayuda a entender cómo el propio Porfi Baloa quiso contar el origen y la evolución de la agrupación.',
+        ],
+        videoUrl: 'https://www.youtube.com/embed/o7THwMACs5o',
+      },
+      {
+        title: 'Integrantes que han hecho parte de Adolescentes Orquesta',
+        paragraphs: [
+          'A lo largo de los años, por Adolescentes Orquesta pasaron varias voces e integrantes que ayudaron a construir su identidad. Esta es parte de la lista que se mencionaba en el archivo original.',
+        ],
+        bullets: [
+          'William Lozano',
+          'Charly Villegas',
+          'Sócrates Cariaco',
+          'Armando Davalillo',
+          'Néstor Rivero',
+          'Everson Hernández',
+          'Ángel Delgado',
+          'Óscar Arriaga',
+          'Alex Gil',
+          'Julio Antillano',
+          'Edwards Pimentel',
+          'Eliécer Dabuy',
+          'Jesús “Godo” Puente',
+          'Johan “Condi” Muñoz',
+          'David González Jr.',
+          'César “Albóndiga” Monge',
+        ],
+      },
+      {
+        title: 'Discografía de Adolescentes Orquesta',
+        paragraphs: [
+          'La discografía histórica de la agrupación ayuda a seguir la evolución del proyecto y a entender por qué varias de sus canciones todavía siguen apareciendo entre las más recordadas del repertorio romántico.',
+        ],
+        bullets: [
+          'Reclamando Nuestro Espacio (1995): “Anhelo”, “Hoy aprendí”, “Dame una oportunidad”, “Amiga”, “No puedo ser tu amigo”, “Tú serás”, “Cruel decisión” y “Señorita”.',
+          'Persona Ideal (1996): “Persona ideal”, “Arrepentida”, “Dame un poco más”, “Celos y distancia”, “Clase social”, “Frente a mi ventana”, “Horas lindas” y “Mi error”.',
+          'La Misma Pluma (1998): “Huellas”, “Si te marchas”, “Mírame”, “Me negó”, “Confesiones”, “Corazón, corazón”, “Comencemos hoy” y “Llámame”.',
+          'Grandes Éxitos (1999): “Persona ideal”, “Anhelo”, “Dame un poco más”, “Hoy aprendí”, “Arrepentida”, “Si te marchas”, “Clase social”, “Me negó” y “Recuerdos”.',
+          'Ahora Más Que Nunca (2001): “Recuerdos”, “Latino”, “Envidioso”, “Virgen”, “Chico vacilón”, “Dos inocentes”, “No te burles” y “Me gusta”.',
+          'Búscame (2005): “Se acabó el amor”, “Ponte pila”, “Si supieras”, “Cuerpo sin alma”, “Aquel lugar”, “Amor amargo”, “Búscame” y “Mentirosa”.',
+          'Lo Nuevo y Lo Mejor (2007): “Se acabó el amor”, “Virgen”, “Me negó”, “Persona ideal”, “Aquel lugar”, “Anhelo”, “Recuerdos” y “Si supieras”.',
+          'Clásico en Vivo (2008): “Ponte pila”, “Anhelo”, “Envidioso”, “Se acabó el amor”, “Amor amargo”, “Persona ideal”, “Virgen”, “Recuerdos” y “Me negó / Arrepentida”.',
+        ],
+      },
+      {
+        title: 'También puedes ver',
+        paragraphs: [
+          'Si te interesa seguir explorando este mapa de la salsa romántica, aquí tienes otras lecturas relacionadas dentro del ecosistema de La Voz Salsa.',
+        ],
+        links: [
+          { label: 'Cantantes de salsa', href: '/cantantes-de-salsa/' },
+          { label: 'Tito Rojas', href: '/tito-rojas/' },
+          { label: 'Grupo Galé', href: '/internacional-grupo-gale-toda-una-historia-musical/' },
+          { label: 'Portada de Pulso Salsero', href: '/' },
         ],
       },
     ],
