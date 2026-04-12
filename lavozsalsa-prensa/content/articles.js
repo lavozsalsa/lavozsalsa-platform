@@ -10,6 +10,7 @@ const legacyProfile = (name, fileName, text) => ({
 const pressArticles = [
   {
     slug: 'cantantes-de-salsa',
+    legacyUrl: 'https://www.lavozsalsa.com/cantantes-de-salsa/',
     category: 'Guía',
     title: 'Cantantes de salsa: nombres, imágenes y artistas famosos del género',
     excerpt:
@@ -268,6 +269,7 @@ const pressArticles = [
   },
   {
     slug: 'salsa-baul',
+    legacyUrl: 'https://www.lavozsalsa.com/salsa-baul/',
     category: 'Archivo',
     title: 'Salsa Baúl: el archivo emocional donde siguen respirando los clásicos',
     excerpt:
@@ -309,6 +311,7 @@ const pressArticles = [
   },
   {
     slug: 'adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa',
+    legacyUrl: 'https://www.lavozsalsa.com/adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa/',
     category: 'Historia',
     title: 'Adolescentes Orquesta: la huella de Porfi Baloa en la salsa romántica',
     excerpt:
@@ -345,6 +348,7 @@ const pressArticles = [
   },
   {
     slug: 'bares-salsa-medellin',
+    legacyUrl: 'https://www.lavozsalsa.com/bares-salsa-medellin/',
     category: 'Ciudad',
     title: 'Bares de salsa en Medellín: una ruta para escuchar la ciudad con otros oídos',
     excerpt:
@@ -386,6 +390,7 @@ const pressArticles = [
   },
   {
     slug: 'yo-me-llamo-frankie-ruiz',
+    legacyUrl: 'https://www.lavozsalsa.com/yo-me-llamo-frankie-ruiz/',
     category: 'Homenajes',
     title: 'Yo me llamo Frankie Ruiz: por qué su figura sigue reapareciendo en la memoria salsera',
     excerpt:
@@ -421,6 +426,7 @@ const pressArticles = [
   },
   {
     slug: 'mimi-ibarra-cantautora',
+    legacyUrl: 'https://www.lavozsalsa.com/mimi-ibarra-cantautora/',
     category: 'Perfiles',
     title: 'Mimi Ibarra: una cantautora que convirtió sensibilidad y carácter en sello propio',
     excerpt:
@@ -455,6 +461,7 @@ const pressArticles = [
   },
   {
     slug: 'internacional-grupo-gale-toda-una-historia-musical',
+    legacyUrl: 'https://www.lavozsalsa.com/internacional-grupo-gale-toda-una-historia-musical/',
     category: 'Perfiles',
     title: 'Grupo Gale: una historia musical que ayudó a consolidar el sonido salsero de Medellín',
     excerpt:
@@ -490,6 +497,7 @@ const pressArticles = [
   },
   {
     slug: 'tito-rojas',
+    legacyUrl: 'https://www.lavozsalsa.com/tito-rojas/',
     category: 'Perfiles',
     title: 'Tito Rojas: la fuerza de una voz que sigue marcando a la salsa romántica',
     excerpt:
@@ -526,14 +534,19 @@ const pressArticles = [
 
 const pressCollections = [
   {
-    key: 'destacados',
-    title: 'Destacados',
-    description: 'Guías, archivo y perfiles que abren la sala con las búsquedas más fuertes del universo salsero.',
+    key: 'guias',
+    title: 'Guías esenciales',
+    description: 'Piezas evergreen pensadas para responder búsquedas amplias, sostener tráfico y abrir puertas de entrada al universo salsero.',
+    slugs: ['cantantes-de-salsa', 'salsa-baul'],
+  },
+  {
+    key: 'archivo',
+    title: 'Archivo, ciudad y conversación',
+    description: 'Historias que conectan memoria, escena local y conversación cultural dentro del mapa salsero.',
     slugs: [
-      'cantantes-de-salsa',
-      'salsa-baul',
       'adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa',
       'bares-salsa-medellin',
+      'yo-me-llamo-frankie-ruiz',
     ],
   },
   {

@@ -19,6 +19,7 @@ type ArticleSection = {
 
 type Article = {
   slug: string;
+  legacyUrl?: string;
   category: string;
   title: string;
   excerpt: string;
@@ -57,8 +58,8 @@ const HEADER_LOGO_SRC = '/brand/logo-lavozsalsa-header-red.png';
 const FOOTER_LOGO_SRC = '/brand/logo-lavozsalsa-dotcom-white.png';
 
 const NAV_LINKS = [
-  { label: 'Destacados', href: '#destacados' },
-  { label: 'Archivo', href: '#archivo' },
+  { label: 'Estanterías', href: '#estanterias' },
+  { label: 'Lo más leído', href: '#archivo' },
   { label: 'Perfiles', href: '#perfiles' },
 ];
 
@@ -172,6 +173,7 @@ function CollectionBlock({
         <div>
           <span className="lvs-eyebrow">{collection.title}</span>
           <h2>{collection.title}</h2>
+          <span className="lvs-collection-count">{articles.length} historias</span>
         </div>
         <p>{collection.description}</p>
       </div>
@@ -179,6 +181,50 @@ function CollectionBlock({
         {articles.map((article) => (
           <HomeCard key={article.slug} article={article} compact />
         ))}
+      </div>
+    </section>
+  );
+}
+
+function ShelvesOverview() {
+  return (
+    <section id="estanterias" className="lvs-shelves">
+      <div className="lvs-section-head">
+        <div>
+          <span className="lvs-eyebrow">Orden editorial</span>
+          <h2>Así estamos organizando la sala</h2>
+        </div>
+        <p>
+          Pulso Salsero se está construyendo por estanterías para que la migración no se vea como un montón de enlaces, sino como una sala con criterio, contexto y rutas claras de lectura.
+        </p>
+      </div>
+
+      <div className="lvs-shelves-grid">
+        {pressCollections.map((collection) => {
+          const articles = collection.slugs
+            .map((slug) => pressArticles.find((item) => item.slug === slug))
+            .filter(Boolean) as Article[];
+          const categoryLabels = [...new Set(articles.map((article) => article.category))];
+
+          return (
+            <a key={collection.key} className="lvs-shelf-card" href={`#${collection.key}`}>
+              <div className="lvs-shelf-topline">
+                <strong>{collection.title}</strong>
+                <span>{articles.length} historias</span>
+              </div>
+              <p>{collection.description}</p>
+              <div className="lvs-shelf-tags">
+                {categoryLabels.map((label) => (
+                  <CategoryPill key={`${collection.key}-${label}`} category={label} />
+                ))}
+              </div>
+              <span className="lvs-card-link">
+                Ver estantería
+                <ArrowIcon />
+              </span>
+            </a>
+          );
+        })}
       </div>
     </section>
   );
@@ -333,6 +379,8 @@ function PressHome() {
           ))}
         </div>
       </section>
+
+      <ShelvesOverview />
 
       <section id="archivo" className="lvs-most-read">
         <div className="lvs-section-head">
@@ -933,6 +981,7 @@ export default function App() {
 
         .lvs-card.is-compact { background: var(--surface); }
 
+        .lvs-shelves,
         .lvs-most-read,
         .lvs-collection,
         .lvs-related,
@@ -942,6 +991,10 @@ export default function App() {
           background: rgba(255,255,255,0.74);
           border-radius: var(--radius-xl);
           padding: 34px;
+        }
+
+        .lvs-shelves {
+          background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(247,240,230,0.96) 100%);
         }
 
         .lvs-section-head,
@@ -957,6 +1010,55 @@ export default function App() {
         .lvs-most-read-grid {
           display: grid;
           gap: 16px;
+        }
+
+        .lvs-shelves-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 18px;
+        }
+
+        .lvs-shelf-card {
+          min-height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 24px;
+          background: rgba(255,255,255,0.84);
+          border: 1px solid var(--line);
+          border-radius: 24px;
+          transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .lvs-shelf-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 22px 44px rgba(34, 17, 17, 0.08);
+          border-color: rgba(255, 32, 38, 0.18);
+        }
+
+        .lvs-shelf-topline {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .lvs-shelf-topline strong {
+          font-size: 1.08rem;
+          line-height: 1.2;
+        }
+
+        .lvs-shelf-topline span,
+        .lvs-collection-count {
+          color: var(--muted);
+          font-size: 0.92rem;
+          font-weight: 500;
+        }
+
+        .lvs-shelf-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
         }
 
         .lvs-most-read-item {
@@ -1320,6 +1422,7 @@ export default function App() {
             grid-template-columns: 1fr;
           }
 
+          .lvs-shelves-grid,
           .lvs-featured-grid,
           .lvs-collection-grid,
           .lvs-related-grid,
@@ -1347,6 +1450,7 @@ export default function App() {
           .lvs-hero-copy,
           .lvs-hero-panel,
           .lvs-featured-main,
+          .lvs-shelves,
           .lvs-most-read,
           .lvs-collection,
           .lvs-related,
@@ -1355,6 +1459,7 @@ export default function App() {
             padding: 24px;
           }
 
+          .lvs-shelves-grid,
           .lvs-featured-grid,
           .lvs-collection-grid,
           .lvs-related-grid,
@@ -1465,6 +1570,7 @@ export default function App() {
               <div className="lvs-footer-column">
                 <span>Pulso Salsero</span>
                 <a href="/">Portada</a>
+                <a href="/#estanterias">Estanterías</a>
                 <a href="/#destacados">Destacados</a>
                 <a href="/#archivo">Archivo</a>
               </div>

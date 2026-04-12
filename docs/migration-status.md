@@ -42,6 +42,10 @@ La migracion no se esta haciendo en bloque. Se prioriza por trafico e intencion 
 - `cantantes-de-salsa`
 - `salsa-baul`
 
+Consulta tambien:
+
+- [Mapa de redirecciones de prensa](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/docs/press-redirect-map.md)
+
 ### Criterio de migracion
 
 1. conservar el slug historico cuando aporte SEO

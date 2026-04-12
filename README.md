@@ -29,6 +29,7 @@ No forma parte de este repositorio:
 
 - [Mapa del repositorio](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/docs/repository-map.md)
 - [Estado de migracion](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/docs/migration-status.md)
+- [Mapa de redirecciones de prensa](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/docs/press-redirect-map.md)
 - [README del sitio principal](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/README.md)
 - [README de artistas](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-artistas/README.md)
 - [README de premium](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/README.md)
