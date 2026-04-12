@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "La Voz Salsa Premium",
+    "slug": "lavozsalsa-premium",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "web": {}
+  }
+}

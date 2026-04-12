@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/tizen_bg" />
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:endColor="#CC000000"
+                android:startColor="#4D000000" />
+        </shape>
+    </item>
+
+    <item android:gravity="center_vertical|start" android:left="28dp">
+        <inset
+            android:drawable="@drawable/logo_main"
+            android:insetTop="26dp"
+            android:insetBottom="26dp"
+            android:insetRight="150dp" />
+    </item>
+
+    <item android:gravity="top|end">
+        <shape android:shape="rectangle">
+            <size android:width="96dp" />
+            <gradient
+                android:angle="270"
+                android:endColor="#00D90F1B"
+                android:startColor="#52D90F1B" />
+        </shape>
+    </item>
+</layer-list>

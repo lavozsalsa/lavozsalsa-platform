@@ -1,0 +1,19 @@
+[Unit]
+Description=La Voz Salsa HLS Log Forwarder
+After=network.target lavozsalsa-analytics.service
+
+[Service]
+Type=simple
+User=lavozsalsa
+Group=lavozsalsa
+SupplementaryGroups=adm
+WorkingDirectory=/opt/lavozsalsa-analytics/current/analytics-web
+EnvironmentFile=/opt/lavozsalsa-analytics/shared/.env
+ExecStart=/usr/bin/node --no-warnings /opt/lavozsalsa-analytics/current/analytics-web/src/hls-log-forwarder.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

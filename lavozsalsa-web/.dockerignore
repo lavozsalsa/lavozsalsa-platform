@@ -1,0 +1,4 @@
+node_modules
+.expo
+.npm-cache
+package-lock.json

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <title>La Voz Salsa TV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <main class="app-shell">
+        <div id="player" class="player-layer"></div>
+
+        <section class="status-card" aria-live="polite">
+            <p class="eyebrow">La Voz Salsa TV</p>
+            <h1 class="title">Reproduccion automatica</h1>
+            <p id="streamLabel" class="stream-label">Preparando...</p>
+            <p id="statusText" class="status-text">Iniciando reproductor</p>
+            <p id="detailText" class="detail-text">La app intentara LIVE primero y usara FALLBACK si hace falta.</p>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

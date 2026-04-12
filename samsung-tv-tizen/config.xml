@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+    xmlns:tizen="http://tizen.org/ns/widgets"
+    id="http://lavozsalsa.com/tv"
+    version="1.0.0"
+    viewmodes="maximized">
+    <name>La Voz Salsa TV</name>
+    <content src="index.html"/>
+    <access origin="https://streaming.lavozsalsa.com" subdomains="true"/>
+    <access origin="https://lavozsalsa.com" subdomains="true"/>
+    <tizen:application
+        id="LVSALSA001.LaVozSalsaTV"
+        package="LVSALSA001"
+        required_version="2.3"/>
+    <tizen:profile name="tv-samsung"/>
+    <tizen:setting
+        screen-orientation="landscape"
+        context-menu="disable"
+        background-support="disable"
+        encryption="disable"
+        hwkey-event="enable"/>
+    <tizen:content-security-policy>
+        default-src 'self' data: blob: https://streaming.lavozsalsa.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' $WEBAPIS;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: blob:;
+        media-src https://streaming.lavozsalsa.com blob:;
+        connect-src https://streaming.lavozsalsa.com https://*.lavozsalsa.com;
+    </tizen:content-security-policy>
+</widget>

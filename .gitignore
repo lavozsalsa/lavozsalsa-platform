@@ -1,0 +1,56 @@
+*.iml
+.DS_Store
+
+# IDE / local tooling
+.idea/
+.gradle/
+.kotlin/
+
+# Android / native
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+**/build/
+
+# JavaScript / Expo / web outputs
+**/node_modules/
+lavozsalsa-artistas/node_modules
+**/dist/
+**/.expo/
+**/.npm-cache/
+web-build/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+!**/.env.example
+!**/.env.production.example
+
+# Databases / analytics runtime data
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+**/assets/covers/*-source.jpg
+
+# Keys / secrets
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+
+# Logs / caches
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.metro-health-check*
+*.tsbuildinfo
+
+# Existing nested repo not part of La Voz Salsa main platform repo
+rockstars-radio/
