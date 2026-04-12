@@ -1,6 +1,15 @@
-# La Voz Salsa Web
+# Pulso Salsero
 
-Landing React independiente para `lavozsalsa.com`, separada de `rockstars-radio`.
+Sala de prensa de La Voz Salsa y destino de migracion del contenido editorial heredado de WordPress.
+
+## URL activa
+
+- [prensa.lavozsalsa.com](https://prensa.lavozsalsa.com)
+
+## Nombre publico
+
+- marca visible: `Pulso Salsero`
+- respaldo institucional: `Sala de prensa de La Voz Salsa`
 
 ## Stack
 
@@ -10,69 +19,66 @@ Landing React independiente para `lavozsalsa.com`, separada de `rockstars-radio`
 
 ## Ejecutar local
 
-1. Instalar dependencias:
-
 ```bash
-cd lavozsalsa-web
-npm install --cache .npm-cache
-```
-
-2. Levantar en web:
-
-```bash
+cd lavozsalsa-prensa
+npm install
 npm run web
 ```
 
-3. Exportar estatico:
+## Exportar sitio estatico
 
 ```bash
 npm run build:web
 ```
 
-La exportacion genera:
+La salida queda en:
 
-- `dist/index.html`
-- `dist/_expo/static/...`
-- `dist/favicon.svg`
-- `dist/social-preview.svg`
-- `dist/site.webmanifest`
-- `dist/robots.txt`
+- `lavozsalsa-prensa/dist`
 
-## Hosting temporal recomendado
+## Archivos clave
 
-### Opcion A: DigitalOcean App Platform
+- [App.tsx](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-prensa/App.tsx)
+- [articles.js](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-prensa/content/articles.js)
+- [postbuild-web.js](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-prensa/scripts/postbuild-web.js)
+- [generate-social-cover.swift](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-prensa/scripts/generate-social-cover.swift)
 
-Es la opcion recomendada para el flujo que quieres:
+## Flujo editorial rapido
 
-- publicar primero en un host temporal
-- revisar la web
-- luego pasar al dominio
+Cada articulo puede tener dos imagenes:
 
-Archivos listos:
+- portada del articulo
+- imagen social con titular para compartir
 
-- [app-platform.spec.yaml](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/app-platform.spec.yaml)
-- [README.digitalocean.md](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/README.digitalocean.md)
+Estandar recomendado:
 
-### Opcion B: VPS o Droplet propio con Nginx
+- tamano base: `1200x630`
+- una imagen limpia para el articulo
+- una variante social con H1 encima
 
-Archivos listos:
+Comando util para generar la portada social:
 
-- [nginx.preview.conf](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/nginx.preview.conf)
-- [Dockerfile](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/Dockerfile)
+```bash
+swift scripts/generate-social-cover.swift \
+  --input /ruta/imagen.jpg \
+  --output assets/covers/slug-social.jpg \
+  --title "Titular del articulo"
+```
 
-Si luego prefieres servidor administrado a mano, ya esta preparado tambien.
+## Como se publica un articulo
 
-## Paso posterior: mover al dominio
+1. crear o actualizar el contenido en `content/articles.js`
+2. asociar `coverImage`, `coverAlt` y `shareImage` si aplica
+3. compilar con `npm run build:web`
+4. publicar `dist/`
 
-Cuando ya la aprobemos en el host temporal:
+El proceso de build:
 
-1. Cambiar DNS del dominio o subdominio.
-2. Ajustar `server_name` o conectar el dominio en Vercel.
-3. Activar HTTPS.
-4. Si definimos dominio final, agregar canonical y sitemap con esa URL final.
+- inyecta metadatos SEO por articulo
+- publica `og:image` y `twitter:image`
+- copia las portadas desde `assets/covers/` a `dist/media/covers/`
 
-## Objetivo
+## Objetivo editorial
 
-- Home comercial inspirada en la claridad estructural de Spotify
-- Marca, radio, TV, app y comunidad en un proyecto aislado
-- Base limpia para contenido, SEO, tracking y despliegue propio
+- migrar las URLs fuertes del WordPress viejo sin perder la intencion SEO
+- mejorar presentacion, velocidad y compartibilidad
+- conectar cada lectura con el resto del ecosistema de La Voz Salsa

@@ -1,6 +1,17 @@
-# La Voz Salsa Web
+# La Voz Salsa Premium
 
-Landing React independiente para `lavozsalsa.com`, separada de `rockstars-radio`.
+Landing comercial de la membresia para oyentes.
+
+## URL activa
+
+- [premium.lavozsalsa.com](https://premium.lavozsalsa.com)
+
+## Estado actual
+
+- publicado en produccion
+- enfocado en conversion
+- usa la misma etiqueta de analytics del sitio principal
+- temporalmente en `noindex`
 
 ## Stack
 
@@ -10,69 +21,30 @@ Landing React independiente para `lavozsalsa.com`, separada de `rockstars-radio`
 
 ## Ejecutar local
 
-1. Instalar dependencias:
-
 ```bash
-cd lavozsalsa-web
-npm install --cache .npm-cache
-```
-
-2. Levantar en web:
-
-```bash
+cd lavozsalsa-premium
+npm install
 npm run web
 ```
 
-3. Exportar estatico:
+## Exportar sitio estatico
 
 ```bash
 npm run build:web
 ```
 
-La exportacion genera:
+La salida queda en:
 
-- `dist/index.html`
-- `dist/_expo/static/...`
-- `dist/favicon.svg`
-- `dist/social-preview.svg`
-- `dist/site.webmanifest`
-- `dist/robots.txt`
+- `lavozsalsa-premium/dist`
 
-## Hosting temporal recomendado
+## Archivos clave
 
-### Opcion A: DigitalOcean App Platform
-
-Es la opcion recomendada para el flujo que quieres:
-
-- publicar primero en un host temporal
-- revisar la web
-- luego pasar al dominio
-
-Archivos listos:
-
-- [app-platform.spec.yaml](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/app-platform.spec.yaml)
-- [README.digitalocean.md](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/README.digitalocean.md)
-
-### Opcion B: VPS o Droplet propio con Nginx
-
-Archivos listos:
-
-- [nginx.preview.conf](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/deploy/nginx.preview.conf)
-- [Dockerfile](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/Dockerfile)
-
-Si luego prefieres servidor administrado a mano, ya esta preparado tambien.
-
-## Paso posterior: mover al dominio
-
-Cuando ya la aprobemos en el host temporal:
-
-1. Cambiar DNS del dominio o subdominio.
-2. Ajustar `server_name` o conectar el dominio en Vercel.
-3. Activar HTTPS.
-4. Si definimos dominio final, agregar canonical y sitemap con esa URL final.
+- [App.tsx](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/App.tsx)
+- [postbuild-web.js](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/scripts/postbuild-web.js)
+- [README.digitalocean.md](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/deploy/README.digitalocean.md)
 
 ## Objetivo
 
-- Home comercial inspirada en la claridad estructural de Spotify
-- Marca, radio, TV, app y comunidad en un proyecto aislado
-- Base limpia para contenido, SEO, tracking y despliegue propio
+- explicar el valor de Premium con claridad
+- vender la propuesta sin depender de la app
+- convertir trafico en oyentes registrados o potenciales suscriptores
