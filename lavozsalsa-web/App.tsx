@@ -10,6 +10,7 @@ const ARTISTS_APP_URL = 'https://app.lavozsalsa.com/artistas';
 const PLAYLISTS_URL = 'https://app.lavozsalsa.com/playlists';
 const ARTISTS_URL = 'https://artistas.lavozsalsa.com/';
 const LIVE_STREAMING_URL = 'https://app.lavozsalsa.com/tv';
+const PRESS_URL = 'https://prensa.lavozsalsa.com/';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.lavozsalsa.app';
 const APP_STORE_URL = 'https://apps.apple.com/us/app/la-voz-salsa/id6478400927';
 const ONE_LINK_URL = 'https://onelink.to/w5n2k9';
@@ -23,8 +24,8 @@ const HERO_BG_SRC = '/media/lavozsalsa-home-hero.jpeg';
 const COMMUNITY_BLOCK_SRC = '/media/community-block.jpeg';
 
 const navLinks = [
-  { label: 'App', href: APP_URL },
-  { label: 'Live Streaming', href: LIVE_STREAMING_URL },
+  { label: 'TV', href: LIVE_STREAMING_URL },
+  { label: 'Pulso Salsero', href: PRESS_URL },
   { label: 'Artistas', href: ARTISTS_URL },
 ];
 
@@ -74,8 +75,8 @@ const footerColumns = [
   {
     title: 'Explorar',
     links: [
-      { label: 'App', href: APP_URL },
-      { label: 'Live Streaming', href: LIVE_STREAMING_URL },
+      { label: 'TV', href: LIVE_STREAMING_URL },
+      { label: 'Pulso Salsero', href: PRESS_URL },
       { label: 'Artistas', href: ARTISTS_URL },
     ],
   },

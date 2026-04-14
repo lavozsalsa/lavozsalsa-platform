@@ -4,6 +4,7 @@ const path = require('node:path');
 const DIST_DIR = path.join(__dirname, '..', 'dist');
 const INDEX_PATH = path.join(DIST_DIR, 'index.html');
 const SITE_URL = 'https://lavozsalsa.com';
+const PRESS_URL = 'https://prensa.lavozsalsa.com';
 const GA_MEASUREMENT_ID = process.env.LVS_GA4_ID || 'G-8C6LP4VJSY';
 const GOOGLE_SITE_VERIFICATION =
   process.env.LVS_GOOGLE_SITE_VERIFICATION || '7NUCpvU-WDIRYQyVyzvAMvwKhhfC21DgyCuXbuY3dIY';
@@ -17,7 +18,8 @@ const COMMUNITY_BLOCK_SOURCE = path.join(ASSETS_DIR, 'community-block.jpeg');
 const BRAND_DIST_DIR = path.join(DIST_DIR, 'brand');
 const MEDIA_DIST_DIR = path.join(DIST_DIR, 'media');
 const FONTS_DIST_DIR = path.join(DIST_DIR, 'fonts');
-const ARTISTS_ROUTE_DIR = path.join(DIST_DIR, 'artistas');
+const ROUTE_METAS = [];
+const LEGACY_ROUTE_DIRS = ['blog', 'pulso-salsero'];
 
 function buildAnalyticsBlock() {
   if (!GA_MEASUREMENT_ID) {
@@ -55,6 +57,36 @@ function buildStructuredData() {
         '@type': 'Organization',
         name: 'La Voz Salsa',
       },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: [
+        {
+          '@type': 'SiteNavigationElement',
+          position: 1,
+          name: 'Inicio',
+          url: `${SITE_URL}/`,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 2,
+          name: 'TV',
+          url: 'https://app.lavozsalsa.com/tv',
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 3,
+          name: 'Pulso Salsero',
+          url: PRESS_URL,
+        },
+        {
+          '@type': 'SiteNavigationElement',
+          position: 4,
+          name: 'Artistas',
+          url: 'https://artistas.lavozsalsa.com/',
+        },
+      ],
     },
   ];
 
@@ -160,6 +192,13 @@ const SITEMAP_XML = `
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+${ROUTE_METAS.map(
+  (meta) => `  <url>
+    <loc>${meta.url}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`
+).join('\n')}
 </urlset>
 `.trimStart();
 
@@ -250,28 +289,45 @@ function writeStaticFiles() {
   fs.copyFileSync(INDEX_PATH, path.join(DIST_DIR, '404.html'));
 }
 
-function writeArtistsRoute() {
+function writeRoutePages() {
   const indexHtml = fs.readFileSync(INDEX_PATH, 'utf8');
-  const artistsHtml = indexHtml
-    .replace('<title>La Voz Salsa</title>', '<title>La Voz Salsa para Artistas</title>')
-    .replaceAll('<meta property="og:title" content="La Voz Salsa" />', '<meta property="og:title" content="La Voz Salsa para Artistas" />')
-    .replaceAll('<meta name="twitter:title" content="La Voz Salsa" />', '<meta name="twitter:title" content="La Voz Salsa para Artistas" />')
-    .replaceAll(
-      'La Voz Salsa: música, radio en vivo, app, playlists, artistas y comunidad salsera.',
-      'La Voz Salsa para Artistas: una plataforma para artistas independientes de la salsa.'
-    )
-    .replaceAll(
-      'Música, radio en vivo, app, playlists, artistas y comunidad salsera.',
-      'Una plataforma para artistas independientes de la salsa.'
-    );
+  const activeRouteSlugs = new Set(ROUTE_METAS.map((meta) => meta.slug));
 
-  fs.mkdirSync(ARTISTS_ROUTE_DIR, { recursive: true });
-  fs.writeFileSync(path.join(ARTISTS_ROUTE_DIR, 'index.html'), artistsHtml);
+  fs.readdirSync(DIST_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .filter((dirName) => !activeRouteSlugs.has(dirName) && LEGACY_ROUTE_DIRS.includes(dirName))
+    .forEach((dirName) => {
+      fs.rmSync(path.join(DIST_DIR, dirName), { recursive: true, force: true });
+    });
+
+  ROUTE_METAS.forEach((meta) => {
+    const routeHtml = indexHtml
+      .replace('<title>La Voz Salsa</title>', `<title>${meta.title}</title>`)
+      .replaceAll('<meta property="og:title" content="La Voz Salsa" />', `<meta property="og:title" content="${meta.ogTitle}" />`)
+      .replaceAll('<meta name="twitter:title" content="La Voz Salsa" />', `<meta name="twitter:title" content="${meta.ogTitle}" />`)
+      .replaceAll(
+        'La Voz Salsa: música, radio en vivo, app, playlists, artistas y comunidad salsera.',
+        meta.description
+      )
+      .replaceAll(
+        'Música, radio en vivo, app, live streaming y comunidad salsera.',
+        meta.description
+      )
+      .replaceAll('<link rel="canonical" href="https://lavozsalsa.com/" />', `<link rel="canonical" href="${meta.url}" />`)
+      .replaceAll('<meta property="og:url" content="https://lavozsalsa.com/" />', `<meta property="og:url" content="${meta.url}" />`)
+      .replaceAll('<meta property="og:image" content="https://lavozsalsa.com/media/lavozsalsa-home-hero.jpeg" />', `<meta property="og:image" content="${meta.image}" />`)
+      .replaceAll('<meta name="twitter:image" content="https://lavozsalsa.com/media/lavozsalsa-home-hero.jpeg" />', `<meta name="twitter:image" content="${meta.image}" />`);
+
+    const routeDir = path.join(DIST_DIR, meta.slug);
+    fs.mkdirSync(routeDir, { recursive: true });
+    fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml);
+  });
 }
 
 ensureDistExists();
 patchIndexHtml();
 writeStaticFiles();
-writeArtistsRoute();
+writeRoutePages();
 
-console.log('Postbuild web listo: metadatos, favicon, preview social, ruta /artistas y robots generados.');
+console.log('Postbuild web listo: metadatos, favicon, robots y sitemap actualizados.');

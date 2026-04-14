@@ -1,0 +1,619 @@
+[
+  {
+    "index": 1,
+    "title": "Deteniendo El tiempo Jose Torres",
+    "filename": "01-deteniendo-el-tiempo-jose-torres.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Deteniendo-El-tiempo-Jose-Torres.mp3",
+    "file": "/media/audio/descargas/01-deteniendo-el-tiempo-jose-torres.mp3",
+    "sizeBytes": 4653268
+  },
+  {
+    "index": 2,
+    "title": "El Daño Jey Zamorano",
+    "filename": "02-el-dano-jey-zamorano.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/El-Daño-Jey-Zamorano.mp3",
+    "file": "/media/audio/descargas/02-el-dano-jey-zamorano.mp3",
+    "sizeBytes": 3904411
+  },
+  {
+    "index": 3,
+    "title": "Mala Novia Son Divas",
+    "filename": "03-mala-novia-son-divas.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Mala-Novia-Son-Divas.mp3",
+    "file": "/media/audio/descargas/03-mala-novia-son-divas.mp3"
+  },
+  {
+    "index": 4,
+    "title": "Nunca Voy a Olvidarte David Lebrón",
+    "filename": "04-nunca-voy-a-olvidarte-david-lebron.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Nunca-Voy-a-Olvidarte-David-Lebrón.mp3",
+    "file": "/media/audio/descargas/04-nunca-voy-a-olvidarte-david-lebron.mp3"
+  },
+  {
+    "index": 5,
+    "title": "Necesito Un Amor Alejo Beltran",
+    "filename": "05-necesito-un-amor-alejo-beltran.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Necesito-Un-Amor-Alejo-Beltran.mp3",
+    "file": "/media/audio/descargas/05-necesito-un-amor-alejo-beltran.mp3"
+  },
+  {
+    "index": 6,
+    "title": "Homenaje a Ray Barreto Orq. Café Con Leche",
+    "filename": "06-homenaje-a-ray-barreto-orq-cafe-con-leche.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Homenaje-a-Ray-Barreto-Orq.-Café-Con-Leche.mp3",
+    "file": "/media/audio/descargas/06-homenaje-a-ray-barreto-orq-cafe-con-leche.mp3"
+  },
+  {
+    "index": 7,
+    "title": "Dejate Querer Chino Marquez",
+    "filename": "07-dejate-querer-chino-marquez.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Dejate-Querer-Chino-Marquez.mp3",
+    "file": "/media/audio/descargas/07-dejate-querer-chino-marquez.mp3"
+  },
+  {
+    "index": 8,
+    "title": "Sueños John Dennis",
+    "filename": "08-suenos-john-dennis.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Sueños-John-Dennis.mp3",
+    "file": "/media/audio/descargas/08-suenos-john-dennis.mp3",
+    "sizeBytes": 4269703
+  },
+  {
+    "index": 9,
+    "title": "Café Con Leche Orq. Café Con Leche",
+    "filename": "09-cafe-con-leche-orq-cafe-con-leche.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Café-Con-Leche-Orq.-Café-Con-Leche.mp3",
+    "file": "/media/audio/descargas/09-cafe-con-leche-orq-cafe-con-leche.mp3",
+    "sizeBytes": 4462774
+  },
+  {
+    "index": 10,
+    "title": "Todo Acabo Mauricio Cachana",
+    "filename": "10-todo-acabo-mauricio-cachana.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Todo-Acabo-Mauricio-Cachana.mp3",
+    "file": "/media/audio/descargas/10-todo-acabo-mauricio-cachana.mp3",
+    "sizeBytes": 4317551
+  },
+  {
+    "index": 11,
+    "title": "Quiero Amarte Mauricio Cachana",
+    "filename": "11-quiero-amarte-mauricio-cachana.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Quiero-Amarte-Mauricio-Cachana.mp3",
+    "file": "/media/audio/descargas/11-quiero-amarte-mauricio-cachana.mp3",
+    "sizeBytes": 3743342
+  },
+  {
+    "index": 12,
+    "title": "Lo Que Me Quedo Gustavo Gerardo",
+    "filename": "12-lo-que-me-quedo-gustavo-gerardo.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Lo-Que-Me-Quedo-Gustavo-Gerardo.mp3",
+    "file": "/media/audio/descargas/12-lo-que-me-quedo-gustavo-gerardo.mp3"
+  },
+  {
+    "index": 13,
+    "title": "No Queda Nada Alejo Beltran",
+    "filename": "13-no-queda-nada-alejo-beltran.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/No-Queda-Nada-Alejo-Beltran.mp3",
+    "file": "/media/audio/descargas/13-no-queda-nada-alejo-beltran.mp3"
+  },
+  {
+    "index": 14,
+    "title": "Cheo Torres Jose Torres",
+    "filename": "14-cheo-torres-jose-torres.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Cheo-Torres-Jose-Torres.mp3",
+    "file": "/media/audio/descargas/14-cheo-torres-jose-torres.mp3",
+    "sizeBytes": 4320870
+  },
+  {
+    "index": 15,
+    "title": "El Amor Más Grande Del Planeta Orq. La Fuga",
+    "filename": "15-el-amor-mas-grande-del-planeta-orq-la-fuga.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/El-Amor-Más-Grande-Del-Planeta-Orq.-La-Fuga.mp3",
+    "file": "/media/audio/descargas/15-el-amor-mas-grande-del-planeta-orq-la-fuga.mp3",
+    "sizeBytes": 4110040
+  },
+  {
+    "index": 16,
+    "title": "Baila Conmigo Pelusa",
+    "filename": "16-baila-conmigo-pelusa.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Baila-Conmigo-Pelusa.mp3",
+    "file": "/media/audio/descargas/16-baila-conmigo-pelusa.mp3",
+    "sizeBytes": 4004000
+  },
+  {
+    "index": 17,
+    "title": "Mi Carta Mauro Mosquera",
+    "filename": "17-mi-carta-mauro-mosquera.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Mi-Carta-Mauro-Mosquera.mp3",
+    "file": "/media/audio/descargas/17-mi-carta-mauro-mosquera.mp3",
+    "sizeBytes": 4010570
+  },
+  {
+    "index": 18,
+    "title": "Falso Amor Chuy Rosario",
+    "filename": "18-falso-amor-chuy-rosario.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Falso-Amor-Chuy-Rosario.mp3",
+    "file": "/media/audio/descargas/18-falso-amor-chuy-rosario.mp3",
+    "sizeBytes": 4467192
+  },
+  {
+    "index": 19,
+    "title": "Tu Eres Lo Maximo Jerry Galante",
+    "filename": "19-tu-eres-lo-maximo-jerry-galante.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Tu-Eres-Lo-Maximo-Jerry-Galante.mp3",
+    "file": "/media/audio/descargas/19-tu-eres-lo-maximo-jerry-galante.mp3",
+    "sizeBytes": 4523658
+  },
+  {
+    "index": 20,
+    "title": "Amor de Habitación Jerry Galante",
+    "filename": "20-amor-de-habitacion-jerry-galante.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Amor-de-Habitación-Jerry-Galante.mp3",
+    "file": "/media/audio/descargas/20-amor-de-habitacion-jerry-galante.mp3",
+    "sizeBytes": 4627092
+  },
+  {
+    "index": 21,
+    "title": "Sensualmente Loco Willie Gonzalez",
+    "filename": "21-sensualmente-loco-willie-gonzalez.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Sensualmente-Loco-Willie-Gonzalez.mp3",
+    "file": "/media/audio/descargas/21-sensualmente-loco-willie-gonzalez.mp3",
+    "sizeBytes": 4618074
+  },
+  {
+    "index": 22,
+    "title": "Solo Cenizas Jhon Dennis",
+    "filename": "22-solo-cenizas-jhon-dennis.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Solo-Cenizas-Jhon-Dennis.mp3",
+    "file": "/media/audio/descargas/22-solo-cenizas-jhon-dennis.mp3",
+    "sizeBytes": 4115978
+  },
+  {
+    "index": 23,
+    "title": "Convencela Willie Gonzalez",
+    "filename": "23-convencela-willie-gonzalez.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Convencela-Willie-Gonzalez.mp3",
+    "file": "/media/audio/descargas/23-convencela-willie-gonzalez.mp3",
+    "sizeBytes": 4612131
+  },
+  {
+    "index": 24,
+    "title": "Entonces Qué Somos Aguanilé",
+    "filename": "24-entonces-que-somos-aguanile.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Entonces-Qué-Somos-Aguanilé.mp3",
+    "file": "/media/audio/descargas/24-entonces-que-somos-aguanile.mp3",
+    "sizeBytes": 3578598
+  },
+  {
+    "index": 25,
+    "title": "Panico Grupo Niche",
+    "filename": "25-panico-grupo-niche.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Panico-Grupo-Niche.mp3",
+    "file": "/media/audio/descargas/25-panico-grupo-niche.mp3",
+    "sizeBytes": 4281531
+  },
+  {
+    "index": 26,
+    "title": "Por Unos Segundos Jr. Aponte",
+    "filename": "26-por-unos-segundos-jr-aponte.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Por-Unos-Segundos-Jr.-Aponte.mp3",
+    "file": "/media/audio/descargas/26-por-unos-segundos-jr-aponte.mp3",
+    "sizeBytes": 3544382
+  },
+  {
+    "index": 27,
+    "title": "Lagrimas Frias Jose Torres",
+    "filename": "27-lagrimas-frias-jose-torres.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Lagrimas-Frias-Jose-Torres.mp3",
+    "file": "/media/audio/descargas/27-lagrimas-frias-jose-torres.mp3",
+    "sizeBytes": 4593546
+  },
+  {
+    "index": 28,
+    "title": "Caricias Prohibidas Viti Ruiz",
+    "filename": "28-caricias-prohibidas-viti-ruiz.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Caricias-Prohibidas-Viti-Ruiz.mp3",
+    "file": "/media/audio/descargas/28-caricias-prohibidas-viti-ruiz.mp3",
+    "sizeBytes": 5133531
+  },
+  {
+    "index": 29,
+    "title": "Y Duele Orq. La Fuga",
+    "filename": "29-y-duele-orq-la-fuga.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Y-Duele-Orq.-La-Fuga.mp3",
+    "file": "/media/audio/descargas/29-y-duele-orq-la-fuga.mp3",
+    "sizeBytes": 3990950
+  },
+  {
+    "index": 30,
+    "title": "Nadie Como Tu Orq. La Fuga",
+    "filename": "30-nadie-como-tu-orq-la-fuga.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Nadie-Como-Tu-Orq.-La-Fuga.mp3",
+    "file": "/media/audio/descargas/30-nadie-como-tu-orq-la-fuga.mp3",
+    "sizeBytes": 4425065
+  },
+  {
+    "index": 31,
+    "title": "Besarte Despacio David Zahan",
+    "filename": "31-besarte-despacio-david-zahan.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Besarte-Despacio-David-Zahan.mp3",
+    "file": "/media/audio/descargas/31-besarte-despacio-david-zahan.mp3",
+    "sizeBytes": 3566911
+  },
+  {
+    "index": 32,
+    "title": "Dime Por Que Dynnastia Orq.",
+    "filename": "32-dime-por-que-dynnastia-orq.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Dime-Por-Que-Dynnastia-Orq..mp3",
+    "file": "/media/audio/descargas/32-dime-por-que-dynnastia-orq.mp3",
+    "sizeBytes": 4167624
+  },
+  {
+    "index": 33,
+    "title": "Somos Mas Fuertes Juntos Gino Cueva",
+    "filename": "33-somos-mas-fuertes-juntos-gino-cueva.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Somos-Mas-Fuertes-Juntos-Gino-Cueva.mp3",
+    "file": "/media/audio/descargas/33-somos-mas-fuertes-juntos-gino-cueva.mp3",
+    "sizeBytes": 4123004
+  },
+  {
+    "index": 34,
+    "title": "Cerrado Por Reparación Willito Otero",
+    "filename": "34-cerrado-por-reparacion-willito-otero.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Cerrado-Por-Reparación-Willito-Otero.mp3",
+    "file": "/media/audio/descargas/34-cerrado-por-reparacion-willito-otero.mp3",
+    "sizeBytes": 4227236
+  },
+  {
+    "index": 35,
+    "title": "Desde Que Te Vi Rey Torcat",
+    "filename": "35-desde-que-te-vi-rey-torcat.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Desde-Que-Te-Vi-Rey-Torcat.mp3",
+    "file": "/media/audio/descargas/35-desde-que-te-vi-rey-torcat.mp3",
+    "sizeBytes": 4423802
+  },
+  {
+    "index": 36,
+    "title": "Voy a Jugarmela Toda Orq. La Fuga",
+    "filename": "36-voy-a-jugarmela-toda-orq-la-fuga.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Voy-a-Jugarmela-Toda-Orq.-La-Fuga.mp3",
+    "file": "/media/audio/descargas/36-voy-a-jugarmela-toda-orq-la-fuga.mp3",
+    "sizeBytes": 4060211
+  },
+  {
+    "index": 37,
+    "title": "El Barrio Willito Otero",
+    "filename": "37-el-barrio-willito-otero.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/El-Barrio-Willito-Otero.mp3",
+    "file": "/media/audio/descargas/37-el-barrio-willito-otero.mp3",
+    "sizeBytes": 3433672
+  },
+  {
+    "index": 38,
+    "title": "Se Me Acabo el Amor Gustavo Gerardo",
+    "filename": "38-se-me-acabo-el-amor-gustavo-gerardo.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Se-Me-Acabo-el-Amor-Gustavo-Gerardo.mp3",
+    "file": "/media/audio/descargas/38-se-me-acabo-el-amor-gustavo-gerardo.mp3",
+    "sizeBytes": 4517774
+  },
+  {
+    "index": 39,
+    "title": "Llego el amor Jey Cadenas",
+    "filename": "39-llego-el-amor-jey-cadenas.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Llego-el-amor-Jey-Cadenas.mp3",
+    "file": "/media/audio/descargas/39-llego-el-amor-jey-cadenas.mp3",
+    "sizeBytes": 4540590
+  },
+  {
+    "index": 40,
+    "title": "Como Antes Jey Cadenas",
+    "filename": "40-como-antes-jey-cadenas.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Como-Antes-Jey-Cadenas.mp3",
+    "file": "/media/audio/descargas/40-como-antes-jey-cadenas.mp3",
+    "sizeBytes": 4138344
+  },
+  {
+    "index": 41,
+    "title": "El Culpable Willie Gonzalez",
+    "filename": "41-el-culpable-willie-gonzalez.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/El-Culpable-Willie-Gonzalez.mp3",
+    "file": "/media/audio/descargas/41-el-culpable-willie-gonzalez.mp3",
+    "sizeBytes": 6817208
+  },
+  {
+    "index": 42,
+    "title": "Amor Como El Agua Jr. Aponte",
+    "filename": "42-amor-como-el-agua-jr-aponte.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Amor-Como-El-Agua-Jr.-Aponte.mp3",
+    "file": "/media/audio/descargas/42-amor-como-el-agua-jr-aponte.mp3",
+    "sizeBytes": 5471122
+  },
+  {
+    "index": 43,
+    "title": "Y Es Por Eso Los Padrinos Orq.",
+    "filename": "43-y-es-por-eso-los-padrinos-orq.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Y-Es-Por-Eso-Los-Padrinos-Orq..mp3",
+    "file": "/media/audio/descargas/43-y-es-por-eso-los-padrinos-orq.mp3",
+    "sizeBytes": 3682385
+  },
+  {
+    "index": 44,
+    "title": "Besos Usados Raul San Miguel",
+    "filename": "44-besos-usados-raul-san-miguel.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Besos-Usados-Raul-San-Miguel.mp3",
+    "file": "/media/audio/descargas/44-besos-usados-raul-san-miguel.mp3",
+    "sizeBytes": 4357868
+  },
+  {
+    "index": 45,
+    "title": "Locos y Poetas Willito Otero",
+    "filename": "45-locos-y-poetas-willito-otero.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Locos-y-Poetas-Willito-Otero.mp3",
+    "file": "/media/audio/descargas/45-locos-y-poetas-willito-otero.mp3",
+    "sizeBytes": 3720613
+  },
+  {
+    "index": 46,
+    "title": "No Lo Beses Los Padrinos Orq.",
+    "filename": "46-no-lo-beses-los-padrinos-orq.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/No-Lo-Beses-Los-Padrinos-Orq..mp3",
+    "file": "/media/audio/descargas/46-no-lo-beses-los-padrinos-orq.mp3",
+    "sizeBytes": 4109988
+  },
+  {
+    "index": 47,
+    "title": "Con el Amor No Se Puede Jugar Jerry Galante",
+    "filename": "47-con-el-amor-no-se-puede-jugar-jerry-galante.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Con-el-Amor-No-Se-Puede-Jugar-Jerry-Galante.mp3",
+    "file": "/media/audio/descargas/47-con-el-amor-no-se-puede-jugar-jerry-galante.mp3",
+    "sizeBytes": 6734502
+  },
+  {
+    "index": 48,
+    "title": "Te Busco Alejo Beltran",
+    "filename": "48-te-busco-alejo-beltran.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Te-Busco-Alejo-Beltran.mp3",
+    "file": "/media/audio/descargas/48-te-busco-alejo-beltran.mp3",
+    "sizeBytes": 4401336
+  },
+  {
+    "index": 49,
+    "title": "Me Gusta Todo De Ti Osvaldo Román",
+    "filename": "49-me-gusta-todo-de-ti-osvaldo-roman.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Me-Gusta-Todo-De-Ti-Osvaldo-Román.mp3",
+    "file": "/media/audio/descargas/49-me-gusta-todo-de-ti-osvaldo-roman.mp3",
+    "sizeBytes": 4089090
+  },
+  {
+    "index": 50,
+    "title": "Intensiones Georgie Valencia",
+    "filename": "50-intensiones-georgie-valencia.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Intensiones-Georgie-Valencia.mp3",
+    "file": "/media/audio/descargas/50-intensiones-georgie-valencia.mp3",
+    "sizeBytes": 4306839
+  },
+  {
+    "index": 51,
+    "title": "Mala Experiencia John Upegui",
+    "filename": "51-mala-experiencia-john-upegui.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Mala-Experiencia-John-Upegui.mp3",
+    "file": "/media/audio/descargas/51-mala-experiencia-john-upegui.mp3",
+    "sizeBytes": 3918221
+  },
+  {
+    "index": 52,
+    "title": "Borinquen Te Quiero Willito Otero",
+    "filename": "52-borinquen-te-quiero-willito-otero.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Borinquen-Te-Quiero-Willito-Otero.mp3",
+    "file": "/media/audio/descargas/52-borinquen-te-quiero-willito-otero.mp3",
+    "sizeBytes": 4546190
+  },
+  {
+    "index": 53,
+    "title": "Ya Borre Jr. Aponte",
+    "filename": "53-ya-borre-jr-aponte.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Ya-Borre-Jr.-Aponte.mp3",
+    "file": "/media/audio/descargas/53-ya-borre-jr-aponte.mp3",
+    "sizeBytes": 4114225
+  },
+  {
+    "index": 54,
+    "title": "La Dama De La Madrugada Jr. Aponte",
+    "filename": "54-la-dama-de-la-madrugada-jr-aponte.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/La-Dama-De-La-Madrugada-Jr.-Aponte.mp3",
+    "file": "/media/audio/descargas/54-la-dama-de-la-madrugada-jr-aponte.mp3",
+    "sizeBytes": 3839441
+  },
+  {
+    "index": 55,
+    "title": "Traicionera Jr. Aponte",
+    "filename": "55-traicionera-jr-aponte.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Traicionera-Jr.-Aponte.mp3",
+    "file": "/media/audio/descargas/55-traicionera-jr-aponte.mp3",
+    "sizeBytes": 3930607
+  },
+  {
+    "index": 56,
+    "title": "Si No Es Contigo Jey Cadenas Ft Junior Jein",
+    "filename": "56-si-no-es-contigo-jey-cadenas-ft-junior-jein.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Si-No-Es-Contigo-Jey-Cadenas-Ft-Junior-Jein.mp3",
+    "file": "/media/audio/descargas/56-si-no-es-contigo-jey-cadenas-ft-junior-jein.mp3",
+    "sizeBytes": 3593321
+  },
+  {
+    "index": 57,
+    "title": "Mi Vida No Es Vida Jey Cadenas Nuevo",
+    "filename": "57-mi-vida-no-es-vida-jey-cadenas-nuevo.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Mi-Vida-No-Es-Vida-Jey-Cadenas-Nuevo.mp3",
+    "file": "/media/audio/descargas/57-mi-vida-no-es-vida-jey-cadenas-nuevo.mp3",
+    "sizeBytes": 4206820
+  },
+  {
+    "index": 58,
+    "title": "De Que Te Sirve Curao En Salsa",
+    "filename": "58-de-que-te-sirve-curao-en-salsa.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/De-Que-Te-Sirve-Curao-En-Salsa.mp3",
+    "file": "/media/audio/descargas/58-de-que-te-sirve-curao-en-salsa.mp3",
+    "sizeBytes": 4705001
+  },
+  {
+    "index": 59,
+    "title": "La Voz Del Barrio Ademir",
+    "filename": "59-la-voz-del-barrio-ademir.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/La-Voz-Del-Barrio-Ademir.mp3",
+    "file": "/media/audio/descargas/59-la-voz-del-barrio-ademir.mp3",
+    "sizeBytes": 4119440
+  },
+  {
+    "index": 60,
+    "title": "Orgullo Verde Ademir",
+    "filename": "60-orgullo-verde-ademir.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Orgullo-Verde-Ademir.mp3",
+    "file": "/media/audio/descargas/60-orgullo-verde-ademir.mp3",
+    "sizeBytes": 4671054
+  },
+  {
+    "index": 61,
+    "title": "Esta Noche Mauro Mosquera",
+    "filename": "61-esta-noche-mauro-mosquera.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/11/Esta-Noche-Mauro-Mosquera.mp3",
+    "file": "/media/audio/descargas/61-esta-noche-mauro-mosquera.mp3",
+    "sizeBytes": 3341481
+  },
+  {
+    "index": 62,
+    "title": "No Hace Falta Que Me Digas Nada Leonardo Sierra",
+    "filename": "62-no-hace-falta-que-me-digas-nada-leonardo-sierra.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/No-Hace-Falta-Que-Me-Digas-Nada-Leonardo-Sierra.mp3",
+    "file": "/media/audio/descargas/62-no-hace-falta-que-me-digas-nada-leonardo-sierra.mp3",
+    "sizeBytes": 4296782
+  },
+  {
+    "index": 63,
+    "title": "Tantos Deseos De Ella John Dennis Escobar",
+    "filename": "63-tantos-deseos-de-ella-john-dennis-escobar.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Tantos-Deseos-De-Ella-John-Dennis-Escobar.mp3",
+    "file": "/media/audio/descargas/63-tantos-deseos-de-ella-john-dennis-escobar.mp3",
+    "sizeBytes": 4582118
+  },
+  {
+    "index": 64,
+    "title": "Para Tenerte Otra Vez John Dennis",
+    "filename": "64-para-tenerte-otra-vez-john-dennis.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Para-Tenerte-Otra-Vez-John-Dennis.mp3",
+    "file": "/media/audio/descargas/64-para-tenerte-otra-vez-john-dennis.mp3",
+    "sizeBytes": 3215465
+  },
+  {
+    "index": 65,
+    "title": "Mariposa Tecnicolor John Dennis Escobar",
+    "filename": "65-mariposa-tecnicolor-john-dennis-escobar.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Mariposa-Tecnicolor-John-Dennis-Escobar.mp3",
+    "file": "/media/audio/descargas/65-mariposa-tecnicolor-john-dennis-escobar.mp3",
+    "sizeBytes": 4326080
+  },
+  {
+    "index": 66,
+    "title": "Ya No Mas Janio Coronado",
+    "filename": "66-ya-no-mas-janio-coronado.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Ya-No-Mas-Janio-Coronado.mp3",
+    "file": "/media/audio/descargas/66-ya-no-mas-janio-coronado.mp3",
+    "sizeBytes": 4073679
+  },
+  {
+    "index": 67,
+    "title": "Señora Proyecto Takiri",
+    "filename": "67-senora-proyecto-takiri.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Señora-Proyecto-Takiri.mp3",
+    "file": "/media/audio/descargas/67-senora-proyecto-takiri.mp3",
+    "sizeBytes": 4088995
+  },
+  {
+    "index": 68,
+    "title": "Si Supieras Proyecto Takiri",
+    "filename": "68-si-supieras-proyecto-takiri.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Si-Supieras-Proyecto-Takiri.mp3",
+    "file": "/media/audio/descargas/68-si-supieras-proyecto-takiri.mp3",
+    "sizeBytes": 3479758
+  },
+  {
+    "index": 69,
+    "title": "Quedate Conmigo Proyecto Takiri",
+    "filename": "69-quedate-conmigo-proyecto-takiri.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Quedate-Conmigo-Proyecto-Takiri.mp3",
+    "file": "/media/audio/descargas/69-quedate-conmigo-proyecto-takiri.mp3",
+    "sizeBytes": 2243353
+  },
+  {
+    "index": 70,
+    "title": "Magia Rosa Viti Ruiz",
+    "filename": "70-magia-rosa-viti-ruiz.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Magia-Rosa-Viti-Ruiz.mp3",
+    "file": "/media/audio/descargas/70-magia-rosa-viti-ruiz.mp3",
+    "sizeBytes": 5057399
+  },
+  {
+    "index": 71,
+    "title": "Se Volvieron a Juntar Chamaco Rivera FT Willie Rosario",
+    "filename": "71-se-volvieron-a-juntar-chamaco-rivera-ft-willie-rosario.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Se-Volvieron-a-Juntar-Chamaco-Rivera-FT-Willie-Rosario.mp3",
+    "file": "/media/audio/descargas/71-se-volvieron-a-juntar-chamaco-rivera-ft-willie-rosario.mp3",
+    "sizeBytes": 4691466
+  },
+  {
+    "index": 72,
+    "title": "No Le Digas Machado y Su Orquesta",
+    "filename": "72-no-le-digas-machado-y-su-orquesta.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/No-Le-Digas-Machado-y-Su-Orquesta.mp3",
+    "file": "/media/audio/descargas/72-no-le-digas-machado-y-su-orquesta.mp3",
+    "sizeBytes": 3528713
+  },
+  {
+    "index": 73,
+    "title": "Me Muero Por Estar Contigo Viti Ruiz",
+    "filename": "73-me-muero-por-estar-contigo-viti-ruiz.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Me-Muero-Por-Estar-Contigo-Viti-Ruiz.mp3",
+    "file": "/media/audio/descargas/73-me-muero-por-estar-contigo-viti-ruiz.mp3",
+    "sizeBytes": 5767529
+  },
+  {
+    "index": 74,
+    "title": "Te Desafio Orquesta La Fuga",
+    "filename": "74-te-desafio-orquesta-la-fuga.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Te-Desafio-Orquesta-La-Fuga.mp3",
+    "file": "/media/audio/descargas/74-te-desafio-orquesta-la-fuga.mp3",
+    "sizeBytes": 4060181
+  },
+  {
+    "index": 75,
+    "title": "Esposa Mia Carlitos Romero",
+    "filename": "75-esposa-mia-carlitos-romero.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Esposa-Mia-Carlitos-Romero.mp3",
+    "file": "/media/audio/descargas/75-esposa-mia-carlitos-romero.mp3",
+    "sizeBytes": 4580475
+  },
+  {
+    "index": 76,
+    "title": "Amigo Carlos Rendon",
+    "filename": "76-amigo-carlos-rendon.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Amigo-Carlos-Rendon.mp3",
+    "file": "/media/audio/descargas/76-amigo-carlos-rendon.mp3",
+    "sizeBytes": 4192447
+  },
+  {
+    "index": 77,
+    "title": "Como Voy A Olvidarte JuanK",
+    "filename": "77-como-voy-a-olvidarte-juank.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Como-Voy-A-Olvidarte-JuanK.mp3",
+    "file": "/media/audio/descargas/77-como-voy-a-olvidarte-juank.mp3",
+    "sizeBytes": 3770060
+  },
+  {
+    "index": 78,
+    "title": "Un Poco Tarde Andy Class",
+    "filename": "78-un-poco-tarde-andy-class.mp3",
+    "sourceUrl": "https://www.lavozsalsa.com/wp-content/uploads/2018/12/Un-Poco-Tarde-Andy-Class.mp3",
+    "file": "/media/audio/descargas/78-un-poco-tarde-andy-class.mp3",
+    "sizeBytes": 4116329
+  }
+]

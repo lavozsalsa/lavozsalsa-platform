@@ -15,14 +15,16 @@ const GOOGLE_SITE_VERIFICATION =
 const ASSETS_DIR = path.join(__dirname, '..', 'assets');
 const FONTS_DIR = path.join(ASSETS_DIR, 'fonts');
 const COVERS_DIR = path.join(ASSETS_DIR, 'covers');
+const AUDIO_DIR = path.join(ASSETS_DIR, 'audio');
 const BRAND_DIST_DIR = path.join(DIST_DIR, 'brand');
 const MEDIA_DIST_DIR = path.join(DIST_DIR, 'media');
 const MEDIA_COVERS_DIST_DIR = path.join(MEDIA_DIST_DIR, 'covers');
+const MEDIA_AUDIO_DIST_DIR = path.join(MEDIA_DIST_DIR, 'audio');
 const FONTS_DIST_DIR = path.join(DIST_DIR, 'fonts');
 
 const FAVICON_SOURCE = path.join(ASSETS_DIR, 'logo-isotipo-lavozsalsa.png');
-const HEADER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-lavozsalsa-header-red.png');
-const FOOTER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-lavozsalsa-dotcom-white.png');
+const HEADER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-pulso-salsero-black.png');
+const FOOTER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-pulso-salsero-footer-isotipo.png');
 const SHARE_IMAGE_SOURCE = path.join(ASSETS_DIR, 'lavozsalsa-home-hero.jpeg');
 
 const ROOT_META = {
@@ -72,7 +74,7 @@ function buildStructuredData(meta) {
       '@type': 'Organization',
       name: 'La Voz Salsa',
       url: SITE_URL,
-      logo: `${SITE_URL}/brand/logo-lavozsalsa-header-red.png`,
+      logo: `${SITE_URL}/brand/logo-pulso-salsero-black.png`,
       description: ROOT_META.description,
     },
     {
@@ -240,8 +242,8 @@ function writeStaticFiles() {
   fs.mkdirSync(FONTS_DIST_DIR, { recursive: true });
 
   const assetCopies = [
-    [HEADER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-lavozsalsa-header-red.png')],
-    [FOOTER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-lavozsalsa-dotcom-white.png')],
+    [HEADER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-pulso-salsero-black.png')],
+    [FOOTER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-pulso-salsero-footer-isotipo.png')],
     [FAVICON_SOURCE, path.join(BRAND_DIST_DIR, 'logo-isotipo-lavozsalsa.png')],
     [FAVICON_SOURCE, path.join(DIST_DIR, 'favicon.png')],
     [FAVICON_SOURCE, path.join(DIST_DIR, 'apple-touch-icon.png')],
@@ -266,6 +268,11 @@ function writeStaticFiles() {
         fs.copyFileSync(from, to);
         fs.chmodSync(to, 0o644);
       });
+  }
+
+  if (fs.existsSync(AUDIO_DIR)) {
+    fs.rmSync(MEDIA_AUDIO_DIST_DIR, { recursive: true, force: true });
+    fs.cpSync(AUDIO_DIR, MEDIA_AUDIO_DIST_DIR, { recursive: true });
   }
 
   fs.writeFileSync(path.join(DIST_DIR, 'site.webmanifest'), WEB_MANIFEST);

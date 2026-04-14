@@ -268,6 +268,341 @@ const pressArticles = [
     ],
   },
   {
+    slug: 'exitos-de-la-salsa-romantica',
+    legacyUrl: 'https://www.lavozsalsa.com/exitos-de-la-salsa-romantica/',
+    category: 'Guía',
+    title: 'Éxitos de la salsa romántica: clásicos, historia y cantantes del género',
+    excerpt:
+      'Una guía amplia de la salsa romántica con sus clásicos, artistas esenciales, contexto histórico y varias canciones que siguen sonando con fuerza en la memoria salsera.',
+    description:
+      'Éxitos de la salsa romántica, sus cantantes más recordados, el origen del género, sus pioneros y una selección amplia de clásicos que todavía siguen vigentes.',
+    featuredRank: 2,
+    readingTime: '22 min',
+    archiveLabel: 'Guía recuperada',
+    updatedLabel: 'Recuperado y actualizado en abril de 2026',
+    coverImage: '/media/covers/historia-salsa-romantica.jpg',
+    coverAlt: 'Artistas asociados a la salsa romántica en una portada de Pulso Salsero',
+    shareImage: '/media/covers/historia-salsa-romantica.jpg',
+    sections: [
+      {
+        title: 'Éxitos de la salsa romántica',
+        paragraphs: [
+          'Presentamos una selección amplia de los mejores éxitos de la salsa romántica, con clásicos de cantantes como Eddie Santiago, Willie González, Frankie Ruiz, Rey Ruiz, Tito Rojas, Víctor Manuelle, Gilberto Santa Rosa, Adolescentes Orquesta y Tony Vega, entre otros nombres que terminaron definiendo una época.',
+          'Todos ellos hicieron parte de la década de los 80, cuando la salsa romántica, también llamada salsa sensual o erótica, comenzaba a tomar forma y a elevar el género con canciones que hoy ya son clásicos.',
+        ],
+        links: [
+          { label: 'Ver la guía de cantantes de salsa', href: '/cantantes-de-salsa/' },
+          { label: 'Volver a Salsa Baúl', href: '/salsa-baul/' },
+        ],
+      },
+      {
+        title: 'Acerca de la salsa romántica',
+        paragraphs: [
+          'La salsa romántica tomó su nombre como una estrategia comercial, aunque en distintos países también fue llamada “salsa monga”, “salsa cama”, “salsa catre”, “salsa sensual” o “erótica”.',
+          'Más allá de los calificativos, se trata de una corriente que tomó prestada parte de la sensibilidad de la balada romántica y la adaptó al lenguaje salsero. Muchas de las primeras letras venían precisamente de canciones románticas ya conocidas, regrabadas bajo el formato de la salsa.',
+          'De ahí surgió una línea más enfocada en el amor, el deseo, la intimidad y el drama sentimental, sin dejar de lado la estructura musical que sostenía la tradición del género.',
+        ],
+      },
+      {
+        title: 'Primer álbum de salsa romántica',
+        paragraphs: [
+          'Cuando la salsa romántica encontró un rumbo más claro, uno de los discos que terminó marcando el camino fue “Lo Mejor de Noche Caliente Vol. 1”, donde la línea melódica de la balada apareció con toda claridad y encontró en Ray de la Paz una voz decisiva.',
+          'De esa etapa también quedaron canciones como “O me quieres o me dejas”, “Preso” y “Estar enamorado”. Más adelante llegaron producciones como “Con Caché” y “Alegres y Románticos”, donde Louie Ramírez y Ray de la Paz consolidaron varios de los temas más fuertes de la primera ola romántica.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/04/louie-ramirez-y-ray-de-la-paz-salsa-romantica-300x300.jpg',
+            alt: 'Louie Ramírez y Ray de la Paz en una imagen asociada a la salsa romántica',
+            caption: 'Louie Ramírez y Ray de la Paz aparecen entre las referencias más importantes del arranque de la salsa romántica.',
+          },
+        ],
+        bullets: [
+          'Todo se derrumbó',
+          'Ladrón de tu amor',
+          'Yo soy aquel',
+          'Solo tú y yo',
+          'Todavía',
+          'Preso',
+          'Desahogo',
+        ],
+        links: [
+          { label: 'Leer la historia general de la salsa', href: '/' },
+        ],
+      },
+      {
+        title: 'Ray de la Paz: pionero de la salsa romántica',
+        paragraphs: [
+          'Ray de la Paz aparece como una de las voces pioneras en la consolidación de este sonido. Su trabajo junto a Louie Ramírez ayudó a fijar un repertorio elegante, sentimental y muy influyente para lo que vendría después.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/11/ray-de-la-paz-salsa-romantica.jpg',
+            alt: 'Ray de la Paz en una imagen asociada a la salsa romántica',
+          },
+        ],
+      },
+      {
+        title: 'Salsa romántica antigua',
+        paragraphs: [
+          'Willie González y Eddie Santiago compartieron escenario en sus primeras épocas y también pasaron por el Conjunto Chaney bajo la dirección de Nicolás Vivas antes de consolidarse como solistas. Ese cruce de trayectorias ayuda a entender cómo se fue armando el mapa de la salsa romántica antigua.',
+          'En esa misma conversación también entra El Conjunto del Amor con “Amigos”, en la voz de Cheo Andújar, una de esas canciones que todavía aparecen cuando se habla de salsa romántica vieja.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/04/willie-gonzalez-el-sensual-de-la-salsa-romantica-212x300.jpg',
+            alt: 'Willie González en una foto asociada a la salsa romántica',
+            caption: 'Willie González, una de las voces más reconocidas de la salsa sensual.',
+          },
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/11/eddie-santiago-300x161.jpg',
+            alt: 'Eddie Santiago en una imagen promocional',
+            caption: 'Eddie Santiago, otro nombre decisivo para la consolidación del género.',
+          },
+        ],
+      },
+      {
+        title: 'Willie González y Eddie Santiago',
+        paragraphs: [
+          'Willie González desarrolló una línea vocal cargada de emoción, historias de amor y una sensibilidad muy marcada, mientras Eddie Santiago irrumpió con fuerza en 1986 gracias al álbum “Atrevido y Diferente”, del cual salieron clásicos como “Tú me quemas”, “De profesión tu amante”, “Qué locura enamorarme de ti”, “Quiero amarte en la hierba” y “Nadie mejor que tú”.',
+          'Años después siguieron sonando temas como “Lluvia” y “Todo empezó”, confirmando que su repertorio ya había entrado en el centro de la memoria salsera.',
+        ],
+        bullets: [
+          'Éxitos Willie González: “Quiero morir en tu piel”, “No es casualidad”, “Devuélveme”, “Pequeñas cosas”, “Cómo se queda”, “Seda”, “Amantes cobardes”, “En la intimidad”, “Solos tú y yo” y “Quiero”.',
+          'Éxitos Eddie Santiago: “Tú me haces falta”, “Mía”, “Tú me quemas”, “Qué locura enamorarme de ti”, “Todo empezó”, “De profesión tú amante”, “Me fallaste”, “Necesito”, “Nadie mejor que tú” y “Antídoto y veneno”.',
+        ],
+      },
+      {
+        title: 'Frankie Ruiz dentro de la salsa romántica',
+        paragraphs: [
+          'Frankie Ruiz inició al lado de Tommy Olivencia y de la Orquesta La Solución, donde comenzó a grabar algunos de sus primeros temas y a construir la identidad que lo llevaría después a una carrera solista llena de éxitos.',
+          'Dentro de esa primera etapa quedaron canciones como “La Rueda” con La Solución y “Lo dudo” con Tommy Olivencia. Luego, ya como solista, surgirían himnos como “La Cura”, “Tú con él”, “Desnúdate mujer”, “Imposible amor”, “Quiero llenarte” y “Deseándote”.',
+          'La nota original recordaba en 2018 que se cumplían 20 años de su muerte. Hoy la mejor forma de mantener vigente esa memoria es volver a su obra con contexto, no solo con nostalgia.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/11/frankie-ruiz.jpg',
+            alt: 'Frankie Ruiz en una imagen de archivo',
+          },
+        ],
+        bullets: [
+          'Lo Dudo',
+          'Anda y Ve',
+          'Tú Con Él',
+          'La Rueda',
+          'La Cura',
+          'Desnúdate Mujer',
+          'Si Te Entregas a Mí',
+          'Imposible Amor',
+          'Quiero Llenarte',
+          'Mi Libertad',
+          'Deseándote',
+        ],
+        links: [
+          { label: 'Leer el perfil de Frankie Ruiz', href: '/frankie-ruiz-el-papa-de-la-salsa/' },
+          { label: 'Leer Yo me llamo Frankie Ruiz', href: '/yo-me-llamo-frankie-ruiz/' },
+        ],
+      },
+      {
+        title: 'Paquito Guzmán',
+        paragraphs: [
+          'Paquito Guzmán no puede quedar por fuera cuando se habla de clásicos de salsa romántica. Después de su etapa junto a Tommy Olivencia, desarrolló una carrera solista fuerte y elegante con canciones como “25 rosas”, “Cinco noches”, “Ser amantes”, “Necesito”, “Tu amante”, “Deja la luz encendida” y “Se nos rompió el amor”.',
+          'Su voz y su estilo contribuyeron a ampliar el repertorio sentimental del género y a sostenerlo con una gran calidad interpretativa.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/04/paquito-guzman-salsa-romantica.jpg',
+            alt: 'Paquito Guzmán en una imagen asociada a la salsa romántica',
+          },
+        ],
+        bullets: [
+          '25 Rosas',
+          'Cinco Noches',
+          'Ser Amantes',
+          'Necesito',
+          'Tu Amante',
+          'Deja La Luz Encendida',
+          'Se Nos Rompió El Amor',
+        ],
+      },
+      {
+        title: 'Cantantes de salsa romántica',
+        paragraphs: [
+          'Con el paso de los años se sumó una oleada enorme de artistas que terminaron fortaleciendo esta línea: Héctor Tricoche, Omar Alfanno, Gilberto Santa Rosa, Tony Vega, Tito Gómez, Tito Rojas, Cano Estremera, José Alberto “El Canario”, Lalo Rodríguez, Pedro Arroyo y Víctor Manuelle, entre muchos otros.',
+          'A esa conversación también se unieron Viti Ruiz, Luis Enrique, Jerry Rivera, La India, Marc Anthony, Johnny Rivera, Mickey Taveras, Amílcar Boscán, Pedro Conga, Maelo Ruiz, Puerto Rican Power, Orquesta Isla Bonita, Rey Ruiz, Charlie Cruz y varios intérpretes más que terminaron haciendo de la salsa romántica una corriente inmensa y diversa.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/07/genero-salsa-emisoras-en-vivo-la-voz-salsa-gilberto-santa-rosa-225x300.jpg',
+            alt: 'Gilberto Santa Rosa en una imagen de archivo',
+          },
+        ],
+        links: [
+          { label: 'Leer la guía de cantantes de salsa', href: '/cantantes-de-salsa/' },
+          { label: 'Leer sobre Tito Rojas', href: '/tito-rojas/' },
+        ],
+      },
+      {
+        title: 'Salsa colombiana',
+        paragraphs: [
+          'En Colombia también hubo nombres e instituciones fundamentales para la expansión del género. Fruko y sus Tesos, Joe Arroyo y The Latin Brothers sembraron una base decisiva para la cultura salsera del país.',
+          'A eso se suman agrupaciones memorables como Grupo Niche, Guayacán Orquesta y Grupo Galé, que ayudaron a proyectar internacionalmente la salsa hecha en Colombia y a sostener una identidad propia dentro de la música latina.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2015/01/Diego-Gale-3-200x300.jpg',
+            alt: 'Diego Galé en una foto de archivo',
+          },
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/08/exitos-de-grupo-niche-jairo-varela.jpg',
+            alt: 'Grupo Niche en una imagen promocional',
+          },
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/07/genero-salsa-emisoras-en-vivo-la-voz-salsa-guayacan-orquesta.jpg',
+            alt: 'Guayacán Orquesta en una imagen de archivo',
+          },
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/07/genero-salsa-emisoras-en-vivo-la-voz-salsa-joe-arroyo-salsa-colombiana.jpg',
+            alt: 'Joe Arroyo en una imagen de archivo',
+          },
+        ],
+        links: [
+          { label: 'Leer la historia de Grupo Galé', href: '/internacional-grupo-gale-toda-una-historia-musical/' },
+          { label: 'Leer la historia de Adolescentes Orquesta', href: '/adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa/' },
+        ],
+      },
+      {
+        title: 'Salsa romántica viejita',
+        paragraphs: [
+          'Este artículo también funciona como una lista de canciones viejitas de salsa romántica que siguen sonando con fuerza. Allí aparecen artistas y temas que marcaron los años 80, 90 y buena parte de los 2000, demostrando que el género consiguió instalar clásicos duraderos.',
+          '“Pequeñas cosas” de Willie González, “Qué hay de malo” de Jerry Rivera, “Caricias prohibidas” de Viti Ruiz, “Siempre seré” de Tito Rojas, “Aquel viejo motel” de David Pabón y “A dónde irás” de Puerto Rican Power son solo algunos de esos títulos que todavía activan recuerdos inmediatos entre los oyentes.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/07/genero-salsa-emisoras-en-vivo-la-voz-salsa-jerry-rivera-225x300.jpg',
+            alt: 'Jerry Rivera en una imagen de archivo',
+          },
+        ],
+      },
+      {
+        title: 'Las mejores 50 canciones de música salsa para dedicar',
+        paragraphs: [
+          'Como cierre de esta guía, recuperamos una lista amplia de canciones de salsa para dedicar. Aquí conviven himnos románticos, canciones de despecho, clásicos bailables y varios títulos que siguen apareciendo en dedicatorias, playlists y conversaciones salseras.',
+        ],
+        images: [
+          {
+            src: 'https://www.lavozsalsa.com/wp-content/uploads/2018/04/gilberto-santa-rosa-victor-manuelle-rey-ruiz-jerry-rivera-salsa-romantica.jpg',
+            alt: 'Gilberto Santa Rosa, Víctor Manuelle, Rey Ruiz y Jerry Rivera en una imagen asociada a la salsa romántica',
+          },
+        ],
+        orderedBullets: [
+          'Vivir mi vida - Marc Anthony',
+          'Pequeñas cosas - Willie González',
+          'Sin sentimiento - Grupo Niche',
+          'La cita - Galy Galiano',
+          'Conteo regresivo - Gilberto Santa Rosa',
+          'Qué hay de malo - Jerry Rivera',
+          'Tengo ganas - Víctor Manuelle',
+          'El gran varón - Willie Colón',
+          'Amor y control - Rubén Blades',
+          'Qué locura enamorarme de ti - Eddie Santiago',
+          'Caricias prohibidas - Viti Ruiz',
+          'Me vas a extrañar - Yiyo Sarante',
+          'Vivir lo nuestro - La India y Marc Anthony',
+          'La negra tiene tumbao - Celia Cruz',
+          'Te amo te extraño - Guayacán Orquesta',
+          'Te va a doler - Maelo Ruiz',
+          'El amor de mi vida - Grupo Galé',
+          'Persona ideal - Adolescentes',
+          'Mi media mitad - Rey Ruiz',
+          'Llorarás - Óscar D’León',
+          'Rebelión - Joe Arroyo',
+          'Casi te envidio - Andy Montañez',
+          'Cómo te hago entender - Roberto Roena',
+          'Qué pena - Los Hermanos Lebrón',
+          'Siempre seré - Tito Rojas',
+          'Amor a medio tiempo - Bobby Valentín',
+          'Un montón de estrellas - Polo Montañez',
+          'Ya no regreso contigo - Roberto Blades',
+          'Esa mujer - Tony Vega',
+          'La juma de ayer - Henry Fiol',
+          'Fabricando fantasías - Tito Nieves',
+          'Juanito Alimaña - Héctor Lavoe',
+          'Un verano en Nueva York - El Gran Combo',
+          'Porque te amo - Nino Segarra',
+          'Las tumbas - Ismael Rivera',
+          'He decidido olvidarte - Pedro Arroyo',
+          'Extrañándote - Michel El Buenón',
+          'El preso - Fruko y sus Tesos',
+          'Página de amor - Tito Gómez',
+          'El ratón - Cheo Feliciano',
+          'Sobre las olas - The Latin Brothers',
+          'De qué callada manera - La Sonora Ponceña',
+          'La noche más linda - Adalberto Santiago',
+          'Desnúdate mujer - Frankie Ruiz',
+          'Yo no sé mañana - Luis Enrique',
+          'A fuego lento - Mario Ortiz',
+          'Corazón embustero - La Grande de Madrid',
+          'Sonido bestial - Richie Ray y Bobby Cruz',
+          'Aquel viejo motel - David Pabón',
+          'A dónde irás - Puerto Rican Power',
+        ],
+      },
+      {
+        title: 'Reflexión salsera',
+        paragraphs: [
+          'En definitiva, la salsa romántica llegó para complementar el mapa del género y abrirlo hacia nuevos públicos. Hay quienes la aman, quienes la discuten y quienes la entienden como una desviación del camino más duro de la salsa, pero su impacto histórico es innegable.',
+          'Sea guaracha, son cubano, cha cha chá, boogaloo, salsa dura o salsa romántica, lo que queda claro es que la música latina ha sabido crecer, transformarse y permanecer en el tiempo. A muchos de los que ya no nos acompañan los seguimos escuchando como si nunca se hubieran ido.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'descargar-salsa',
+    legacyUrl: 'https://www.lavozsalsa.com/descargar-salsa/',
+    category: 'Descargas',
+    title: 'Descargar salsa gratis: MP3 de salsa romántica, salsa baúl y éxitos para móvil o PC',
+    excerpt:
+      'Escucha y descarga salsa desde una biblioteca pensada para móvil o PC: salsa romántica, salsa baúl, clásicos del género y archivo recuperado de La Voz Salsa.',
+    description:
+      'Descargar salsa gratis en MP3 desde móvil o PC: salsa romántica, salsa baúl, éxitos del género y una biblioteca recuperada del archivo de La Voz Salsa.',
+    featuredRank: 3,
+    readingTime: '12 min',
+    archiveLabel: 'Biblioteca recuperada',
+    updatedLabel: 'Recuperado y reorganizado en abril de 2026',
+    sections: [
+      {
+        title: 'Descargar salsa romántica y salsa baúl',
+        paragraphs: [
+          'Esta página fue pensada para quienes todavía disfrutan guardar canciones, revisarlas con calma y tener a mano una buena selección de salsa en MP3. Aquí reunimos audios que circularon durante años dentro del archivo de La Voz Salsa y los ordenamos en una biblioteca más clara para escuchar y descargar desde móvil o PC.',
+          'La selección mezcla salsa romántica, salsa baúl, sencillos independientes y canciones que siguen apareciendo entre oyentes, coleccionistas y seguidores de La Voz Salsa. La idea no es dejar enlaces sueltos, sino abrir una biblioteca que de verdad se pueda usar.',
+        ],
+      },
+      {
+        title: 'Cómo usar esta biblioteca',
+        paragraphs: [
+          'Cada tarjeta te deja escuchar el tema desde el navegador antes de bajarlo. Así puedes revisar la pista, confirmar cuál quieres guardar y descargar solo lo que de verdad te interesa.',
+        ],
+        bullets: [
+          'Escucha previa dentro de la misma página.',
+          'Descarga individual por canción en formato MP3.',
+          'Experiencia pensada para móvil y escritorio.',
+          'Archivo recuperado sin depender del WordPress viejo.',
+        ],
+      },
+      {
+        title: 'Sigue explorando el archivo salsero',
+        paragraphs: [
+          'Esta biblioteca convive con otras rutas que ya están activas dentro de Pulso Salsero. Si quieres seguir por estilos, artistas o memoria salsera, aquí tienes tres entradas que conectan muy bien con estas descargas.',
+        ],
+        links: [
+          { label: 'Abrir la guía de éxitos de la salsa romántica', href: '/exitos-de-la-salsa-romantica/' },
+          { label: 'Entrar a Salsa Baúl', href: '/salsa-baul/' },
+          { label: 'Ver la guía de cantantes de salsa', href: '/cantantes-de-salsa/' },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'salsa-baul',
     legacyUrl: 'https://www.lavozsalsa.com/salsa-baul/',
     category: 'Archivo',
@@ -480,20 +815,119 @@ const pressArticles = [
       {
         title: 'Lugares y nombres que han marcado conversación',
         paragraphs: [
-          'Dentro de esa cartografía salsera aparecen referencias que durante años ayudaron a formar públicos y escenas: Tíbiri, Son Havana, El Eslabón Prendido, Oye Bonita y otros espacios que, en distintos momentos, sirvieron de punto de encuentro para melómanos, bailadores y promotores del género.',
-          'El valor de esos lugares no es solo comercial. También es simbólico: muchos ayudaron a sostener una forma muy particular de vivir la salsa en Medellín.',
+          'Dentro de esa cartografía salsera aparecen referencias más concretas y vivas de la ciudad. Son Havana en San Juan con la 73, Mulenze y Sarabanda Salsa Bar en la 33, Charrupí Salsa Bar en Manrique la 45 y La Clave en Aranjuez ayudan a dibujar una ruta mucho más real para entender cómo suena la salsa en Medellín.',
+          'El valor de esos lugares no es solo comercial. También es simbólico: ayudan a sostener una forma muy particular de vivir la salsa en la ciudad. Y más allá de esos nombres, casi en cada barrio puedes encontrar bares de salsa que mantienen encendida esa tradición.',
         ],
       },
       {
         title: 'Cómo armar tu propia ruta salsera',
         paragraphs: [
-          'Si vas a recorrer la ciudad con criterio salsero, busca tres cosas: programación consistente, selección musical con identidad y público que realmente escuche el género. Un buen bar de salsa no es solo un lugar para ir de rumba; también es una escuela informal para oír mejor.',
+          'Si vas a recorrer Medellín con criterio salsero, busca tres cosas: programación consistente, selección musical con identidad y público que realmente escuche el género. Un buen bar de salsa no es solo un lugar para ir de rumba; también es una escuela informal para oír mejor.',
         ],
         bullets: [
-          'Empieza por lugares con tradición y comunidad melómana.',
+          'Empieza por zonas y bares con tradición salsera reconocible, como San Juan, la 33, Manrique y Aranjuez.',
           'Busca programación especial alrededor de conciertos y ferias locales.',
           'Pregunta por las noches de descarga, salsa romántica o colección.',
-          'Sigue la conversación en plataformas y medios especializados de la ciudad.',
+          'Recuerda que la escena no vive solo en los lugares más conocidos: en muchos barrios hay bares de salsa con identidad propia.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'frankie-ruiz-el-papa-de-la-salsa',
+    legacyUrl: 'https://www.lavozsalsa.com/frankie-ruiz-el-papa-de-la-salsa/',
+    category: 'Perfiles',
+    title: 'Frankie Ruiz, el Papá de la Salsa: biografía, éxitos y legado de una voz irrepetible',
+    excerpt:
+      'Frankie Ruiz sigue siendo uno de los nombres más importantes de la salsa romántica por su voz, sus canciones y el impacto emocional que dejó en varias generaciones.',
+    description:
+      'Biografía de Frankie Ruiz, el Papá de la Salsa: sus etapas con La Solución y Tommy Olivencia, sus grandes éxitos, su carrera como solista y su legado dentro del género.',
+    featuredRank: 5,
+    readingTime: '8 min',
+    archiveLabel: 'Perfil recuperado',
+    updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: '/media/covers/frankie-ruiz-el-papa-de-la-salsa.jpg',
+    coverAlt: 'Frankie Ruiz en una imagen promocional sobre fondo rojo',
+    shareImage: '/media/covers/frankie-ruiz-el-papa-de-la-salsa.jpg',
+    sections: [
+      {
+        title: 'Una voz que marcó la salsa romántica',
+        paragraphs: [
+          'José Antonio Torresola Ruiz Paterson, conocido artísticamente como Frankie Ruiz y recordado como “El Papá de la Salsa”, nació el 10 de marzo de 1958 en Paterson, Nueva Jersey, y murió el 9 de agosto de 1998 a los 40 años. Su nombre quedó ligado para siempre a una forma de cantar intensa, callejera y profundamente emocional.',
+          'Desde muy joven, todavía en la adolescencia, hizo sus primeras grabaciones acompañado de Charlie López y su orquesta. Esa experiencia temprana fue moldeando una voz que más adelante se volvería decisiva para la explosión de la salsa romántica.',
+        ],
+      },
+      {
+        title: 'Frankie Ruiz y la Orquesta La Solución',
+        paragraphs: [
+          'En 1977, cuando la salsa romántica comenzaba a expandirse con más fuerza, Frankie Ruiz se unió a la delantera de la Orquesta La Solución. De esa etapa salieron dos producciones claves, “Frankie Ruiz y La Solución” y “Orquesta La Solución”, que ayudaron a poner su nombre en circulación dentro del género.',
+          'Allí quedó uno de los clásicos más recordados de toda su carrera: “La Rueda”. Ese tema ayudó a consolidar una relación muy fuerte entre Frankie y el público salsero, incluso antes de su etapa definitiva como solista.',
+        ],
+      },
+      {
+        title: 'Frankie Ruiz y Tommy Olivencia',
+        paragraphs: [
+          'En la década de los 80 se unió a la orquesta de Tommy Olivencia, otra estación fundamental dentro de su crecimiento artístico. En esa etapa se destacó “Lo Dudo”, incluido en el álbum “Celebrando otro aniversario”, una grabación que reforzó todavía más su potencia interpretativa.',
+          'Ese paso por orquestas importantes fue clave porque le dio repertorio, oficio y visibilidad, pero sobre todo le permitió llegar a la carrera solista con una experiencia escénica y vocal ya muy sólida.',
+        ],
+      },
+      {
+        title: 'Canciones y éxitos de Frankie Ruiz',
+        paragraphs: [
+          'La grandeza de Frankie Ruiz también se explica por un repertorio que sigue sonando en emisoras, fiestas, homenajes y colecciones salseras. Estos son algunos de los títulos más recordados de su carrera.',
+          'Temas como “Deseándote” condensan muy bien su costado más íntimo y dramático: una forma de cantar el deseo, la pérdida y la intensidad amorosa que lo volvió inconfundible dentro de la salsa romántica.',
+        ],
+        bullets: [
+          'La Rueda',
+          'La Cura',
+          'Desnúdate Mujer',
+          'Tú Con Él',
+          'Deseándote',
+          'Tú Me Vuelves Loco',
+          'Quiero Llenarte',
+          'Imposible Amor',
+          'Ironía',
+          'Lo Dudo',
+          'Mi Libertad',
+          'Como Lo Hacen',
+          'Bailando',
+          'Si Te Entregas a Mí',
+          'Anda y Ve',
+        ],
+      },
+      {
+        title: 'Frankie Ruiz solista',
+        paragraphs: [
+          'Para 1985 emprendió definitivamente su carrera como solista, ya con una experiencia formada y varios temas emblemáticos que comenzaban a instalarse como parte de un repertorio exitoso. A partir de ahí su popularidad se disparó y su nombre quedó definitivamente asociado a la primera línea de la salsa romántica.',
+          'En 1987 fue elegido artista del año en la categoría tropical por Billboard gracias al álbum “Voy Pa’ Encima”, una producción que incluyó temas tan fuertes como “Mi Libertad” y “Desnúdate Mujer”. Ese reconocimiento confirmó que Frankie ya no era solo una gran promesa: era una figura central de la música latina.',
+          'Después de atravesar un periodo duro ligado al alcohol y las drogas, logró seguir adelante con discos como “Más Grande Que Nunca”, “Puerto Rico Soy Tuyo” y “Mirándote”, trabajos que sostuvieron su nombre en las primeras posiciones de la radio latina durante los años 90.',
+        ],
+      },
+      {
+        title: '¿De qué murió Frankie Ruiz?',
+        paragraphs: [
+          'Frankie Ruiz murió a causa de cirrosis hepática, después de una carrera tan brillante como dolorosa. Su partida ocurrió poco tiempo después de grabar el álbum “Nacimiento y Recuerdos”, producción que incluso alcanzó a presentar en uno de los escenarios más famosos del mundo: el Madison Square Garden.',
+          'Su final fue triste, como también lo fue el de otras grandes figuras de la salsa. Pero más allá de esa herida, lo que permanece es el valor inmenso de una obra que ayudó a definir la sensibilidad de la salsa romántica y que todavía hoy sigue encontrando nuevas generaciones de oyentes.',
+        ],
+      },
+      {
+        title: 'Seguir leyendo a Frankie Ruiz en Pulso Salsero',
+        paragraphs: [
+          'Si quieres seguir explorando cómo reaparece el legado de Frankie Ruiz dentro del archivo de La Voz Salsa, aquí tienes dos historias relacionadas que amplían su influencia en tributos recientes y memoria salsera.',
+        ],
+        links: [
+          {
+            label: 'Yo me llamo Frankie Ruiz',
+            href: '/yo-me-llamo-frankie-ruiz/',
+          },
+          {
+            label: 'David Zahan y su homenaje a Frankie Ruiz',
+            href: '/david-zahan-y-frankie-ruiz-reviviendo-al-papa-de-la-salsa/',
+          },
+          {
+            label: 'Volver a la guía de cantantes de salsa',
+            href: '/cantantes-de-salsa/',
+          },
         ],
       },
     ],
@@ -532,39 +966,158 @@ const pressArticles = [
           'Cada vez que el nombre de Frankie Ruiz regresa a la conversación, lo que realmente se activa es una pregunta más profunda: qué tanto sigue pesando la salsa romántica en la memoria colectiva. Y la respuesta, por ahora, parece clara: pesa muchísimo.',
         ],
       },
+      {
+        title: 'Uno de los tributos recientes: David Zahan',
+        paragraphs: [
+          'Dentro de esa cadena de homenajes recientes, una de las historias que más llamó la atención fue la de David Zahan, cantautor salsero colombiano que construyó un proyecto entero alrededor de la admiración que siente por Frankie Ruiz.',
+          'Ese caso ayuda a entender que la vigencia de Frankie no se sostiene solo en la nostalgia, sino también en la forma en que nuevos intérpretes siguen encontrando en su legado una referencia artística y emocional.',
+        ],
+        links: [
+          {
+            label: 'Leer el perfil principal de Frankie Ruiz',
+            href: '/frankie-ruiz-el-papa-de-la-salsa/',
+          },
+          {
+            label: 'Leer la historia de David Zahan y su homenaje a Frankie Ruiz',
+            href: '/david-zahan-y-frankie-ruiz-reviviendo-al-papa-de-la-salsa/',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'david-zahan-y-frankie-ruiz-reviviendo-al-papa-de-la-salsa',
+    legacyUrl: 'https://www.lavozsalsa.com/david-zahan-y-frankie-ruiz-reviviendo-al-papa-de-la-salsa/',
+    category: 'Homenajes',
+    title: 'David Zahan y Frankie Ruiz: un homenaje que volvió a encender la memoria salsera',
+    excerpt:
+      'David Zahan llevó su admiración por Frankie Ruiz a un proyecto de alcance internacional y se convirtió en uno de los tributos recientes más visibles alrededor del legado del Papá de la Salsa.',
+    description:
+      'David Zahan, cantante salsero colombiano, convirtió su homenaje a Frankie Ruiz en un proyecto de amplio alcance y en uno de los tributos recientes más comentados dentro de la salsa romántica.',
+    featuredRank: 9,
+    readingTime: '6 min',
+    archiveLabel: 'Tributo recuperado',
+    updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: '/media/covers/david-zahan-frankie-ruiz-cover.jpg',
+    coverAlt: 'David Zahan en la portada de Reviviendo a Frankie Ruiz',
+    shareImage: '/media/covers/david-zahan-frankie-ruiz-cover.jpg',
+    sections: [
+      {
+        title: 'Un cantante colombiano marcado por Frankie Ruiz',
+        paragraphs: [
+          'Andrés David Saldarriaga Salazar, conocido artísticamente como David Zahan, es un cantautor salsero colombiano nacido en Medellín. Su gusto por la salsa comenzó desde pequeño, cuando en su casa sonaban los LP que escuchaba su padre.',
+          'Entre todas esas influencias, el nombre que terminó marcándolo con más fuerza fue Frankie Ruiz. Se volvió su gran inspiración y su principal referente musical, al punto de que con trabajo, disciplina y constancia terminó construyendo una de las voces más cercanas al timbre del Papá de la Salsa que hoy pueden encontrarse dentro del circuito salsero.',
+        ],
+      },
+      {
+        title: 'Reviviendo a Frankie Ruiz',
+        paragraphs: [
+          'David Zahan alcanzó reconocimiento internacional con su homenaje “Reviviendo a Frankie Ruiz”, un proyecto que ayudó a poner su nombre en circulación mucho más allá de Colombia. Según la nota original, ese trabajo superó los 100 millones de reproducciones en YouTube en menos de un año.',
+          'Más allá de la cifra, lo importante es lo que ese fenómeno revela: Frankie Ruiz sigue teniendo una presencia tan fuerte dentro de la memoria salsera que todavía puede mover audiencias masivas a través de nuevos tributos.',
+        ],
+      },
+      {
+        title: 'Yo me llamo Frankie Ruiz y el salto masivo en televisión',
+        paragraphs: [
+          'Una parte importante de esa visibilidad llegó con su participación en el reality “Yo me llamo” del Canal Caracol, uno de los formatos más populares de la televisión colombiana. Allí apareció como “Yo me llamo Frankie Ruiz” y logró cautivar al jurado con una interpretación que reforzó todavía más la relación entre su voz y el legado del cantante boricua.',
+          'En su presentación del 25 de septiembre de 2018, David Zahan interpretó “La Rueda”, uno de los clásicos asociados a Frankie Ruiz en su etapa con La Solución. Esa noche recibió tres sí del jurado conformado por Amparo Grisales, Pipe Bueno y César Escola, junto con varios elogios por la fuerza de su interpretación.',
+        ],
+        links: [
+          {
+            label: 'Volver a la nota de Yo me llamo Frankie Ruiz',
+            href: '/yo-me-llamo-frankie-ruiz/',
+          },
+        ],
+      },
+      {
+        title: 'Una carrera propia más allá del tributo',
+        paragraphs: [
+          'Aunque el homenaje a Frankie Ruiz le dio una enorme exposición, la historia de David Zahan no empezó allí. Según el archivo original, inició su carrera como solista en 2006 y ganó visibilidad con “Te Echo de Menos”, un tema que sonó con fuerza dentro de la salsa romántica en emisoras de Colombia y México.',
+          'Desde entonces ha seguido lanzando material propio, trabajando con exponentes y productores reconocidos de la salsa y llevando su estilo romántico a distintos países de Latinoamérica. Eso le da otra dimensión a la historia: el tributo a Frankie Ruiz no fue solo una imitación celebrada por el público, sino también una plataforma desde la cual Zahan consolidó su propia carrera dentro del género.',
+        ],
+      },
+      {
+        title: 'Mantener vivo el legado del Papá de la Salsa',
+        paragraphs: [
+          'En la nota original, David Zahan decía que daba gracias a Dios por el don de interpretar y mantener vivo el legado de su ídolo. También aclaraba que nunca se trató de reemplazar a Frankie Ruiz, sino de rendirle homenaje con respeto y dedicación.',
+          'Ese matiz es importante porque explica por qué ciertos tributos sí conectan con el público salsero: no funcionan como sustitución, sino como una manera de volver a activar la memoria alrededor de una figura inmensa de la salsa romántica.',
+          'La historia también recuerda que Frankie Ruiz murió en 1998, a los 40 años, a causa de cirrosis hepática. Se fue en un momento muy alto de su carrera, pero dejó un legado que todavía es citado por artistas de la salsa, el reguetón y otros géneros musicales.',
+        ],
+      },
+      {
+        title: 'Fuentes y enlaces relacionados',
+        paragraphs: [
+          'Estas referencias ayudan a contextualizar mejor la historia de David Zahan y su homenaje a Frankie Ruiz.',
+        ],
+        links: [
+          { label: 'Leer el perfil de Frankie Ruiz en Pulso Salsero', href: '/frankie-ruiz-el-papa-de-la-salsa/' },
+          { label: 'Volver a la nota de Yo me llamo Frankie Ruiz', href: '/yo-me-llamo-frankie-ruiz/' },
+        ],
+      },
     ],
   },
   {
     slug: 'mimi-ibarra-cantautora',
     legacyUrl: 'https://www.lavozsalsa.com/mimi-ibarra-cantautora/',
     category: 'Perfiles',
-    title: 'Mimi Ibarra: una cantautora que convirtió sensibilidad y carácter en sello propio',
+    title: 'Mimi Ibarra, cantautora colombiana y compositora de grandes éxitos de la salsa',
     excerpt:
-      'Una mirada a la trayectoria de Mimi Ibarra, su lugar dentro de la salsa romántica y la forma en que su voz sigue siendo referencia para muchas oyentes.',
+      'Mimi Ibarra se convirtió en una de las compositoras más solicitadas de la salsa romántica y luego llevó esa sensibilidad a su propia carrera como intérprete.',
     description:
-      'Perfil de Mimi Ibarra y su aporte a la salsa romántica: una voz con identidad propia, sensibilidad y permanencia dentro del género.',
+      'Biografía de Mimi Ibarra, cantautora colombiana y autora de canciones grabadas por Tito Rojas, Puerto Rican Power, Anthony Cruz, Maelo Ruiz y otros nombres de la salsa.',
     featuredRank: 6,
-    readingTime: '6 min',
+    readingTime: '8 min',
     archiveLabel: 'Perfil recuperado',
     updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: '/media/covers/mimi-ibarra-cantautora-colombiana.jpg',
+    coverAlt: 'Mimi Ibarra en una foto promocional sobre fondo gris',
+    shareImage: '/media/covers/mimi-ibarra-cantautora-colombiana.jpg',
     sections: [
       {
-        title: 'Una voz con identidad propia',
+        title: 'Una cantautora colombiana con sello propio',
         paragraphs: [
-          'Mimi Ibarra ocupa un lugar especial dentro de la salsa romántica porque supo construir una identidad reconocible en un territorio muchas veces dominado por voces masculinas. Su repertorio conectó con oyentes que encontraron en ella sensibilidad, firmeza y una forma distinta de contar el amor y el desamor.',
-          'Ese valor sigue siendo importante hoy, cuando cada vez más artistas buscan un lugar propio dentro del género sin renunciar a la emoción ni a la narrativa popular.',
+          'Mimi Ibarra, cantautora colombiana, es hoy por hoy una de las compositoras más solicitadas y exitosas dentro del universo salsero. Sus letras y melodías dejaron una huella propia en la salsa romántica, con un estilo que mezcla sensibilidad, fuerza femenina y una manera muy particular de narrar el amor.',
+          'Esa identidad la convirtió en una referencia especial dentro del género. Primero se abrió camino como autora de canciones grabadas por grandes intérpretes y más adelante llevó esa misma sensibilidad a su faceta como cantante.',
         ],
       },
       {
-        title: 'Más que intérprete',
+        title: 'Biografía Mimi Ibarra: primero compositora, luego intérprete',
         paragraphs: [
-          'Hablar de Mimi Ibarra como cantautora también permite reconocer una dimensión autoral que a veces se pasa por alto. No es solo una voz vinculada a un momento de la salsa romántica. También es una artista que ayudó a construir lenguaje, repertorio y conexión emocional desde su propia mirada.',
+          'Desde niña soñó con incursionar en la música como intérprete, aunque su reconocimiento internacional comenzó primero por otra puerta: la composición. Mimi empezó escribiendo canciones y encontró en ese ejercicio una vocación que ella misma ha descrito como un regalo de Dios.',
+          'Después de sus primeros pasos en Colombia, su obra encontró un espacio decisivo en Puerto Rico con el sello Musical Productions. Allí escribió canciones para distintos artistas y terminó conquistando al público salsero con talento, creatividad y una capacidad especial para convertir emociones cotidianas en himnos románticos.',
         ],
       },
       {
-        title: 'Por qué sigue siendo una referencia',
+        title: 'Mimi Ibarra: cantautora de grandes éxitos',
         paragraphs: [
-          'Su presencia en búsquedas y archivos demuestra que todavía hay una audiencia que vuelve a su música para reencontrarse con una sensibilidad específica dentro del género. Esa permanencia es, justamente, una de las señales que distinguen a los nombres que realmente dejan huella.',
+          'Entre las composiciones de Mimi Ibarra aparecen títulos que siguen muy presentes en la memoria del público: "Señora", "Juguete de nadie", "Déjala", "Morena linda", "Dile a él" y "Te propongo". Su catálogo terminó en voces de gran peso como Tito Rojas, La Puerto Rican Power, Tito Gómez, Anthony Cruz, Maelo Ruiz y Oscar D’ León.',
+          'También se suman otros temas muy recordados dentro del circuito salsero, como "Te necesito mi amor", "Por qué te quiero tanto", "Por esa mujer", "También nos duele", "Lloraré", "No pude evitarlo", "Eres la única", "Ganas" y "Nunca te fallé". Todo ese recorrido reafirma algo importante: Mimi no fue una autora de una sola canción exitosa, sino una compositora capaz de sostener repertorio, identidad y permanencia.',
+        ],
+        links: [
+          {
+            label: 'Leer también: Tito Rojas en Pulso Salsero',
+            href: '/tito-rojas/',
+          },
+        ],
+      },
+      {
+        title: 'Romántica por excelencia y dueña de su propia voz',
+        paragraphs: [
+          'Mimi Ibarra es una romántica por excelencia. Esa misma capacidad para escribir grandes canciones la llevó a hacer realidad su sueño más personal: lanzar su carrera como intérprete con temas de su propia inspiración y una voz que conserva cercanía, sutileza y mucha intención emocional.',
+          'En esa faceta aparecen canciones como "Qué tiene ella", "Marinero de amor", "Descarado", "Paso, paso" y "No puede ser", tema con el que ganó un premio Diplo en Puerto Rico. Más adelante llegarían producciones en las que también sobresalen "Duele", a dúo con Tito Rojas, "Si no estás junto a mí", "Que nadie se entere" y su interpretación de la balada pop "Quién eres tú".',
+        ],
+      },
+      {
+        title: 'Una presencia que sigue vigente dentro y fuera de Colombia',
+        paragraphs: [
+          'Su música y su voz han sonado en países como República Dominicana, Venezuela, Ecuador, Puerto Rico, Colombia, Canadá, Europa y Estados Unidos, donde reside actualmente. En concierto, Mimi Ibarra conecta con el público desde frases cargadas de pasión, ilusión y realismo, con una puesta en escena marcada por carisma, ternura y experiencia.',
+          'Por eso sigue siendo una referencia valiosa cuando se habla de mujeres que escribieron, cantaron y dejaron huella dentro de la salsa. Su trayectoria no solo enriquece la historia del género: también demuestra que detrás de muchos éxitos inolvidables hubo una compositora colombiana con voz propia y una visión muy clara de lo que quería decir.',
+        ],
+        links: [
+          {
+            label: 'Ver la guía de cantantes de salsa',
+            href: '/cantantes-de-salsa/',
+          },
         ],
       },
     ],
@@ -573,34 +1126,99 @@ const pressArticles = [
     slug: 'internacional-grupo-gale-toda-una-historia-musical',
     legacyUrl: 'https://www.lavozsalsa.com/internacional-grupo-gale-toda-una-historia-musical/',
     category: 'Perfiles',
-    title: 'Grupo Gale: una historia musical que ayudó a consolidar el sonido salsero de Medellín',
+    title: 'Grupo Galé: una historia musical que ayudó a consolidar el sonido salsero de Medellín',
     excerpt:
-      'Repasamos el lugar de Grupo Gale dentro de la salsa hecha en Medellín y por qué su historia sigue siendo una referencia clave para el circuito local.',
+      'Repasamos la historia de Grupo Galé, su discografía, el papel de Diego Galé y la manera en que la agrupación se convirtió en una referencia internacional de la salsa hecha en Colombia.',
     description:
-      'Grupo Gale y su historia musical: una referencia central para entender el desarrollo del sonido salsero en Medellín.',
+      'Grupo Galé y su historia musical: una referencia central para entender el desarrollo del sonido salsero en Medellín, Colombia y su proyección internacional.',
     featuredRank: 7,
-    readingTime: '6 min',
+    readingTime: '11 min',
     archiveLabel: 'Perfil recuperado',
     updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: '/media/covers/diego-gale-y-su-grupo-gale.jpg',
+    coverAlt: 'Diego Galé y varios integrantes de Grupo Galé en una foto promocional',
+    shareImage: '/media/covers/diego-gale-y-su-grupo-gale.jpg',
     sections: [
       {
         title: 'Un nombre que pesa en la historia local',
         paragraphs: [
-          'Grupo Gale forma parte de la conversación obligada cuando se intenta narrar cómo Medellín se convirtió en una plaza salsera tan fuerte. Su historia conecta producción, repertorio, trabajo de orquesta y una relación muy estrecha con el público de la ciudad.',
-          'En torno al proyecto también aparece la figura de Diego Gale, indispensable para entender buena parte de la producción salsera hecha desde Medellín en las últimas décadas.',
+          'En 1989 Diego Galé creó el Grupo Galé y lo convirtió con el tiempo en una de las agrupaciones salseras más exitosas de Colombia a nivel internacional. Su historia conecta producción, repertorio, trabajo de orquesta y una relación muy estrecha con el público de Medellín, ciudad clave para entender su crecimiento.',
+          'A partir de 1992, Diego Galé también se consolidó como compositor, arreglista y productor musical de artistas de renombre, de modo que la historia del grupo no puede separarse de la figura del músico que le dio dirección, sonido e identidad.',
+          'Dentro de ese recorrido destaca “El amor de mi vida”, tema de la producción “Auténtico” de 2007, que recibió nominación a los premios Grammy y se convirtió en una de las insignias de la agrupación y en una de las canciones favoritas del público.',
         ],
       },
       {
-        title: 'Más que una orquesta de temporada',
+        title: 'Éxitos Grupo Galé y discografía',
         paragraphs: [
-          'Lo que vuelve importante a Grupo Gale no es solo un puñado de éxitos, sino su capacidad para sostener una narrativa musical con identidad, disciplina y presencia en el circuito de la ciudad.',
-          'Ese tipo de continuidad es parte de lo que hace que ciertas agrupaciones se conviertan en referentes y no simplemente en recuerdos de un momento puntual.',
+          'Lo que vuelve importante a Grupo Galé no es solo un puñado de éxitos, sino la continuidad de una discografía amplia que fue marcando distintas etapas de la salsa hecha en Medellín. Esa constancia explica por qué la agrupación terminó convirtiéndose en institución y no solo en una orquesta de temporada.',
+        ],
+        bullets: [
+          '1989. Frívolo',
+          '1990. Nuestra Salsa',
+          '1991. Sensitivo',
+          '1992. A Conciencia',
+          '1993. Sin Apariencias',
+          '1994. Afirmando',
+          '1996. Dominando La Salsa',
+          '1997. Grandes Hits / Salsadicción',
+          '1998. En Su Sitio',
+          '1999. Grupo Galé 10 Años',
+          '2000. Con El Mismo Swing',
+          '2002. 20 De Julio',
+          '2004. Esencia Latina',
+          '2004. Los Mejores 30',
+          '2005. 15 Aniversario CD/DVD En Vivo',
+          '2007. Auténtico',
+          '2009. Instinto',
+          '2011. Deluxe',
+          '2012. Diego Galé… Entre Amigos',
+          '2015. Mi Mundo Perfecto',
         ],
       },
       {
-        title: 'Una historia que sigue dialogando con el presente',
+        title: 'Noticias Grupo Galé: Después del Silencio y Mi Mundo Perfecto',
         paragraphs: [
-          'En el archivo salsero de Medellín, Grupo Gale aparece una y otra vez porque su recorrido ayuda a leer la evolución de la ciudad como territorio musical. No se trata solo de mirar atrás: también se trata de entender por qué algunos proyectos siguen siendo brújula para lo que viene.',
+          'En Medellín, Grupo Galé grabó el DVD de la producción “Después del Silencio”, también conocida como “Mi Mundo Perfecto”, en una noche romántica a la que asistieron medios, amigos y seguidores del grupo. Allí quedó registrada una de las producciones más importantes de su trayectoria reciente.',
+          'Con George Valencia, Carlos Llamosa, David Carl y Diego Giraldo al frente de las voces, más una banda de gran formato, el grupo interpretó uno a uno los temas de este álbum. La noche combinó el costado romántico de Galé con el sabor del Pacífico y la presencia de invitados cercanos al universo musical de Diego Galé.',
+          '“Después del Silencio” significó una pausa creativa y espiritual para Diego Galé, y al mismo tiempo un nuevo impulso para una agrupación que regresó con una producción cargada de sentimiento romántico, energía bailable y reafirmación sonora.',
+        ],
+        bullets: [
+          'Temas destacados del DVD: “Después del Silencio”, “Síguele el paso”, “Mi mundo perfecto”, “Dicen de ella”, “Qué pasa corazón”, “Mujer de fantasía”, “Tan solo tú”, “Recuerdo que te amé”, “Y un día te fuiste”, “Kilele”, “Te quiero para mí”, “Mi Colombia” y “El vacilón”.',
+          'Voces del proyecto: George Valencia, David Carl, Carlos Llamosa y Jaime Galé.',
+          'Músicos presentes: Giovanny Montoya, Ostual Serna, Julián Arias, Andrés Ríos, Diego Galé, Luis Vélez “Petato”, Jimmy Galé, Oscar Abueta, Hernán “Tato” Benítez, Diego Laverde, Javier Aponza, Juan Pablo Castaño, Ismael Jauregui, Morist Jiménez, Juan Pablo Valencia, Leo Morales, Fredy Galé y Yeison Garzón.',
+        ],
+      },
+      {
+        title: 'Grandes éxitos, aniversario y La Gente Pide',
+        paragraphs: [
+          'En el Casino Hollywood de Medellín, Grupo Galé presentó una noche construida sobre sus éxitos y clásicos de la salsa romántica, evento que sirvió como punto de partida para la grabación de un DVD internacional de grandes éxitos con motivo de su aniversario 27. Esa escena reafirmó el lugar del grupo como orgullo salsero colombiano con alcance latinoamericano y europeo.',
+          'Años después llegaría “La Gente Pide”, producción presentada en 2020 como una respuesta directa al gusto del público. El proyecto mantuvo la apuesta por las melodías románticas, pero con una energía renovada, nuevas voces y un sonido alineado con la identidad histórica de la agrupación.',
+          'En esa etapa apareció la incorporación del venezolano Marcial Istúriz, además del trabajo vocal de Carlos Llamosa, Tatán Betancur y Tiko Bermúdez. La producción fue grabada entre estudios de Miami y Colombia, con autoría compartida entre Diego Galé y varios compositores cercanos al proyecto.',
+        ],
+      },
+      {
+        title: 'Acerca de Diego Galé',
+        paragraphs: [
+          'Hablar de Grupo Galé también obliga a detenerse en Diego Galé, uno de los nombres más importantes de la música tropical hecha en Medellín. Productor, compositor, director, percusionista e instrumentista, ha dedicado su vida artística al conocimiento y la integración de ritmos afrocubanos, puertorriqueños, neoyorquinos y tropicales colombianos.',
+          'Su carrera comenzó desde muy joven bajo la influencia del Caribe y del ambiente musical que lo rodeaba. Hijo del bolerista Jaime Galé, inició en la orquesta de su padre y luego hizo parte de agrupaciones como Wanda Kenya y Fruko y sus Tesos, antes de seguir profundizando su formación musical.',
+          'Ya en Miami, estudió música y se proyectó como percusionista de alto nivel. Más adelante regresó a Colombia para trabajar con Jairo Varela y Grupo Niche, participando en algunas de las grabaciones más importantes de esa agrupación y consolidando una reputación que lo llevó a múltiples estudios y escenarios.',
+        ],
+      },
+      {
+        title: 'Diego Galé como productor, músico y director',
+        paragraphs: [
+          'La carrera de Diego Galé como productor es inmensa. Ha trabajado en discos de Maelo Ruiz, Richie Ray y Bobby Cruz, Tito Nieves, Tony Vega, Andy Montañez, David Pabón, Ismael Miranda, Luisito Carrión, Willie González, Frankie Negrón, Tito Gómez, Pedro Arroyo y muchos otros nombres del género.',
+          'Como músico y percusionista, también ha compartido proyectos y conciertos con artistas como Luis Enrique, D.L.G., Marc Anthony, Olga Tañón, Yuri Buenaventura, Los Titanes, Grupo Niche, Alejandro Fernández, N’Klabe, Víctor Manuelle, La India, Sergio George, Cheo Feliciano, Óscar D’León y Celia Cruz.',
+          'Entre los hitos de su carrera aparecen la dirección de Colombia All Star y Grupo Galé en el Madison Square Garden, participaciones en festivales de Europa y Curazao, su trabajo con Sergio George and his All Stars, dos invitaciones como percusionista de la Fania All Star y la producción de materiales didácticos como “Percusivo”.',
+          'A esto se suma su paso por Discos Fuentes como productor exclusivo entre 2001 y 2003, y por Codiscos como vicepresidente de A&R de salsa entre 2004 y 2010, además de su faceta como productor de música católica y cristiana.',
+        ],
+      },
+      {
+        title: 'Diego Galé entre amigos y una historia que sigue dialogando con el presente',
+        paragraphs: [
+          'En 2012, Diego Galé concentró su atención en “Diego Galé… Entre Amigos”, un proyecto grabado en Medellín con una larga lista de invitados y pensado como una celebración de su disciplina, constancia y respeto ganado dentro del mundo salsero. Allí participaron voces y músicos como Tito Nieves, Oswaldo Román, Wichy Camacho, Julio Voltio, Fruko, Mauro Mosquera, Ángeles, Jaime Galé padre, Willie González y Johnny Rivera, entre otros.',
+          'Ese mismo periodo lo encontró activo en producciones como la de Yan Collazo, en la grabación del DVD de Salsa Giants en Curazao y en sesiones para el álbum “3.0” de Marc Anthony como percusionista. Para los Latin Grammy 2013 recibió mención por su trabajo como músico ejecutante en producciones premiadas como Salsa Giants y el proyecto de Marc Anthony.',
+          'Por todo eso, Grupo Galé y Diego Galé siguen apareciendo una y otra vez dentro del archivo salsero de Medellín. No se trata solo de mirar hacia atrás: se trata de entender por qué esta historia sigue siendo una brújula para leer la salsa colombiana en clave de presente y de futuro.',
         ],
       },
     ],
@@ -611,31 +1229,114 @@ const pressArticles = [
     category: 'Perfiles',
     title: 'Tito Rojas: la fuerza de una voz que sigue marcando a la salsa romántica',
     excerpt:
-      'Tito Rojas dejó carácter, repertorio y una presencia vocal que todavía pesa en la memoria de cualquier oyente de salsa romántica.',
+      'Tito Rojas, “El Gallo Salsero”, dejó canciones, discos y una presencia vocal que todavía pesa en la memoria de cualquier oyente de salsa romántica.',
     description:
-      'Tito Rojas sigue siendo una referencia mayor de la salsa romántica por su voz, su repertorio y la conexión emocional que construyó con el público.',
+      'Canciones, biografía y discografía de Tito Rojas, uno de los grandes referentes de la salsa romántica y una voz esencial del repertorio latino.',
     featuredRank: 8,
-    readingTime: '6 min',
+    readingTime: '10 min',
     archiveLabel: 'Perfil recuperado',
     updatedLabel: 'Actualizado en abril de 2026',
+    coverImage: '/media/covers/tito-rojas-el-gallo-de-la-salsa.jpg',
+    coverAlt: 'Tito Rojas con traje gris y micrófono en una imagen promocional',
+    shareImage: '/media/covers/tito-rojas-el-gallo-de-la-salsa.jpg',
     sections: [
       {
         title: 'Un intérprete de peso propio',
         paragraphs: [
-          'Tito Rojas pertenece a ese grupo de cantantes que no necesitan presentación larga entre salseros. Su voz, su carácter escénico y la manera en que asumió el repertorio romántico lo convirtieron en una figura de referencia para distintas generaciones.',
-          'Más que un cantante exitoso, fue un intérprete con presencia. Y esa presencia sigue sintiéndose incluso años después, en búsquedas, homenajes y memorias compartidas.',
+          'Tito Rojas, uno de los exponentes de la salsa más cotizados dentro del género, construyó una carrera de más de cuatro décadas en las que convirtió varios de sus temas en clásicos obligados del repertorio salsero. Por eso, cuando se habla de “El Gallo Salsero”, no se habla solo de popularidad: se habla de una voz con sello, carácter y permanencia.',
+          'Tito Rojas pertenece a ese grupo de cantantes que no necesitan una presentación larga entre salseros. Su presencia escénica, la manera en que asumió el repertorio romántico y la conexión emocional que lograba con el público lo convirtieron en una figura de referencia para distintas generaciones.',
         ],
       },
       {
-        title: 'La huella de sus canciones',
+        title: 'Canciones Tito Rojas',
         paragraphs: [
-          'Buena parte de su permanencia está en la fuerza de un cancionero que todavía conecta con el público. Tito Rojas hizo de la emoción una herramienta poderosa, pero siempre sostenida por una voz con peso, claridad y sello propio.',
+          'Buena parte de su permanencia está en la fuerza de un cancionero que todavía conecta con el público. Estos son algunos de los éxitos más recordados de Tito Rojas dentro de una discografía que sigue sonando con fuerza entre melómanos, bailadores y oyentes de salsa romántica.',
+        ],
+        bullets: [
+          'Siempre seré',
+          'Es mi mujer',
+          'Señora',
+          'Condéname a tu amor',
+          'Señora de madrugada',
+          'Claro',
+          'Amigo',
+          'Sensual',
+          'Lloro',
+          'Quiero hacerte el amor',
+          'A ti volveré',
+          'Déjala',
+          'Ella se hizo deseo',
+          'Esperándote',
+          'He chocado con la vida',
+          'Lo que te queda',
+          'Nadie es eterno',
+          'Por mujeres como tú',
+          'Te prefiero a ti',
+          'Dime si eres feliz',
+        ],
+      },
+      {
+        title: 'Biografía Tito Rojas',
+        paragraphs: [
+          'Tito Rojas hizo sus comienzos en la Internacional del maestro Pedro Conga, una etapa decisiva para su formación profesional dentro del circuito salsero. Más adelante se dio el encuentro con Justo Betancourt, padrino de su hija Kitsha, y de allí surgió el apodo que lo acompañaría durante toda la vida artística: “El Gallo Salsero”.',
+          'Después de grabar producciones junto a Betancourt, Tito Rojas creó su Conjunto Borincano y siguió abriendo camino con una voz cada vez más reconocible. Ese recorrido fue marcando el inicio de una etapa de mayor visibilidad y preparó el terreno para su expansión internacional.',
+        ],
+      },
+      {
+        title: 'Tito Rojas con la Puerto Rican Power',
+        paragraphs: [
+          'En la década de los 80 se unió a Luisito Ayala y su Puerto Rican Power, una alianza que llevó su voz a un nuevo nivel de reconocimiento en varios países. Allí quedaron grabaciones que en Colombia, Puerto Rico y otras plazas salseras siguen siendo muy apetecidas por el público.',
+          'De esa etapa quedaron títulos que ayudaron a consolidar su nombre antes de la explosión definitiva como solista.',
+        ],
+        bullets: [
+          'Amar no se puede apurar',
+          'No puedo prescindir de ti',
+          'Noche de bodas',
+          'Con ella',
+        ],
+      },
+      {
+        title: 'El Gallo Salsero como solista',
+        paragraphs: [
+          'En los años 90, Tito Rojas dio un giro definitivo a su carrera y se lanzó como solista con un estilo ya completamente definido. Ahí obtuvo el más alto reconocimiento nacional e internacional, con canciones que cruzaron generaciones y todavía hoy siguen presentes en emisoras, fiestas, colecciones y búsquedas del género.',
+          'También grabó con el maestro Julio Gunda Merced y dejó huella con una forma de cantar que combinaba fuerza, drama y cercanía popular. A eso se suman composiciones de la colombiana Mimi Ibarra que se convirtieron en éxitos de su repertorio, como “Por qué te quiero tanto”, “Señora” y el dúo “Duele”.',
+        ],
+      },
+      {
+        title: 'Tito Rojas discografía esencial',
+        paragraphs: [
+          'La discografía de Tito Rojas muestra por qué su legado no depende de una sola época. Hay discos de orquesta, etapas de consolidación, colecciones en vivo, recopilaciones y producciones tardías que siguieron nutriendo su repertorio.',
+          'Esta selección resume buena parte de los álbumes más recordados que circularon entre salseros y coleccionistas a lo largo de su carrera.',
+        ],
+        bullets: [
+          '1980. Tito Rojas y El Conjunto Borincano: “El vendedor”, “Huye pa’ lla”, “Dile la verdad”, “Laile”, “Con velo y corona”, “Miedo me da”, “Mejor que siempre”, “A la montaña” y “Me mata la soledad”.',
+          '1990. Sensual: “Doble”, “Me voy o me quedo”, “Tormenta de amor”, “Ella se hizo deseo”, “Sensual”, “Siempre seré” y “Este amor”.',
+          '1991. Tres Mujeres: “Amor de mentira”, “No estoy”, “Contigo aprendí”, “Quiéreme tal como soy”, “Tres mujeres”, “Piel con piel”, “Te arrancaré de mí” y “Noche de boda”.',
+          '1992. Condéname: “Porque este amor”, “Quiero llenar tu vida”, “Amor del bueno”, “Nadie es eterno”, “Condéname a tu amor”, “Señora”, “Ahora contigo” y “A ti volveré”.',
+          '1994. Curacao Salsa: “Señora de madrugada”, “Enamórame”, “Lo que te queda” y “Nadie es eterno”.',
+          '1994. A Mi Estilo: “Señora de madrugada”, “Dime si eres feliz”, “Por qué te quiero tanto”, “Quiero ser tuyo”, “Enamórame”, “He chocado con la vida” y “Lo que te queda”.',
+          '1995. Derecho Propio: “Esperándote”, “Enamorado de ti”, “Lloraré”, “Te quedarás conmigo”, “Cuando estoy contigo”, “Claro” y “Usted”.',
+          '1997. Pal Pueblo: “Lloro”, “Si ella supiera”, “Ayúdame a olvidarla”, “Es mi mujer”, “Yo no te olvido”, “Soñando con tu nombre”, “Me lleva, me lleva” y “Sin ti”.',
+          '1999. Navidad con Tito Rojas: “Cantemos todos cantemos”, “Tiempos navideños”, “Voy a parrandear”, “Cuando den las doce”, “El julepe”, “Yo no puedo”, “Ponle por nombre Jesús” y “Medley navideño”.',
+          '1999. Alegrías y Penas: “Siempre seré”, “Te quiero para mí”, “Te amo tanto”, “América”, “Por mujeres como tú”, “Definitivamente” y “No me dejes solo”.',
+          '2000. Rompiendo Noches: “Qué más tú quieres de mí”, “Como tú”, “Perdóname”, “A todas las mujeres”, “El amor que tú me das”, “No lo olvido”, “Hoy se lo digo a esa mujer”, “Qué te vaya bonito”, “Lo que vivo con ella” y “La gente dice”.',
+          '2001. Quiero Llegar a Casa: “Quiero llegar a casa”, “Así como tú”, “Pensarás en mí”, “Vivir sin tu amor”, “Nada es posible sin ti”, “Te lo pido Señor” y “Cuánto te quiero”.',
+          '2001. Auténticamente En Vivo: recoge títulos como “Quiéreme tal como soy”, “Dime si eres feliz”, “Lloraré”, “Tormenta de amor”, “Ella se hizo deseo”, “Es mi mujer”, “Nadie es eterno” y “Por mujeres como tú”.',
+          '2002. 10 Anniversario: repasa canciones como “Tres mujeres”, “Quiéreme tal como soy”, “Porque este amor”, “Siempre seré”, “Amar no se puede apurar”, “Amigo”, “Claro”, “Te quedarás conmigo” y “Condéname a tu amor”.',
+          '2003. Doble Platino: “Todo ha cambiado”, “Libre soy”, “Cárcel de amor”, “Amor de cristal”, “Volver volver” y una revisión amplia de repertorio anterior.',
+          '2003. Canta El Gallo y El De Siempre: dos producciones que mantuvieron en circulación éxitos como “Por mujeres como tú”, “Siempre seré”, “Lloraré”, “Condéname a tu amor”, “El gallo no olvida” y “Estoy rendido”.',
+          '2004. Tradicional: “Todita tú”, “Quiero”, “Mi gallinita”, “Me quedé con las ganas”, “Bésame”, “Las mujeres” y “Si tú vas”.',
+          '2005. Borrón y Cuenta Nueva: “Si me faltas tú”, “Yo soy el malo”, “Las quiero a las dos”, “Qué locura”, “Cuando un hombre se enamora” y “Esa clase de mujer”.',
+          '2007. Sin Comentarios y Éxitos y Más: una etapa donde convivieron canciones nuevas y recopilaciones con títulos como “Quédate conmigo”, “No me abandones”, “Dígame señora”, “Nadie es eterno”, “Cuídala” y “Después de Dios, las mujeres”.',
+          '2014. El Viajero: “Ven y ven”, “Esa clase de mujer”, “Sigo pa’ lante”, “Caray, caray”, “Por ella”, “Agúzate y come berro”, “Rebeldía” y “Muchachas de Guatire”.',
+          '2015. 1: una compilación que reúne “Lo que te queda”, “Siempre seré”, “Señora de madrugada”, “Condéname a tu amor”, “Nadie es eterno”, “Por mujeres como tú”, “Señora”, “A ti volveré”, “Esperándote” y “Es mi mujer”, entre otras.',
         ],
       },
       {
         title: 'Por qué sigue tan presente',
         paragraphs: [
           'Cuando una figura como Tito Rojas continúa apareciendo entre las búsquedas más fuertes del género, lo que se confirma es que su legado no quedó detenido en la nostalgia. Sigue operando como referencia viva dentro del mapa salsero.',
+          'Su cancionero, su timbre y la memoria colectiva que dejó explican por qué “El Gallo Salsero” sigue siendo uno de los nombres más consultados, cantados y recordados dentro de la salsa romántica.',
         ],
       },
     ],
@@ -646,28 +1347,29 @@ const pressCollections = [
   {
     key: 'guias',
     title: 'Guías esenciales',
-    description: 'Piezas evergreen pensadas para responder búsquedas amplias, sostener tráfico y abrir puertas de entrada al universo salsero.',
-    slugs: ['cantantes-de-salsa', 'salsa-baul'],
+    description: 'Grandes puertas de entrada para entender artistas, repertorios y conversaciones que siguen moviendo búsquedas dentro del universo salsero.',
+    slugs: ['cantantes-de-salsa', 'exitos-de-la-salsa-romantica', 'descargar-salsa', 'salsa-baul'],
   },
   {
     key: 'archivo',
     title: 'Archivo, ciudad y conversación',
-    description: 'Historias que conectan memoria, escena local y conversación cultural dentro del mapa salsero.',
+    description: 'Historias donde se cruzan memoria, Medellín, escena local y conversación cultural alrededor de la salsa.',
     slugs: [
       'adolescentes-orquesta-la-historia-verdadera-de-porfi-baloa',
       'bares-salsa-medellin',
       'yo-me-llamo-frankie-ruiz',
+      'david-zahan-y-frankie-ruiz-reviviendo-al-papa-de-la-salsa',
     ],
   },
   {
     key: 'perfiles',
     title: 'Perfiles y legado',
-    description: 'Nombres que siguen sosteniendo conversación, memoria y escucha activa dentro del género.',
+    description: 'Perfiles de artistas y referentes que siguen sosteniendo memoria, escucha activa y autoridad dentro del género.',
     slugs: [
+      'frankie-ruiz-el-papa-de-la-salsa',
       'mimi-ibarra-cantautora',
       'internacional-grupo-gale-toda-una-historia-musical',
       'tito-rojas',
-      'yo-me-llamo-frankie-ruiz',
     ],
   },
 ];
