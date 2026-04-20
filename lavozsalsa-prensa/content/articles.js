@@ -566,6 +566,7 @@ const pressArticles = [
     description:
       'Descargar salsa gratis en MP3 desde móvil o PC: salsa romántica, salsa baúl, éxitos del género y una biblioteca recuperada del archivo de La Voz Salsa.',
     featuredRank: 3,
+    showInFeed: false,
     readingTime: '12 min',
     archiveLabel: 'Biblioteca recuperada',
     updatedLabel: 'Recuperado y reorganizado en abril de 2026',
@@ -1348,7 +1349,7 @@ const pressCollections = [
     key: 'guias',
     title: 'Guías esenciales',
     description: 'Grandes puertas de entrada para entender artistas, repertorios y conversaciones que siguen moviendo búsquedas dentro del universo salsero.',
-    slugs: ['cantantes-de-salsa', 'exitos-de-la-salsa-romantica', 'descargar-salsa', 'salsa-baul'],
+    slugs: ['cantantes-de-salsa', 'exitos-de-la-salsa-romantica', 'salsa-baul'],
   },
   {
     key: 'archivo',

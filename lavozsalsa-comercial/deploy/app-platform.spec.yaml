@@ -1,0 +1,15 @@
+name: lavozsalsa-web
+region: nyc
+static_sites:
+  - name: lavozsalsa-web
+    github:
+      repo: REEMPLAZAR_USUARIO_O_ORG/LaVozSalsaTV
+      branch: main
+      deploy_on_push: true
+    source_dir: lavozsalsa-web
+    build_command: npm install --cache .npm-cache && npm run build:web
+    output_dir: dist
+    catchall_document: index.html
+    index_document: index.html
+    routes:
+      - path: /

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Voz Salsa</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./renderer.js"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="La Voz Salsa Desktop">
+      <webview
+        id="app-webview"
+        class="app-webview"
+        partition="persist:lavozsalsa-desktop"
+        allowpopups
+      ></webview>
+    </main>
+  </body>
+</html>

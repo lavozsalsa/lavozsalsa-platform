@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instala La Voz Salsa</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./renderer.js"></script>
+  </head>
+  <body>
+    <main class="installer-shell">
+      <section class="hero-panel">
+        <div class="brand-row">
+          <img class="brand-icon" src="../assets/icon.png" alt="La Voz Salsa" />
+          <div class="brand-wordmark">
+            <span class="brand-wordmark-main">LAVOZ</span>
+            <span class="brand-wordmark-accent">SALSA</span>
+          </div>
+        </div>
+
+        <p class="eyebrow">Instalador para macOS</p>
+        <h1>Instala La Voz Salsa</h1>
+        <p class="hero-copy">
+          Esta app detecta automaticamente tu Mac y coloca la version correcta de La Voz Salsa dentro
+          de Aplicaciones, sin que tengas que escoger entre Intel o Apple Silicon.
+        </p>
+
+        <div class="hero-badges">
+          <span class="pill">Una sola descarga</span>
+          <span class="pill">Deteccion automatica</span>
+          <span class="pill">Instalacion directa</span>
+        </div>
+      </section>
+
+      <section class="installer-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Mac detectado</p>
+            <h2 id="architecture-label">Cargando...</h2>
+          </div>
+          <span id="app-version-badge" class="version-pill">App</span>
+        </div>
+
+        <div class="spec-grid">
+          <article class="spec-item">
+            <span class="spec-label">Version que instalara</span>
+            <strong id="app-version">-</strong>
+          </article>
+
+          <article class="spec-item">
+            <span class="spec-label">Destino</span>
+            <strong id="destination-name">Aplicaciones</strong>
+          </article>
+
+          <article class="spec-item">
+            <span class="spec-label">Tamano del instalador interno</span>
+            <strong id="payload-size">-</strong>
+          </article>
+
+          <article class="spec-item">
+            <span class="spec-label">Tipo de instalacion</span>
+            <strong>Directa</strong>
+          </article>
+        </div>
+
+        <div id="status-box" class="status-box" data-stage="idle">
+          <strong id="status-title">Listo para instalar</strong>
+          <p id="status-copy">
+            Haz clic en el boton y esta app instalara directamente La Voz Salsa en tu carpeta de
+            Aplicaciones, sin abrir el instalador clasico de paquetes.
+          </p>
+        </div>
+
+        <div class="progress-area" hidden id="progress-area">
+          <div class="progress-header">
+            <span id="progress-label">Preparando instalador...</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-track">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button id="btn-install" class="primary-button" type="button">Instalar en Aplicaciones</button>
+          <button id="btn-finder" class="secondary-button" type="button" hidden>Mostrar app</button>
+        </div>
+
+        <p id="footnote" class="footnote">
+          macOS puede pedir permiso para copiar la app a la carpeta Aplicaciones. Ese es el permiso
+          normal del sistema.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

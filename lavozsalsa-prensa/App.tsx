@@ -76,18 +76,13 @@ const curatedDescargarSalsaTracks = descargarSalsaTracks.filter(
 const MAIN_SITE_URL = 'https://lavozsalsa.com';
 const APP_URL = 'https://app.lavozsalsa.com';
 const LIVE_URL = 'https://app.lavozsalsa.com/tv';
-const ARTISTS_URL = 'https://artistas.lavozsalsa.com';
-const PREMIUM_URL = 'https://premium.lavozsalsa.com';
 const APP_DOWNLOAD_URL = 'https://onelink.to/w5n2k9';
 
 const HOME_ALIASES = new Set(['/', '/pulso-salsero/']);
-const HEADER_LOGO_SRC = '/brand/logo-pulso-salsero-black.png';
-const FOOTER_LOGO_SRC = '/brand/logo-pulso-salsero-footer-isotipo.png';
 
 const NAV_LINKS = [
   { label: 'Historias clave', href: '#destacados' },
   { label: 'Perfiles', href: '#perfiles' },
-  { label: 'Descargar Salsa', href: '/descargar-salsa/' },
 ];
 
 const socialLinks = [
@@ -342,16 +337,16 @@ function CollectionBlock({
 
 function ShelvesOverview() {
   return (
-    <section id="rutas" className="lvs-shelves">
-      <div className="lvs-section-head">
-        <div>
-          <span className="lvs-eyebrow">Rutas editoriales</span>
-          <h2>Cómo se está ordenando Pulso Salsero</h2>
+      <section id="rutas" className="lvs-shelves">
+        <div className="lvs-section-head">
+          <div>
+            <span className="lvs-eyebrow">Rutas editoriales</span>
+            <h2>Una sala para leer la salsa</h2>
+          </div>
+          <p>
+          Aquí cada entrada tiene intención: unas rescatan memoria, otras abren contexto y otras conectan con los artistas, la ciudad y las historias que sostienen el pulso de La Voz Salsa.
+          </p>
         </div>
-        <p>
-          Aquí no estamos apilando enlaces. Estamos armando una sala con entradas claras para que el lector encuentre guías, memoria, ciudad y perfiles con una lógica editorial que sí represente a La Voz Salsa.
-        </p>
-      </div>
 
       <div className="lvs-shelves-grid">
         {pressCollections.map((collection) => {
@@ -908,16 +903,33 @@ export default function App() {
 
         .lvs-logo {
           display: inline-flex;
-          align-items: center;
-          gap: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 4px;
           flex-shrink: 0;
+          min-width: 0;
         }
 
-        .lvs-logo img {
-          height: 50px;
-          max-width: min(36vw, 430px);
-          width: auto;
-          display: block;
+        .lvs-logo-text {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          min-width: 0;
+        }
+
+        .lvs-logo-text strong {
+          color: var(--ink);
+          font-family: 'Gotham Display', 'Gotham', sans-serif;
+          font-size: clamp(1.45rem, 2.25vw, 2.35rem);
+          line-height: 0.92;
+          letter-spacing: -0.08em;
+        }
+
+        .lvs-logo-text span {
+          color: var(--muted);
+          font-size: clamp(0.72rem, 0.96vw, 0.92rem);
+          line-height: 1.08;
         }
 
         .lvs-mobile-toggle,
@@ -944,23 +956,6 @@ export default function App() {
           width: 22px;
           height: 22px;
           display: block;
-        }
-
-        .lvs-logo-text {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-
-        .lvs-logo-text strong {
-          font-size: 1rem;
-          font-weight: 700;
-          letter-spacing: 0.02em;
-        }
-
-        .lvs-logo-text span {
-          color: var(--muted);
-          font-size: 0.84rem;
         }
 
         .lvs-nav {
@@ -2252,32 +2247,10 @@ export default function App() {
           gap: 30px;
         }
 
-        .lvs-footer-top {
-          display: flex;
-          justify-content: flex-start;
-          gap: 18px;
-          align-items: flex-start;
-        }
-
-        .lvs-footer-brand {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0;
-          border-radius: 0;
-          background: transparent;
-        }
-
-        .lvs-footer-top img {
-          height: 36px;
-          width: auto;
-          display: block;
-        }
-
         .lvs-footer-grid {
           display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 24px;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 26px;
         }
 
         .lvs-footer-column {
@@ -2457,14 +2430,9 @@ export default function App() {
             width: auto;
           }
 
-          .lvs-footer-top,
           .lvs-footer-bottom {
             flex-direction: column;
             align-items: flex-start;
-          }
-
-          .lvs-footer-top img {
-            height: 33px;
           }
 
           .lvs-footer-socials-wrap {
@@ -2500,12 +2468,16 @@ export default function App() {
             width: auto;
             justify-content: flex-start;
             max-width: calc(100% - 64px);
+            gap: 2px;
           }
 
-          .lvs-logo img {
-            height: 38px;
-            max-width: min(62vw, 260px);
-            width: auto;
+          .lvs-logo-text strong {
+            font-size: 1.18rem;
+            letter-spacing: -0.06em;
+          }
+
+          .lvs-logo-text span {
+            display: none;
           }
 
           .lvs-nav,
@@ -2516,6 +2488,10 @@ export default function App() {
           .lvs-mobile-toggle {
             display: inline-flex;
             flex-shrink: 0;
+          }
+
+          .lvs-footer-grid {
+            grid-template-columns: 1fr;
           }
 
           .lvs-mobile-panel {
@@ -2551,10 +2527,6 @@ export default function App() {
             margin-top: 6px;
             background: var(--red);
             color: #fff;
-          }
-
-          .lvs-footer-top img {
-            height: 27px;
           }
 
           .lvs-download-track-title {
@@ -2593,7 +2565,10 @@ export default function App() {
         <header className="lvs-header">
           <div className="lvs-header-inner">
             <a className="lvs-logo" href="/">
-              <img src={HEADER_LOGO_SRC} alt="Pulso Salsero" />
+              <span className="lvs-logo-text">
+                <strong>Pulso Salsero</strong>
+                <span>Sala de prensa de La Voz Salsa</span>
+              </span>
             </a>
 
             <nav className="lvs-nav">
@@ -2651,30 +2626,17 @@ export default function App() {
 
         <footer className="lvs-footer">
           <div className="lvs-footer-inner">
-            <div className="lvs-footer-top">
-              <div className="lvs-footer-brand">
-                <img src={FOOTER_LOGO_SRC} alt="Pulso Salsero" />
-              </div>
-            </div>
-
             <div className="lvs-footer-grid">
               <div className="lvs-footer-column">
                 <span>Pulso Salsero</span>
                 <a href="/">Portada</a>
                 <a href="/#destacados">Historias clave</a>
                 <a href="/#perfiles">Perfiles</a>
-                <a href="/descargar-salsa/">Descargar Salsa</a>
               </div>
               <div className="lvs-footer-column">
                 <span>La Voz Salsa</span>
-                <a href={APP_URL}>Escuchar La Voz Salsa</a>
+                <a href={APP_URL}>Escuchar emisora</a>
                 <a href={LIVE_URL}>Live Streaming</a>
-              </div>
-              <div className="lvs-footer-column">
-                <span>Productos</span>
-                <a href={APP_URL}>Plataforma</a>
-                <a href={ARTISTS_URL}>Artistas</a>
-                <a href={PREMIUM_URL}>Premium</a>
               </div>
               <div className="lvs-footer-column">
                 <span>Acceso</span>

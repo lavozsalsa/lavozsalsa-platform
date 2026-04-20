@@ -23,8 +23,6 @@ const MEDIA_AUDIO_DIST_DIR = path.join(MEDIA_DIST_DIR, 'audio');
 const FONTS_DIST_DIR = path.join(DIST_DIR, 'fonts');
 
 const FAVICON_SOURCE = path.join(ASSETS_DIR, 'logo-isotipo-lavozsalsa.png');
-const HEADER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-pulso-salsero-black.png');
-const FOOTER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-pulso-salsero-footer-isotipo.png');
 const SHARE_IMAGE_SOURCE = path.join(ASSETS_DIR, 'lavozsalsa-home-hero.jpeg');
 
 const ROOT_META = {
@@ -74,7 +72,7 @@ function buildStructuredData(meta) {
       '@type': 'Organization',
       name: 'La Voz Salsa',
       url: SITE_URL,
-      logo: `${SITE_URL}/brand/logo-pulso-salsero-black.png`,
+      logo: `${SITE_URL}/brand/logo-isotipo-lavozsalsa.png`,
       description: ROOT_META.description,
     },
     {
@@ -242,8 +240,6 @@ function writeStaticFiles() {
   fs.mkdirSync(FONTS_DIST_DIR, { recursive: true });
 
   const assetCopies = [
-    [HEADER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-pulso-salsero-black.png')],
-    [FOOTER_LOGO_SOURCE, path.join(BRAND_DIST_DIR, 'logo-pulso-salsero-footer-isotipo.png')],
     [FAVICON_SOURCE, path.join(BRAND_DIST_DIR, 'logo-isotipo-lavozsalsa.png')],
     [FAVICON_SOURCE, path.join(DIST_DIR, 'favicon.png')],
     [FAVICON_SOURCE, path.join(DIST_DIR, 'apple-touch-icon.png')],

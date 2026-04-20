@@ -1,0 +1,11 @@
+node_modules/
+dist/
+out/
+release/
+release-*/
+installer-release-*/
+electron-dist/
+installer-app/payloads/
+.env.release.local
+secrets/
+*.log

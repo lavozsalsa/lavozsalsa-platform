@@ -1,0 +1,39 @@
+{
+  "name": "lavozsalsa-desktop",
+  "version": "1.1.2",
+  "private": true,
+  "description": "Aplicacion de escritorio de La Voz Salsa para radio y TV en vivo.",
+  "author": "La Voz Salsa",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "installer:prepare": "node ./scripts/run-release-command.js node ./scripts/prepare-installer-payloads.js",
+    "installer:build:mac:dir": "node ./scripts/run-release-command.js electron-builder --mac dir --universal --config electron-builder.installer.config.js",
+    "installer:build:mac:dmg": "node ./scripts/run-release-command.js electron-builder --mac dmg --universal --config electron-builder.installer.config.js",
+    "installer:package:mac": "node ./scripts/run-release-command.js node ./scripts/package-mac-installer-app.js",
+    "installer:release:mac": "npm run installer:prepare && npm run installer:build:mac:dmg",
+    "installer:release:mac:zip": "npm run installer:prepare && npm run installer:build:mac:dir && npm run installer:package:mac",
+    "prepare:mac-base": "node ./scripts/prepare-local-electron-base.js",
+    "release:check": "node ./scripts/run-release-command.js node ./scripts/check-release-env.js",
+    "release:verify": "node ./scripts/verify-release-artifacts.js",
+    "release:manifest": "node ./scripts/generate-release-manifest.js",
+    "release:finalize": "npm run release:verify && npm run release:manifest",
+    "build:mac:dir": "node ./scripts/run-release-command.js electron-builder --mac dir --x64 --arm64 --config electron-builder.config.js",
+    "build:mac:dir:local": "npm run prepare:mac-base && LVS_DESKTOP_LOCAL_ELECTRON=1 node ./scripts/run-release-command.js electron-builder --mac dir --x64 --arm64 --config electron-builder.config.js",
+    "package:mac": "node ./scripts/run-release-command.js node ./scripts/package-mac-installers.js",
+    "release:mac": "npm run build:mac:dir && npm run package:mac",
+    "release:mac:local": "npm run build:mac:dir:local && npm run package:mac",
+    "release:win": "node ./scripts/run-release-command.js electron-builder --win nsis --x64 --config electron-builder.config.js",
+    "release:all:local": "npm run release:mac:local && npm run release:win",
+    "pack": "node ./scripts/run-release-command.js electron-builder --dir --config electron-builder.config.js",
+    "dist": "node ./scripts/run-release-command.js electron-builder --config electron-builder.config.js",
+    "dist:mac": "node ./scripts/run-release-command.js electron-builder --mac dmg --config electron-builder.config.js",
+    "dist:mac:local": "npm run prepare:mac-base && LVS_DESKTOP_LOCAL_ELECTRON=1 node ./scripts/run-release-command.js electron-builder --mac dmg --config electron-builder.config.js",
+    "dist:win": "npm run release:win"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}

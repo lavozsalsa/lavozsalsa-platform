@@ -124,6 +124,7 @@ class MainActivity : ComponentActivity() {
         private const val RADIO_METADATA_RETRY_MS = 30_000L
         private const val RADIO_RETRY_DELAY_MS = 3_000L
         private const val LIVE_START_DELAY_MS = 850L
+        private const val LIVE_RETRY_DELAY_MS = 3_000L
 
         private const val EXTRA_DEBUG_TEST_URL = "debug_test_url"
         private const val EXTRA_DEBUG_TEST_LABEL = "debug_test_label"
@@ -186,6 +187,7 @@ class MainActivity : ComponentActivity() {
     private var playerView: PlayerView? = null
     private var metadataJob: Job? = null
     private var radioRetryJob: Job? = null
+    private var liveRetryJob: Job? = null
     private var liveStartJob: Job? = null
     private var splashJob: Job? = null
     private var debugTestStream: DebugTestStream? = null
@@ -231,8 +233,11 @@ class MainActivity : ComponentActivity() {
                     }
                 }
 
-                Player.STATE_IDLE,
-                Player.STATE_ENDED -> Unit
+                Player.STATE_ENDED -> {
+                    if (playbackMode == PlaybackMode.LIVE) {
+                        scheduleLiveRetry("La transmisión terminó. Reintentando…")
+                    }
+                }
             }
 
             Log.d(TAG, "Playback state: $playbackState / $playbackMode")
@@ -294,9 +299,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 PlaybackMode.LIVE -> {
-                    liveUiState = LiveUiState.UNAVAILABLE
-                    liveStateText = "No hay transmisión en vivo en este momento."
-                    liveHintText = "Presiona Back para volver al menú."
+                    scheduleLiveRetry("No se pudo mantener la transmisión. Reintentando…")
                 }
 
                 PlaybackMode.DEBUG -> {
@@ -441,6 +444,8 @@ class MainActivity : ComponentActivity() {
         metadataJob = null
         radioRetryJob?.cancel()
         radioRetryJob = null
+        liveRetryJob?.cancel()
+        liveRetryJob = null
         liveStartJob?.cancel()
         liveStartJob = null
 
@@ -506,7 +511,7 @@ class MainActivity : ComponentActivity() {
 
         liveStartJob = lifecycleScope.launch {
             delay(LIVE_START_DELAY_MS)
-            playLiveItem(LIVE_URL)
+            playLiveItem(LIVE_URL, cacheBust = true)
         }
     }
 
@@ -526,15 +531,46 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun playLiveItem(url: String) {
+    private fun playLiveItem(url: String, cacheBust: Boolean = false) {
+        val resolvedUrl = if (cacheBust) {
+            cacheBustUrl(url)
+        } else {
+            url
+        }
+
         val liveItem = MediaItem.Builder()
-            .setUri(url)
+            .setUri(resolvedUrl)
             .setMimeType(MimeTypes.APPLICATION_M3U8)
             .build()
 
         player?.setMediaItem(liveItem, true)
         player?.prepare()
         player?.playWhenReady = true
+    }
+
+    private fun scheduleLiveRetry(message: String) {
+        if (currentSection != AppSection.LIVE || playbackMode != PlaybackMode.LIVE) {
+            return
+        }
+
+        liveRetryJob?.cancel()
+        liveUiState = LiveUiState.LOADING
+        liveStateText = message
+        liveHintText = "Presiona Back para volver al menú."
+
+        liveRetryJob = lifecycleScope.launch {
+            delay(LIVE_RETRY_DELAY_MS)
+            if (currentSection == AppSection.LIVE && playbackMode == PlaybackMode.LIVE) {
+                player?.stop()
+                player?.clearMediaItems()
+                playLiveItem(LIVE_URL, cacheBust = true)
+            }
+        }
+    }
+
+    private fun cacheBustUrl(url: String): String {
+        val separator = if (url.contains('?')) '&' else '?'
+        return "$url${separator}ts=${System.currentTimeMillis()}"
     }
 
     private fun scheduleRadioRetry() {

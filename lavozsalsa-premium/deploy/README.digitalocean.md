@@ -1,10 +1,10 @@
-# La Voz Salsa Premium en DigitalOcean
+# La Voz Salsa Comercial en DigitalOcean
 
-Guia corta para publicar o actualizar `premium.lavozsalsa.com`.
+Guía corta para publicar o actualizar `comercial.lavozsalsa.com`.
 
 ## Dominio objetivo
 
-- `premium.lavozsalsa.com`
+- `comercial.lavozsalsa.com`
 
 ## Stack
 
@@ -27,7 +27,7 @@ Archivo de referencia:
 
 Archivo principal:
 
-- [nginx.premium.lavozsalsa.com.conf](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/deploy/nginx.premium.lavozsalsa.com.conf)
+- [nginx.comercial.lavozsalsa.com.conf](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-premium/deploy/nginx.comercial.lavozsalsa.com.conf)
 
 Archivo de preview:
 

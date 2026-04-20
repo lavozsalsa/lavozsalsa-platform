@@ -13,6 +13,8 @@ const FONTS_DIR = path.join(ASSETS_DIR, 'fonts');
 const FAVICON_SOURCE = path.join(ASSETS_DIR, 'logo-isotipo-lavozsalsa.png');
 const HEADER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-lavozsalsa-header-red.png');
 const FOOTER_LOGO_SOURCE = path.join(ASSETS_DIR, 'logo-lavozsalsa-dotcom-white.png');
+const APP_STORE_BADGE_SOURCE = path.join(ASSETS_DIR, 'app-store-badge.png');
+const PLAY_STORE_BADGE_SOURCE = path.join(ASSETS_DIR, 'google-play-badge.png');
 const HERO_BG_SOURCE = path.join(ASSETS_DIR, 'lavozsalsa-home-hero.jpeg');
 const COMMUNITY_BLOCK_SOURCE = path.join(ASSETS_DIR, 'community-block.jpeg');
 const BRAND_DIST_DIR = path.join(DIST_DIR, 'brand');
@@ -71,20 +73,8 @@ function buildStructuredData() {
         {
           '@type': 'SiteNavigationElement',
           position: 2,
-          name: 'TV',
-          url: 'https://app.lavozsalsa.com/tv',
-        },
-        {
-          '@type': 'SiteNavigationElement',
-          position: 3,
           name: 'Pulso Salsero',
           url: PRESS_URL,
-        },
-        {
-          '@type': 'SiteNavigationElement',
-          position: 4,
-          name: 'Artistas',
-          url: 'https://artistas.lavozsalsa.com/',
         },
       ],
     },
@@ -156,7 +146,7 @@ const SOCIAL_PREVIEW_SVG = `
     Música, radio en vivo, app, playlists y comunidad salsera
   </text>
   <text x="120" y="532" fill="#CDBFAF" font-family="Arial, Helvetica, sans-serif" font-size="28">
-    Escucha, descubre canciones, sigue artistas y descarga la app gratis.
+    Escucha, descubre canciones y descarga la app gratis.
   </text>
 </svg>
 `.trimStart();
@@ -165,7 +155,7 @@ const WEB_MANIFEST = JSON.stringify(
   {
     name: 'La Voz Salsa',
     short_name: 'La Voz Salsa',
-    description: 'Música, radio en vivo, app, playlists, artistas y comunidad salsera.',
+    description: 'Música, radio en vivo, app, playlists y comunidad salsera.',
     background_color: '#0a0a0a',
     theme_color: '#ff101f',
     display: 'standalone',
@@ -250,6 +240,8 @@ function writeStaticFiles() {
   const copiedPngTargets = [
     path.join(BRAND_DIST_DIR, 'logo-lavozsalsa-header-red.png'),
     path.join(BRAND_DIST_DIR, 'logo-lavozsalsa-dotcom-white.png'),
+    path.join(BRAND_DIST_DIR, 'app-store-badge.png'),
+    path.join(BRAND_DIST_DIR, 'google-play-badge.png'),
     path.join(BRAND_DIST_DIR, 'logo-isotipo-lavozsalsa.png'),
     path.join(DIST_DIR, 'favicon.png'),
     path.join(DIST_DIR, 'apple-touch-icon.png'),
@@ -270,9 +262,11 @@ function writeStaticFiles() {
   fs.mkdirSync(FONTS_DIST_DIR, { recursive: true });
   fs.copyFileSync(HEADER_LOGO_SOURCE, copiedPngTargets[0]);
   fs.copyFileSync(FOOTER_LOGO_SOURCE, copiedPngTargets[1]);
-  fs.copyFileSync(FAVICON_SOURCE, copiedPngTargets[2]);
-  fs.copyFileSync(FAVICON_SOURCE, copiedPngTargets[3]);
+  fs.copyFileSync(APP_STORE_BADGE_SOURCE, copiedPngTargets[2]);
+  fs.copyFileSync(PLAY_STORE_BADGE_SOURCE, copiedPngTargets[3]);
   fs.copyFileSync(FAVICON_SOURCE, copiedPngTargets[4]);
+  fs.copyFileSync(FAVICON_SOURCE, copiedPngTargets[5]);
+  fs.copyFileSync(FAVICON_SOURCE, copiedPngTargets[6]);
   fs.copyFileSync(HERO_BG_SOURCE, copiedMediaTargets[0]);
   fs.copyFileSync(COMMUNITY_BLOCK_SOURCE, copiedMediaTargets[1]);
   fs.copyFileSync(path.join(FONTS_DIR, 'GothamBook.ttf'), copiedFontTargets[0]);
@@ -307,7 +301,7 @@ function writeRoutePages() {
       .replaceAll('<meta property="og:title" content="La Voz Salsa" />', `<meta property="og:title" content="${meta.ogTitle}" />`)
       .replaceAll('<meta name="twitter:title" content="La Voz Salsa" />', `<meta name="twitter:title" content="${meta.ogTitle}" />`)
       .replaceAll(
-        'La Voz Salsa: música, radio en vivo, app, playlists, artistas y comunidad salsera.',
+        'La Voz Salsa: música, radio en vivo, app, playlists y comunidad salsera.',
         meta.description
       )
       .replaceAll(

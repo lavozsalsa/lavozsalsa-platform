@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La Voz Salsa | Social Preview</title>
+    <style>
+      @font-face {
+        font-family: 'LVS Gotham Medium';
+        src: url('./assets/fonts/GothamMedium.ttf') format('truetype');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'LVS Gotham Black';
+        src: url('./assets/fonts/GothamBlack.otf') format('opentype');
+        font-display: swap;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+        overflow: hidden;
+        background: #0a090a;
+      }
+
+      body {
+        position: relative;
+        color: #ffffff;
+        font-family: 'LVS Gotham Medium', Arial, sans-serif;
+        background:
+          linear-gradient(90deg, rgba(255, 28, 36, 0.28) 0%, rgba(255, 28, 36, 0.12) 46%, rgba(76, 4, 8, 0.3) 100%),
+          url('./assets/hero-portada-lavozsalsa.jpg') center center / cover no-repeat;
+      }
+
+      body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(255, 31, 38, 0.08) 0%, rgba(255, 31, 38, 0.02) 44%, rgba(72, 0, 5, 0.54) 100%);
+      }
+
+      .frame {
+        position: relative;
+        z-index: 1;
+        width: 1200px;
+        height: 630px;
+        padding: 64px 42px 52px 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .copy {
+        width: 610px;
+        margin-top: 4px;
+      }
+
+      .wordmark {
+        display: block;
+        width: 232px;
+        height: auto;
+        margin: 0 0 28px;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: 'LVS Gotham Black', Arial, sans-serif;
+        font-size: 96px;
+        line-height: 0.84;
+        letter-spacing: -0.06em;
+      }
+
+      h1 span {
+        display: block;
+      }
+
+      .subtitle {
+        margin: 30px 0 0;
+        font-size: 22px;
+        line-height: 1.42;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .footer span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer span + span::before {
+        content: '•';
+        position: absolute;
+        left: -12px;
+        color: rgba(255, 255, 255, 0.42);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="copy">
+        <img class="wordmark" src="./assets/logo-wordmark-lavozsalsa-white.png" alt="La Voz Salsa" />
+        <h1>
+          <span>Media Kit</span>
+          <span>2026</span>
+        </h1>
+        <p class="subtitle">Propuesta comercial multiplataforma para marcas.</p>
+      </div>
+
+      <div class="footer">
+        <span>Radio online</span>
+        <span>Live streaming</span>
+        <span>App</span>
+        <span>Web</span>
+        <span>Redes</span>
+        <span>Eventos</span>
+      </div>
+    </div>
+  </body>
+</html>

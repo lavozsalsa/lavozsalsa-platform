@@ -1,15 +1,15 @@
-# La Voz Salsa Premium
+# La Voz Salsa Comercial
 
-Landing comercial de la membresia para oyentes.
+Landing comercial de La Voz Salsa para presentar la propuesta de marca.
 
-## URL activa
+## URL objetivo
 
-- [premium.lavozsalsa.com](https://premium.lavozsalsa.com)
+- [comercial.lavozsalsa.com](https://comercial.lavozsalsa.com)
 
 ## Estado actual
 
-- publicado en produccion
-- enfocado en conversion
+- listo para publicarse como sitio comercial
+- enfocado en propuesta para marcas
 - usa la misma etiqueta de analytics del sitio principal
 - temporalmente en `noindex`
 
@@ -45,6 +45,6 @@ La salida queda en:
 
 ## Objetivo
 
-- explicar el valor de Premium con claridad
-- vender la propuesta sin depender de la app
-- convertir trafico en oyentes registrados o potenciales suscriptores
+- presentar el ecosistema comercial de La Voz Salsa
+- vender la propuesta a marcas con una landing clara y visual
+- compartir el enlace por WhatsApp con vista previa de portada

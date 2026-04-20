@@ -3,12 +3,9 @@ import { useEffect, useRef, useState } from 'react';
 
 const RADIO_STREAM_URL = 'https://emisora.lavozsalsa.com/listen/lavozsalsa/stream';
 const HOME_URL = '/';
-const ARTISTS_PAGE_PATH = '/artistas/';
 const APP_URL = 'https://app.lavozsalsa.com/';
-const PLATFORM_URL = 'https://app.lavozsalsa.com/';
 const ARTISTS_APP_URL = 'https://app.lavozsalsa.com/artistas';
 const PLAYLISTS_URL = 'https://app.lavozsalsa.com/playlists';
-const ARTISTS_URL = 'https://artistas.lavozsalsa.com/';
 const LIVE_STREAMING_URL = 'https://app.lavozsalsa.com/tv';
 const PRESS_URL = 'https://prensa.lavozsalsa.com/';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.lavozsalsa.app';
@@ -20,20 +17,20 @@ const COOKIES_URL = 'https://app.lavozsalsa.com/politica-de-cookies';
 
 const HEADER_LOGO_SRC = '/brand/logo-lavozsalsa-header-red.png';
 const FOOTER_LOGO_SRC = '/brand/logo-lavozsalsa-dotcom-white.png';
+const APP_STORE_BADGE_SRC = '/brand/app-store-badge.png';
+const PLAY_STORE_BADGE_SRC = '/brand/google-play-badge.png';
 const HERO_BG_SRC = '/media/lavozsalsa-home-hero.jpeg';
 const COMMUNITY_BLOCK_SRC = '/media/community-block.jpeg';
 
 const navLinks = [
-  { label: 'TV', href: LIVE_STREAMING_URL },
   { label: 'Pulso Salsero', href: PRESS_URL },
-  { label: 'Artistas', href: ARTISTS_URL },
 ];
 
 const valueItems = [
   {
     title: 'Radio en vivo',
     icon: 'radio',
-    copy: 'Escucha La Voz Salsa y disfruta una programación diseñada por personas que aman y conocen la salsa. Aquí suena lo comercial, pero también la salsa no comercial y lo nuevo de la industria para conocedores del género.',
+    copy: 'Escucha La Voz Salsa y disfruta una programación hecha por personas que aman y conocen la salsa. Aquí suena lo comercial, pero también la salsa no comercial y lo nuevo de la industria para conocedores del género.',
   },
   {
     title: 'Live Streaming',
@@ -75,23 +72,21 @@ const footerColumns = [
   {
     title: 'Explorar',
     links: [
-      { label: 'TV', href: LIVE_STREAMING_URL },
       { label: 'Pulso Salsero', href: PRESS_URL },
-      { label: 'Artistas', href: ARTISTS_URL },
     ],
   },
   {
-    title: 'App',
+    title: 'La Voz Salsa',
     links: [
-      { label: 'Abrir app', href: ONE_LINK_URL },
+      { label: 'Escuchar emisora', href: APP_URL },
+      { label: 'Live Streaming', href: LIVE_STREAMING_URL },
+    ],
+  },
+  {
+    title: 'Acceso',
+    links: [
+      { label: 'Abrir app', href: APP_URL },
       { label: 'Descargar app', href: ONE_LINK_URL },
-    ],
-  },
-  {
-    title: 'Escuchar',
-    links: [
-      { label: 'Radio en vivo', href: RADIO_STREAM_URL },
-      { label: 'Plataforma web', href: PLATFORM_URL },
     ],
   },
 ];
@@ -104,8 +99,8 @@ const socialLinks = [
 ];
 
 const storeBadges = [
-  { label: 'App Store', href: APP_STORE_URL, icon: 'apple' },
-  { label: 'Google Play', href: PLAY_STORE_URL, icon: 'play' },
+  { label: 'App Store', href: APP_STORE_URL, src: APP_STORE_BADGE_SRC, alt: 'Descargar en App Store' },
+  { label: 'Google Play', href: PLAY_STORE_URL, src: PLAY_STORE_BADGE_SRC, alt: 'Descargar en Google Play' },
 ];
 
 const artistFeatureItems = [
@@ -218,39 +213,18 @@ function SocialIcon({ icon }: { icon: string }) {
   }
 }
 
-function StoreBadgeIcon({ icon }: { icon: string }) {
-  switch (icon) {
-    case 'apple':
-      return (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M15.2 12.6c0-1.8 1-2.8 1.8-3.3-.9-1.3-2.3-1.5-2.8-1.5-1.2-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.4-.7-1.3 0-2.4.7-3.1 1.8-1.3 2.1-.3 5.2.9 6.9.6.9 1.4 2 2.4 2 .9 0 1.3-.6 2.4-.6 1.1 0 1.5.6 2.5.6 1 0 1.7-.9 2.3-1.8.7-1 1-2 1-2-.1 0-2.1-.8-2.1-4.1Zm-1.8-6.1c.5-.6.9-1.4.8-2.2-.8 0-1.7.5-2.2 1.1-.5.5-.9 1.4-.8 2.1.9.1 1.7-.4 2.2-1Z"
-            fill="currentColor"
-          />
-        </svg>
-      );
-    case 'play':
-      return (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4.7 3.8 14.9 14 4.8 20.2c-.4-.3-.6-.8-.6-1.3V5.1c0-.5.2-.9.5-1.3Z" fill="currentColor" />
-          <path d="m15.8 14.9 2.7-1.6c1-.6 1-1.9 0-2.5l-2.8-1.6-2.6 2.6 2.7 3.1Z" fill="currentColor" />
-          <path d="m5.4 20.6 10.4-6.3 2.8 1.6c.3.2.5.5.6.8L7.8 22c-.9.4-1.8-.2-2.4-1.4Z" fill="currentColor" />
-          <path d="m19.2 7.1-.6.8-2.8 1.7-2.7-3 4.7-2.8c.6.2 1.1.7 1.4 1.3Z" fill="currentColor" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
-
 function ValueIcon({ icon }: { icon: string }) {
   switch (icon) {
     case 'radio':
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 10.5A6 6 0 0 1 12 4.5a6 6 0 0 1 6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <path d="M4 13.5A8 8 0 0 1 12 5.5a8 8 0 0 1 8 8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity=".7" />
-          <circle cx="12" cy="16.5" r="2.5" fill="currentColor" />
+          <rect x="4" y="8.5" width="16" height="10" rx="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+          <path d="M8 8.5 10.6 5.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path d="M15.2 8.5 18 5.8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="8.7" cy="13.5" r="1.1" fill="currentColor" />
+          <circle cx="12.1" cy="13.5" r="1.1" fill="currentColor" opacity=".85" />
+          <path d="M15.2 12.2c1 .4 1.6 1.3 1.6 2.4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity=".8" />
+          <path d="M7.3 17.6h9.4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity=".85" />
         </svg>
       );
     case 'stream':
@@ -288,7 +262,7 @@ export default function App() {
   const [playing, setPlaying] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const currentPath = normalizePathname(typeof window === 'undefined' ? '/' : window.location.pathname);
-  const isArtistsPage = currentPath === ARTISTS_PAGE_PATH;
+  const isArtistsPage = false;
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -307,6 +281,34 @@ export default function App() {
       setPlaying(false);
     });
   }, [playing]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const url = new URL(window.location.href);
+    const removableKeys = [...url.searchParams.keys()].filter((key) => {
+      const normalizedKey = key.toLowerCase();
+      return (
+        normalizedKey === 'srsltid' ||
+        normalizedKey === 'gclid' ||
+        normalizedKey === 'fbclid' ||
+        normalizedKey === 'msclkid' ||
+        normalizedKey.startsWith('utm_')
+      );
+    });
+
+    if (!removableKeys.length) {
+      return;
+    }
+
+    removableKeys.forEach((key) => url.searchParams.delete(key));
+
+    const cleanSearch = url.searchParams.toString();
+    const cleanUrl = `${url.pathname}${cleanSearch ? `?${cleanSearch}` : ''}${url.hash}`;
+    window.history.replaceState({}, '', cleanUrl);
+  }, []);
 
   return (
     <>
@@ -429,7 +431,7 @@ export default function App() {
         }
 
         .lvs-brand-wordmark {
-          width: 202px;
+          width: 184px;
           height: auto;
         }
 
@@ -442,10 +444,18 @@ export default function App() {
         }
 
         .lvs-nav-links a {
-          color: rgba(255, 255, 255, 0.88);
+          min-height: 44px;
+          padding: 0 16px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          color: rgba(255, 255, 255, 0.96);
           font-family: var(--font-display);
           font-size: 0.95rem;
           font-weight: 700;
+          line-height: 1;
+          display: inline-flex;
+          align-items: center;
           transition: color 180ms ease;
         }
 
@@ -622,20 +632,23 @@ export default function App() {
         }
 
         .lvs-value-item-icon {
-          width: 54px;
-          height: 54px;
-          margin-bottom: 18px;
-          border-radius: 16px;
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+          border-radius: 24px;
           display: grid;
           place-items: center;
           background: linear-gradient(180deg, var(--brand) 0%, var(--brand-deep) 100%);
           color: #ffffff;
-          box-shadow: 0 12px 24px rgba(215, 7, 22, 0.18);
+          box-shadow:
+            0 18px 34px rgba(215, 7, 22, 0.24),
+            0 0 0 8px rgba(255, 16, 31, 0.08);
+          transition: transform 180ms ease, box-shadow 180ms ease;
         }
 
         .lvs-value-item-icon svg {
-          width: 24px;
-          height: 24px;
+          width: 34px;
+          height: 34px;
           display: block;
         }
 
@@ -1208,24 +1221,26 @@ export default function App() {
         }
 
         .lvs-store-badge {
-          min-width: 124px;
-          min-height: 42px;
-          padding: 0 12px;
-          border-radius: 12px;
+          min-width: 138px;
+          min-height: 46px;
+          padding: 7px 10px;
+          border-radius: 14px;
           display: inline-flex;
           align-items: center;
-          gap: 9px;
+          gap: 8px;
           background: #141414;
           border: 1px solid rgba(255, 255, 255, 0.14);
           color: #ffffff;
-          transition: border-color 180ms ease, transform 180ms ease, color 180ms ease;
+          transition: border-color 180ms ease, transform 180ms ease, color 180ms ease, background 180ms ease;
         }
 
-        .lvs-store-badge svg {
-          width: 16px;
-          height: 16px;
+        .lvs-store-badge-image {
+          width: 22px;
+          height: 22px;
+          object-fit: contain;
           display: block;
           flex: 0 0 auto;
+          border-radius: 8px;
         }
 
         .lvs-store-badge-copy {
@@ -1234,14 +1249,14 @@ export default function App() {
         }
 
         .lvs-store-badge-copy small {
-          font-size: 0.58rem;
+          font-size: 0.42rem;
           color: rgba(255, 255, 255, 0.62);
           line-height: 1;
         }
 
         .lvs-store-badge-copy strong {
           font-family: var(--font-display);
-          font-size: 0.82rem;
+          font-size: 0.64rem;
           font-weight: 700;
           line-height: 1.1;
         }
@@ -1249,6 +1264,7 @@ export default function App() {
         .lvs-store-badge:hover {
           transform: translateY(-1px);
           border-color: rgba(255, 16, 31, 0.4);
+          background: #181818;
           color: var(--brand);
         }
 
@@ -1335,18 +1351,12 @@ export default function App() {
             grid-template-columns: 1fr;
           }
 
-          .lvs-topbar-inner {
-            padding: 18px 0;
-            align-items: flex-start;
-            flex-direction: column;
+          .lvs-nav-links {
+            gap: 12px;
           }
 
-          .lvs-nav-actions {
-            width: 100%;
-          }
-
-          .lvs-nav-button {
-            flex: 1 1 auto;
+          .lvs-brand-wordmark {
+            width: 208px;
           }
         }
 
@@ -1355,8 +1365,25 @@ export default function App() {
             width: min(100% - 28px, 1180px);
           }
 
-          .lvs-nav-links {
-            display: none;
+          .lvs-topbar-inner {
+            min-height: 76px;
+            padding: 14px 0;
+            gap: 12px;
+          }
+
+          .lvs-brand-name {
+            font-size: 1.14rem;
+          }
+
+          .lvs-brand-tagline {
+            font-size: 0.58rem;
+            letter-spacing: 0.12em;
+          }
+
+          .lvs-nav-links a {
+            min-height: 42px;
+            padding: 0 14px;
+            font-size: 0.88rem;
           }
 
           .lvs-hero-inner {
@@ -1408,6 +1435,17 @@ export default function App() {
           .lvs-community-copy {
             padding: 34px 26px;
           }
+
+          .lvs-store-badge {
+            min-width: 128px;
+            min-height: 42px;
+            padding: 6px 9px;
+          }
+
+          .lvs-store-badge-image {
+            width: 20px;
+            height: 20px;
+          }
         }
       `}</style>
 
@@ -1434,19 +1472,10 @@ export default function App() {
                 return (
                 <a key={item.label} href={item.href} className={isActive ? 'is-active' : undefined}>
                   {item.label}
-                </a>
+                  </a>
                 );
               })}
             </nav>
-
-            <div className="lvs-nav-actions">
-              <a className="lvs-nav-button lvs-nav-button-dark" href={isArtistsPage ? ARTISTS_APP_URL : LIVE_STREAMING_URL}>
-                {isArtistsPage ? 'Hub artístico' : 'Live Streaming'}
-              </a>
-              <a className="lvs-nav-button lvs-nav-button-red" href={ONE_LINK_URL}>
-                Abrir app
-              </a>
-            </div>
           </div>
         </header>
 
@@ -1599,7 +1628,7 @@ export default function App() {
                     <h1 className="lvs-hero-title">Toda la salsa. Todo en un solo lugar.</h1>
 
                     <p>
-                      Escucha radio en vivo, descubre canciones, sigue artistas, entra a la comunidad y descarga la app gratuita de La Voz Salsa.
+                      Escucha radio en vivo y disfruta de nuestros programas en Live Streaming. Descubre lo que está sonando en salsa, entra a la comunidad y descarga la app gratuita de La Voz Salsa.
                     </p>
 
                     <div className="lvs-hero-actions">
@@ -1613,28 +1642,6 @@ export default function App() {
                         Ver streaming
                       </a>
                     </div>
-                  </div>
-                </div>
-              </section>
-
-              <section className="lvs-section-light">
-                <div className="lvs-shell">
-                  <span className="lvs-section-kicker">Música, radio y live streaming</span>
-                  <h2 className="lvs-section-title">La cultura salsera reunida en una sola plataforma.</h2>
-                  <p className="lvs-section-intro">
-                    Escucha nuestra emisora en vivo, disfruta nuestros programas en live streaming y participa en un chat interactivo creado para quienes viven la salsa todos los días.
-                  </p>
-
-                  <div className="lvs-value-grid">
-                    {valueItems.map((item) => (
-                      <article key={item.title} className="lvs-value-item">
-                        <div className="lvs-value-item-icon">
-                          <ValueIcon icon={item.icon} />
-                        </div>
-                        <h3>{item.title}</h3>
-                        <p>{item.copy}</p>
-                      </article>
-                    ))}
                   </div>
                 </div>
               </section>
@@ -1686,12 +1693,29 @@ export default function App() {
                 </div>
               </section>
 
+              <section className="lvs-community-section">
+                <div className="lvs-shell">
+                  <div className="lvs-community-card">
+                    <div className="lvs-community-media" aria-hidden="true" />
+
+                    <div className="lvs-community-copy">
+                      <span className="lvs-section-kicker">La comunidad primero</span>
+                      <h2>¡Una pasión hecha comunidad!</h2>
+                      <p>Hecha por salseros para los salseros. Conecta con una comunidad que habla el mismo idioma: La Salsa.</p>
+                      <a className="lvs-primary-button" href={ONE_LINK_URL}>
+                        Descargar app
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               <section className="lvs-section-dark">
                 <div className="lvs-shell">
                   <span className="lvs-section-kicker">Preguntas frecuentes</span>
                   <h2 className="lvs-section-title">Antes de entrar, esto es lo esencial.</h2>
                   <p className="lvs-section-intro">
-                    Resolvemos rápido qué encuentras en La Voz Salsa, cómo descargar la app y como descubrir lo mejor de la salsa romantica y clasica.
+                    Resolvemos rápido qué encuentras en La Voz Salsa, cómo descargar la app y cómo descubrir lo mejor de la salsa romántica y clásica.
                   </p>
 
                   <div className="lvs-faq-wrap">
@@ -1716,23 +1740,6 @@ export default function App() {
                   </div>
                 </div>
               </section>
-
-              <section className="lvs-community-section">
-                <div className="lvs-shell">
-                  <div className="lvs-community-card">
-                    <div className="lvs-community-media" aria-hidden="true" />
-
-                    <div className="lvs-community-copy">
-                      <span className="lvs-section-kicker">La comunidad primero</span>
-                      <h2>¡Una pasión hecha comunidad!</h2>
-                      <p>Hecha por salseros para los salseros. Conecta con una comunidad que habla el mismo idioma: La Salsa.</p>
-                      <a className="lvs-primary-button" href={ONE_LINK_URL}>
-                        Descargar app
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
             </>
           )}
         </main>
@@ -1741,7 +1748,7 @@ export default function App() {
           <div className="lvs-shell">
             <div className="lvs-footer-grid">
               <div className="lvs-footer-brand">
-                <img src={FOOTER_LOGO_SRC} alt="lavozsalsa.com" />
+                <img src={FOOTER_LOGO_SRC} alt="La Voz Salsa" />
               </div>
 
               {footerColumns.map((column) => (
@@ -1775,7 +1782,7 @@ export default function App() {
                 <div className="lvs-footer-download" aria-label="Descargar la app">
                   {storeBadges.map((item) => (
                     <a key={item.label} className="lvs-store-badge" href={item.href}>
-                      <StoreBadgeIcon icon={item.icon} />
+                      <img className="lvs-store-badge-image" src={item.src} alt={item.alt} />
                       <span className="lvs-store-badge-copy">
                         <small>Descargar en</small>
                         <strong>{item.label}</strong>
