@@ -115,7 +115,7 @@ class MainActivity : ComponentActivity() {
         private const val TAG = "LaVozSalsaTV"
         private const val USER_AGENT = "LaVozSalsaTV/1.0"
 
-        private const val RADIO_STREAM_URL = "https://emisora.lavozsalsa.com/listen/lavozsalsa/stream"
+        private const val RADIO_STREAM_URL = "https://emisora.lavozsalsa.com/listen/lavozsalsa/web128"
         private const val NOWPLAYING_URL = "https://emisora.lavozsalsa.com/api/nowplaying_static/lavozsalsa.json"
         private const val LIVE_URL = "https://streaming.lavozsalsa.com/live-abr/master.m3u8"
 

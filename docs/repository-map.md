@@ -13,6 +13,15 @@ Sitio principal de `lavozsalsa.com`.
 - salida: `lavozsalsa-web/dist`
 - documentacion: [README](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-web/README.md)
 
+### `lavozsalsa-tv/`
+
+Sitio dedicado de `tv.lavozsalsa.com`.
+
+- objetivo: streaming en vivo, chat y comunidad en un subdominio propio
+- stack: React + Expo Web + TypeScript + Firebase + hls.js
+- salida: `lavozsalsa-tv/dist`
+- documentacion: [README](/Users/Mix/AndroidStudioProjects/LaVozSalsaTV/lavozsalsa-tv/README.md)
+
 ### `lavozsalsa-artistas/`
 
 Sitio de artistas.

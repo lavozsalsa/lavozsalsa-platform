@@ -5,6 +5,7 @@ Monorepo principal de La Voz Salsa. Aqui conviven la app Android y los proyectos
 ## Propiedades activas
 
 - `lavozsalsa.com`: sitio principal
+- `tv.lavozsalsa.com`: streaming de TV y comunidad en vivo
 - `artistas.lavozsalsa.com`: acceso para artistas y propuesta Impulso
 - `premium.lavozsalsa.com`: membresia para oyentes
 - `prensa.lavozsalsa.com`: Pulso Salsero, sala de prensa y migracion editorial
@@ -14,6 +15,7 @@ Monorepo principal de La Voz Salsa. Aqui conviven la app Android y los proyectos
 - `app/`: app Android principal
 - `analytics-web/`: dashboard y herramientas de analitica
 - `lavozsalsa-web/`: home principal de `lavozsalsa.com`
+- `lavozsalsa-tv/`: base nueva de `tv.lavozsalsa.com`
 - `lavozsalsa-artistas/`: sitio para artistas, Impulso y material comercial
 - `lavozsalsa-premium/`: landing comercial de Premium
 - `lavozsalsa-prensa/`: Pulso Salsero y migracion del contenido editorial legado

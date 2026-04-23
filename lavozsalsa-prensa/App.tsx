@@ -75,7 +75,7 @@ const curatedDescargarSalsaTracks = descargarSalsaTracks.filter(
 
 const MAIN_SITE_URL = 'https://lavozsalsa.com';
 const APP_URL = 'https://app.lavozsalsa.com';
-const LIVE_URL = 'https://app.lavozsalsa.com/tv';
+const LIVE_URL = 'https://tv.lavozsalsa.com/';
 const APP_DOWNLOAD_URL = 'https://onelink.to/w5n2k9';
 
 const HOME_ALIASES = new Set(['/', '/pulso-salsero/']);
@@ -100,6 +100,7 @@ const CATEGORY_TONES: Record<string, { bg: string; ink: string }> = {
   Ciudad: { bg: '#dff3f6', ink: '#004e5b' },
   Homenajes: { bg: '#efe3ff', ink: '#53248d' },
   Perfiles: { bg: '#e5edff', ink: '#193f93' },
+  'Salsa nueva': { bg: '#ddf6e4', ink: '#14532d' },
   Comunidad: { bg: '#ffe2e2', ink: '#8b1116' },
 };
 
@@ -406,7 +407,7 @@ function ArticleActions() {
     {
       title: 'Escucha la emisora',
       copy: 'Entra a la plataforma y sigue la programación de La Voz Salsa en cualquier momento.',
-      href: APP_URL,
+      href: MAIN_SITE_URL,
     },
     {
       title: 'Ver live streaming',
@@ -2635,7 +2636,7 @@ export default function App() {
               </div>
               <div className="lvs-footer-column">
                 <span>La Voz Salsa</span>
-                <a href={APP_URL}>Escuchar emisora</a>
+                <a href={MAIN_SITE_URL}>Escuchar emisora</a>
                 <a href={LIVE_URL}>Live Streaming</a>
               </div>
               <div className="lvs-footer-column">

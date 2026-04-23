@@ -9,6 +9,11 @@ const SITE_URL = 'https://prensa.lavozsalsa.com';
 const SITE_NAME = 'Pulso Salsero';
 const SITE_SUBTITLE = 'Sala de prensa de La Voz Salsa';
 const GA_MEASUREMENT_ID = process.env.LVS_PRESS_GA4_ID || process.env.LVS_GA4_ID || 'G-8C6LP4VJSY';
+const FACEBOOK_APP_ID =
+  process.env.LVS_PRESS_FACEBOOK_APP_ID ||
+  process.env.LVS_FACEBOOK_APP_ID ||
+  process.env.FACEBOOK_APP_ID ||
+  '';
 const GOOGLE_SITE_VERIFICATION =
   process.env.LVS_PRESS_GOOGLE_SITE_VERIFICATION || process.env.LVS_GOOGLE_SITE_VERIFICATION || '';
 
@@ -114,6 +119,7 @@ function buildMetaBlock(meta) {
     '<meta property="og:type" content="website" />',
     `<meta property="og:url" content="${meta.url}" />`,
     `<meta property="og:image" content="${meta.image}" />`,
+    FACEBOOK_APP_ID ? `<meta property="fb:app_id" content="${FACEBOOK_APP_ID}" />` : '',
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${meta.title}" />`,
     `<meta name="twitter:description" content="${meta.description}" />`,

@@ -4,7 +4,7 @@ const state = {
   urls: {
     app: 'https://app.lavozsalsa.com/',
     radio: 'https://app.lavozsalsa.com/',
-    tv: 'https://app.lavozsalsa.com/tv',
+    tv: 'https://tv.lavozsalsa.com/',
   },
 };
 

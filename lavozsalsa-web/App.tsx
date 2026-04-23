@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useRef, useState } from 'react';
 
-const RADIO_STREAM_URL = 'https://emisora.lavozsalsa.com/listen/lavozsalsa/stream';
+const RADIO_STREAM_URL = 'https://emisora.lavozsalsa.com/listen/lavozsalsa/web128';
 const HOME_URL = '/';
+const MAIN_SITE_URL = 'https://lavozsalsa.com';
 const APP_URL = 'https://app.lavozsalsa.com/';
 const ARTISTS_APP_URL = 'https://app.lavozsalsa.com/artistas';
 const PLAYLISTS_URL = 'https://app.lavozsalsa.com/playlists';
-const LIVE_STREAMING_URL = 'https://app.lavozsalsa.com/tv';
+const LIVE_STREAMING_URL = 'https://tv.lavozsalsa.com/';
 const PRESS_URL = 'https://prensa.lavozsalsa.com/';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.lavozsalsa.app';
 const APP_STORE_URL = 'https://apps.apple.com/us/app/la-voz-salsa/id6478400927';
@@ -14,6 +15,7 @@ const ONE_LINK_URL = 'https://onelink.to/w5n2k9';
 const PRIVACY_URL = 'https://app.lavozsalsa.com/privacidad';
 const TERMS_URL = 'https://app.lavozsalsa.com/terminos';
 const COOKIES_URL = 'https://app.lavozsalsa.com/politica-de-cookies';
+const RADIO_NOW_PLAYING_URL = '/api/nowplaying.json';
 
 const HEADER_LOGO_SRC = '/brand/logo-lavozsalsa-header-red.png';
 const FOOTER_LOGO_SRC = '/brand/logo-lavozsalsa-dotcom-white.png';
@@ -44,27 +46,96 @@ const valueItems = [
   },
 ];
 
-const panelItems = [
-  'Identifica el nombre de la canción y el artista que están sonando.',
-  'Revisa un historial con temas emitidos anteriormente en la señal.',
-  'Encuentra banners de artistas, conciertos, noticias y novedades salseras.',
-];
+type RadioTrackPayload = {
+  title?: string;
+  artist?: string;
+  art?: string;
+  played_at?: number | string;
+  song?: RadioTrackPayload;
+};
+
+type RadioNowPlayingPayload = {
+  now_playing?: RadioTrackPayload;
+  song_history?: RadioTrackPayload[];
+};
+
+type RadioHistoryItem = {
+  key: string;
+  title: string;
+  artist: string;
+  playedAtLabel: string;
+  artUrl?: string;
+  isCurrent?: boolean;
+};
 
 const faqItems = [
   {
     question: 'Qué es La Voz Salsa?',
     answer:
-      'La Voz Salsa es una plataforma de música, radio, streaming y red social para salseros. Reúne emisoras en vivo, canciones, playlists, artistas, comunidad y una app móvil gratuita.',
+      'La Voz Salsa es una plataforma de música, radio, streaming y una comunidad para salseros. Disfruta de los éxitos de la salsa nuevos y de siempre con una programación hecha por personas que estudian y conocen el género.',
   },
   {
     question: 'La app se puede descargar gratis?',
     answer:
-      'Sí. Usa el botón Descargar app y te llevamos a la tienda correcta según tu dispositivo. También puedes entrar por App Store o Google Play desde el footer.',
+      'Sí. Usa el botón Descargar app y te llevamos a la tienda correcta según tu dispositivo. También puedes entrar por App Store o Google Play desde el footer. Próximamente también disponible en Colombia.',
   },
   {
     question: 'Puedo saber qué canción está sonando?',
     answer:
-      'Sí. La app muestra títulos de canciones, artistas y un historial para consultar temas que sonaron antes. Así puedes descubrir, guardar y buscar salsa con más facilidad.',
+      'Sí. La app muestra títulos de canciones, artistas y un historial para consultar temas que sonaron antes. Así puedes descubrir y buscar salsa con más facilidad.',
+  },
+];
+
+type PressHighlight = {
+  label: string;
+  title: string;
+  excerpt: string;
+  href: string;
+  image: string;
+  alt: string;
+  meta: string;
+};
+
+const pressHighlights: PressHighlight[] = [
+  {
+    label: 'Lo último publicado',
+    title: 'Nelson “Nell” Álvarez presenta “Esta vez”',
+    excerpt:
+      'Un lanzamiento con alma romántica que revisita el pulso de la salsa noventera con arreglos actuales y una lectura fresca del género.',
+    href: `${PRESS_URL}nelson-nell-alvarez-esta-vez/`,
+    image: `${PRESS_URL}media/covers/nelson-nell-alvarez-esta-vez.jpg`,
+    alt: 'Nelson “Nell” Álvarez en una imagen promocional con chaqueta roja y gorra negra',
+    meta: 'Nuevo lanzamiento',
+  },
+  {
+    label: 'Legado',
+    title: 'Frankie Ruiz, el Papá de la Salsa',
+    excerpt:
+      'Biografía, éxitos y legado de una voz irrepetible que sigue apareciendo en la memoria y en las búsquedas salseras.',
+    href: `${PRESS_URL}frankie-ruiz-el-papa-de-la-salsa/`,
+    image: `${PRESS_URL}media/covers/frankie-ruiz-el-papa-de-la-salsa.jpg`,
+    alt: 'Frankie Ruiz con fondo rojo en una imagen promocional',
+    meta: 'Archivo vivo',
+  },
+  {
+    label: 'Voz esencial',
+    title: 'Tito Rojas y la fuerza de El Gallo Salsero',
+    excerpt:
+      'Una lectura amplia sobre la voz que marcó la salsa romántica y dejó canciones que siguen sonando con fuerza.',
+    href: `${PRESS_URL}tito-rojas/`,
+    image: `${PRESS_URL}media/covers/tito-rojas-el-gallo-de-la-salsa.jpg`,
+    alt: 'Tito Rojas en una imagen promocional con traje gris y micrófono',
+    meta: 'Legado',
+  },
+  {
+    label: 'Compositora',
+    title: 'Mimi Ibarra, cantautora colombiana',
+    excerpt:
+      'La compositora que convirtió su sello romántico en éxitos grabados por voces de peso dentro de la salsa.',
+    href: `${PRESS_URL}mimi-ibarra-cantautora/`,
+    image: `${PRESS_URL}media/covers/mimi-ibarra-cantautora-colombiana.jpg`,
+    alt: 'Mimi Ibarra en una foto promocional sobre fondo gris',
+    meta: 'Perfiles',
   },
 ];
 
@@ -78,7 +149,7 @@ const footerColumns = [
   {
     title: 'La Voz Salsa',
     links: [
-      { label: 'Escuchar emisora', href: APP_URL },
+      { label: 'Escuchar emisora', href: MAIN_SITE_URL },
       { label: 'Live Streaming', href: LIVE_STREAMING_URL },
     ],
   },
@@ -257,9 +328,57 @@ function normalizePathname(pathname: string) {
   return pathname.endsWith('/') ? pathname : `${pathname}/`;
 }
 
+function formatRadioPlayedAt(value: number | string | undefined) {
+  if (value === undefined || value === null) {
+    return '';
+  }
+
+  const isNumericString = typeof value === 'string' && /^\d+$/.test(value);
+  const date = typeof value === 'number' || isNumericString ? new Date(Number(value) * 1000) : new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return '';
+  }
+
+  return new Intl.DateTimeFormat('es-CO', {
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(date);
+}
+
+function normalizeRadioTrack(source: RadioTrackPayload | undefined, fallbackPlayedAt?: number | string, isCurrent = false) {
+  if (!source) {
+    return null;
+  }
+
+  const nestedSong = source.song && source.song !== source ? source.song : undefined;
+  const track = nestedSong || source;
+  const title = String(track.title || '').trim();
+  const artist = String(track.artist || '').trim();
+
+  if (!title && !artist) {
+    return null;
+  }
+
+  const playedAt = source.played_at ?? fallbackPlayedAt ?? track.played_at;
+  const playedAtLabel = isCurrent ? 'Ahora' : formatRadioPlayedAt(playedAt) || 'Hace un momento';
+
+  return {
+    key: `${artist || 'artista'}-${title || 'tema'}-${String(playedAt || Math.random())}`,
+    title: title || 'Tema en reproducción',
+    artist: artist || 'La Voz Salsa',
+    artUrl: typeof track.art === 'string' ? track.art : undefined,
+    playedAtLabel,
+    isCurrent,
+  } satisfies RadioHistoryItem;
+}
+
 export default function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
+  const [radioNowPlaying, setRadioNowPlaying] = useState<RadioHistoryItem | null>(null);
+  const [radioHistory, setRadioHistory] = useState<RadioHistoryItem[]>([]);
+  const [radioHistoryStatus, setRadioHistoryStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const currentPath = normalizePathname(typeof window === 'undefined' ? '/' : window.location.pathname);
   const isArtistsPage = false;
@@ -281,6 +400,63 @@ export default function App() {
       setPlaying(false);
     });
   }, [playing]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    let cancelled = false;
+    let timer: ReturnType<typeof window.setTimeout> | undefined;
+
+    const loadRadioHistory = async () => {
+      try {
+        const response = await fetch(RADIO_NOW_PLAYING_URL, {
+          cache: 'no-store',
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const payload = (await response.json()) as RadioNowPlayingPayload;
+        const currentTrack = normalizeRadioTrack(payload.now_playing, undefined, true);
+        const historyTracks = (payload.song_history || [])
+          .map((entry) => normalizeRadioTrack(entry, entry.played_at))
+          .filter((entry): entry is RadioHistoryItem => Boolean(entry))
+          .slice(0, 10);
+
+        if (cancelled) {
+          return;
+        }
+
+        setRadioNowPlaying(currentTrack);
+        setRadioHistory(historyTracks);
+        setRadioHistoryStatus('ready');
+      } catch {
+        if (!cancelled) {
+          setRadioHistoryStatus('error');
+        }
+      } finally {
+        if (!cancelled) {
+          timer = window.setTimeout(loadRadioHistory, 15_000);
+        }
+      }
+    };
+
+    void loadRadioHistory();
+
+    return () => {
+      cancelled = true;
+
+      if (timer) {
+        window.clearTimeout(timer);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') {
@@ -477,7 +653,12 @@ export default function App() {
           padding: 0 22px;
           border-radius: 999px;
           border: 1px solid transparent;
-          transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
+          transition:
+            transform 180ms ease,
+            background 180ms ease,
+            border-color 180ms ease,
+            color 180ms ease,
+            box-shadow 180ms ease;
         }
 
         .lvs-nav-button:hover,
@@ -503,6 +684,25 @@ export default function App() {
           color: #050505;
           font-family: var(--font-display);
           font-weight: 700;
+        }
+
+        .lvs-nav-button-red:hover,
+        .lvs-nav-button-red:focus-visible,
+        .lvs-primary-button:hover,
+        .lvs-primary-button:focus-visible {
+          background: var(--brand);
+          border-color: var(--brand);
+          color: #ffffff;
+          box-shadow: 0 18px 30px rgba(255, 16, 31, 0.18);
+        }
+
+        .lvs-secondary-button:hover,
+        .lvs-secondary-button:focus-visible,
+        .lvs-panel-link:hover,
+        .lvs-panel-link:focus-visible {
+          border-color: rgba(255, 16, 31, 0.72);
+          color: var(--brand);
+          box-shadow: 0 0 0 1px rgba(255, 16, 31, 0.12) inset;
         }
 
         .lvs-hero {
@@ -561,12 +761,6 @@ export default function App() {
           gap: 14px;
           flex-wrap: wrap;
           margin-top: 32px;
-        }
-
-        .lvs-secondary-button:hover,
-        .lvs-panel-link:hover {
-          border-color: rgba(255, 16, 31, 0.54);
-          color: var(--brand);
         }
 
         .lvs-section-light,
@@ -737,19 +931,172 @@ export default function App() {
           line-height: 1.68;
         }
 
-        .lvs-stream-list {
+        .lvs-radio-live-card {
+          margin-top: 22px;
+          padding: 18px;
+          border-radius: 24px;
+          background:
+            radial-gradient(circle at top right, rgba(255, 16, 31, 0.16), transparent 22%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lvs-radio-live-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          min-height: 30px;
+          padding: 0 12px;
+          border-radius: 999px;
+          background: rgba(255, 16, 31, 0.16);
+          color: #ff9aa1;
+          font-family: var(--font-display);
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .lvs-radio-live-tag::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 999px;
+          background: #ff3340;
+          box-shadow: 0 0 0 4px rgba(255, 51, 64, 0.18);
+        }
+
+        .lvs-radio-live-track {
+          display: grid;
+          grid-template-columns: 62px minmax(0, 1fr);
+          gap: 14px;
+          align-items: center;
+          margin-top: 14px;
+        }
+
+        .lvs-radio-live-art,
+        .lvs-radio-history-art {
+          display: grid;
+          place-items: center;
+          overflow: hidden;
+          background: #171717;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          color: rgba(255, 255, 255, 0.88);
+        }
+
+        .lvs-radio-live-art {
+          width: 62px;
+          height: 62px;
+          border-radius: 18px;
+          font-family: var(--font-display);
+          font-size: 1.4rem;
+          font-weight: 900;
+        }
+
+        .lvs-radio-live-art img,
+        .lvs-radio-history-art img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .lvs-radio-live-copy strong,
+        .lvs-radio-history-copy strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.08rem;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+
+        .lvs-radio-live-copy span,
+        .lvs-radio-history-copy span {
+          display: block;
+          margin-top: 4px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.5;
+        }
+
+        .lvs-radio-history-list {
           list-style: none;
           padding: 0;
           margin: 22px 0 0;
           display: grid;
-          gap: 14px;
+          gap: 10px;
+          max-height: 240px;
+          overflow: auto;
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
         }
 
-        .lvs-stream-list li {
+        .lvs-radio-history-list::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        .lvs-radio-history-list::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.22);
+          border-radius: 999px;
+          border: 3px solid transparent;
+          background-clip: padding-box;
+        }
+
+        .lvs-radio-history-list::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        .lvs-radio-history-item {
           position: relative;
-          padding-left: 22px;
-          color: rgba(255, 255, 255, 0.82);
-          line-height: 1.65;
+          padding: 12px 14px;
+          border-radius: 20px;
+          display: grid;
+          grid-template-columns: 48px minmax(0, 1fr) auto;
+          gap: 14px;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .lvs-radio-history-art {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+
+        .lvs-radio-history-track {
+          min-width: 0;
+          display: grid;
+          gap: 4px;
+        }
+
+        .lvs-radio-history-track strong {
+          display: block;
+          font-size: 0.98rem;
+          line-height: 1.18;
+        }
+
+        .lvs-radio-history-track span {
+          display: block;
+          font-size: 0.9rem;
+          line-height: 1.35;
+        }
+
+        .lvs-radio-history-time {
+          color: rgba(255, 255, 255, 0.55);
+          font-size: 0.78rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          white-space: nowrap;
+        }
+
+        .lvs-radio-history-empty {
+          padding: 14px 16px;
+          border-radius: 18px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px dashed rgba(255, 255, 255, 0.14);
+          color: rgba(255, 255, 255, 0.68);
+          line-height: 1.6;
         }
 
         .lvs-stream-list li::before {
@@ -785,6 +1132,22 @@ export default function App() {
           text-align: left;
           cursor: pointer;
           overflow: hidden;
+          transition:
+            transform 180ms ease,
+            box-shadow 180ms ease,
+            border-color 180ms ease,
+            background 180ms ease;
+        }
+
+        .lvs-faq-item:hover,
+        .lvs-faq-item:focus-visible {
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+        }
+
+        .lvs-faq-item.is-open {
+          transform: scale(1.008);
+          background: linear-gradient(180deg, #1a1a1a 0%, #131313 100%);
         }
 
         .lvs-faq-head {
@@ -816,6 +1179,271 @@ export default function App() {
         .lvs-community-section {
           padding: 0 0 88px;
           background: linear-gradient(180deg, #111111 0%, #050505 100%);
+        }
+
+        .lvs-press-section {
+          position: relative;
+          padding: 34px 0 88px;
+          background:
+            radial-gradient(circle at 8% 12%, rgba(255, 16, 31, 0.14), transparent 22%),
+            radial-gradient(circle at 92% 2%, rgba(255, 255, 255, 0.06), transparent 18%),
+            linear-gradient(180deg, #090909 0%, #050505 100%);
+        }
+
+        .lvs-press-section::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 16%),
+            radial-gradient(circle at center top, rgba(255, 16, 31, 0.08), transparent 35%);
+          pointer-events: none;
+        }
+
+        .lvs-press-section .lvs-shell {
+          position: relative;
+          z-index: 1;
+        }
+
+        .lvs-press-head {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 24px;
+          margin-bottom: 24px;
+        }
+
+        .lvs-press-head > div {
+          max-width: 68ch;
+        }
+
+        .lvs-press-head h2 {
+          margin: 16px 0 0;
+          font-family: var(--font-display);
+          font-size: clamp(2rem, 5vw, 3.8rem);
+          font-weight: 900;
+          line-height: 0.98;
+          letter-spacing: -0.045em;
+        }
+
+        .lvs-press-head p {
+          margin: 16px 0 0;
+          max-width: 56ch;
+          color: rgba(255, 255, 255, 0.72);
+          font-size: 1.03rem;
+          line-height: 1.7;
+        }
+
+        .lvs-press-head .lvs-primary-button {
+          flex-shrink: 0;
+          min-height: 58px;
+          padding: 0 26px;
+        }
+
+        .lvs-press-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+          gap: 18px;
+          align-items: stretch;
+        }
+
+        .lvs-press-feature {
+          position: relative;
+          display: grid;
+          grid-template-rows: minmax(320px, 1fr) auto;
+          min-height: 620px;
+          border-radius: 34px;
+          overflow: hidden;
+          color: inherit;
+          text-decoration: none;
+          background:
+            radial-gradient(circle at top right, rgba(255, 16, 31, 0.16), transparent 24%),
+            linear-gradient(180deg, rgba(18, 18, 18, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: var(--shadow);
+          transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            box-shadow 220ms ease;
+        }
+
+        .lvs-press-feature:hover,
+        .lvs-press-feature:focus-visible {
+          transform: translateY(-3px);
+          border-color: rgba(255, 16, 31, 0.28);
+          box-shadow: 0 34px 60px rgba(0, 0, 0, 0.34);
+        }
+
+        .lvs-press-feature-media {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .lvs-press-feature-media img,
+        .lvs-press-card-media img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 280ms ease;
+        }
+
+        .lvs-press-feature:hover .lvs-press-feature-media img,
+        .lvs-press-card:hover .lvs-press-card-media img,
+        .lvs-press-card:focus-visible .lvs-press-card-media img {
+          transform: scale(1.03);
+        }
+
+        .lvs-press-feature-media::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.2) 62%, rgba(0, 0, 0, 0.8) 100%),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent 48%, rgba(0, 0, 0, 0.08));
+          pointer-events: none;
+        }
+
+        .lvs-press-feature-body {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          padding: 28px 30px 30px;
+        }
+
+        .lvs-press-chip-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .lvs-press-chip {
+          display: inline-flex;
+          align-items: center;
+          min-height: 30px;
+          padding: 0 12px;
+          border-radius: 999px;
+          background: rgba(255, 16, 31, 0.14);
+          color: #ff9aa1;
+          font-family: var(--font-display);
+          font-size: 0.76rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .lvs-press-meta {
+          display: inline-flex;
+          align-items: center;
+          min-height: 28px;
+          padding: 0 11px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.08);
+          color: rgba(255, 255, 255, 0.82);
+          font-size: 0.74rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .lvs-press-feature h3 {
+          margin: 0;
+          font-family: var(--font-display);
+          font-size: clamp(1.8rem, 3.2vw, 3rem);
+          font-weight: 900;
+          line-height: 0.96;
+          letter-spacing: -0.045em;
+        }
+
+        .lvs-press-feature p {
+          margin: 0;
+          max-width: 54ch;
+          color: rgba(255, 255, 255, 0.74);
+          font-size: 1rem;
+          line-height: 1.7;
+        }
+
+        .lvs-press-side {
+          display: grid;
+          gap: 16px;
+        }
+
+        .lvs-press-card {
+          display: grid;
+          grid-template-columns: 124px minmax(0, 1fr);
+          gap: 16px;
+          align-items: stretch;
+          min-height: 176px;
+          overflow: hidden;
+          border-radius: 28px;
+          color: inherit;
+          text-decoration: none;
+          background:
+            radial-gradient(circle at top right, rgba(255, 16, 31, 0.12), transparent 24%),
+            linear-gradient(180deg, rgba(16, 16, 16, 0.98) 0%, rgba(9, 9, 9, 0.98) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: var(--shadow);
+          transition:
+            transform 220ms ease,
+            border-color 220ms ease,
+            box-shadow 220ms ease;
+        }
+
+        .lvs-press-card:hover,
+        .lvs-press-card:focus-visible {
+          transform: translateY(-3px);
+          border-color: rgba(255, 16, 31, 0.24);
+          box-shadow: 0 28px 52px rgba(0, 0, 0, 0.3);
+        }
+
+        .lvs-press-card-media {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .lvs-press-card-media::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.18));
+          pointer-events: none;
+        }
+
+        .lvs-press-card-body {
+          padding: 18px 18px 18px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .lvs-press-card-body h3 {
+          margin: 0;
+          font-family: var(--font-display);
+          font-size: 1.14rem;
+          font-weight: 800;
+          line-height: 1.18;
+        }
+
+        .lvs-press-card-body p {
+          margin: 0;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.58;
+          font-size: 0.94rem;
+        }
+
+        .lvs-press-card-foot {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          align-items: center;
+        }
+
+        .lvs-press-card-arrow {
+          color: #ff9aa1;
+          font-size: 0.84rem;
+          font-weight: 700;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
         }
 
         .lvs-community-card {
@@ -1227,6 +1855,7 @@ export default function App() {
           border-radius: 14px;
           display: inline-flex;
           align-items: center;
+          justify-content: center;
           gap: 8px;
           background: #141414;
           border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1234,9 +1863,19 @@ export default function App() {
           transition: border-color 180ms ease, transform 180ms ease, color 180ms ease, background 180ms ease;
         }
 
+        .lvs-store-badge-icon {
+          width: 24px;
+          height: 24px;
+          display: grid;
+          place-items: center;
+          flex: 0 0 24px;
+        }
+
         .lvs-store-badge-image {
-          width: 22px;
-          height: 22px;
+          max-width: 22px;
+          max-height: 22px;
+          width: auto;
+          height: auto;
           object-fit: contain;
           display: block;
           flex: 0 0 auto;
@@ -1322,6 +1961,7 @@ export default function App() {
           .lvs-artists-hero-inner,
           .lvs-artists-pillar-layout,
           .lvs-community-card,
+          .lvs-press-grid,
           .lvs-footer-grid {
             grid-template-columns: 1fr;
           }
@@ -1339,6 +1979,19 @@ export default function App() {
           .lvs-footer-download {
             justify-items: start;
             justify-content: flex-start;
+          }
+
+          .lvs-press-head {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+
+          .lvs-press-head .lvs-primary-button {
+            align-self: flex-start;
+          }
+
+          .lvs-press-card {
+            grid-template-columns: 112px minmax(0, 1fr);
           }
         }
 
@@ -1428,6 +2081,41 @@ export default function App() {
             padding-bottom: 68px;
           }
 
+          .lvs-press-section {
+            padding: 26px 0 68px;
+          }
+
+          .lvs-press-feature {
+            min-height: auto;
+          }
+
+          .lvs-press-feature-body {
+            padding: 24px 22px 24px;
+          }
+
+          .lvs-press-feature-media {
+            min-height: 240px;
+          }
+
+          .lvs-press-card {
+            grid-template-columns: 96px minmax(0, 1fr);
+            gap: 12px;
+            min-height: 154px;
+            border-radius: 24px;
+          }
+
+          .lvs-press-card-body {
+            padding: 16px 14px 16px 0;
+          }
+
+          .lvs-press-card-body h3 {
+            font-size: 1.02rem;
+          }
+
+          .lvs-press-card-body p {
+            font-size: 0.9rem;
+          }
+
           .lvs-community-media {
             min-height: 280px;
           }
@@ -1442,9 +2130,42 @@ export default function App() {
             padding: 6px 9px;
           }
 
+          .lvs-store-badge-icon {
+            width: 22px;
+            height: 22px;
+            flex-basis: 22px;
+          }
+
           .lvs-store-badge-image {
-            width: 20px;
-            height: 20px;
+            max-width: 20px;
+            max-height: 20px;
+          }
+
+          .lvs-radio-live-track {
+            grid-template-columns: 54px minmax(0, 1fr);
+          }
+
+          .lvs-radio-live-art {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+          }
+
+          .lvs-radio-history-item {
+            grid-template-columns: 42px minmax(0, 1fr);
+            gap: 12px;
+          }
+
+          .lvs-radio-history-art {
+            width: 42px;
+            height: 42px;
+          }
+
+          .lvs-radio-history-time {
+            grid-column: 2 / -1;
+            justify-self: start;
+            margin-top: -4px;
+            margin-left: 0;
           }
         }
       `}</style>
@@ -1652,7 +2373,7 @@ export default function App() {
                     <span className="lvs-section-kicker">Descarga la app gratis</span>
                     <h2>Lleva la salsa contigo y descubre qué está sonando.</h2>
                     <p>
-                      En la app puedes escuchar la señal, ver nombres de temas y artistas, consultar canciones emitidas anteriormente, recibir novedades y entrar a la comunidad salsera.
+                      En la app puedes escuchar la señal, ver nombres de temas y artistas, consultar canciones emitidas anteriormente, recibir novedades y entrar a la comunidad salsera. Próximamente también disponible en Colombia.
                     </p>
 
                     <div className="lvs-inline-actions">
@@ -1666,29 +2387,68 @@ export default function App() {
                   </div>
 
                   <aside className="lvs-cta-panel">
-                    <span className="lvs-panel-kicker">Dentro de la app</span>
-                    <h3>Radio, historial musical, noticias y comunidad.</h3>
-                    <p>
-                      Instálala gratis y usa un acceso rápido para seguir la salsa desde tu celular, tu navegador o el dispositivo donde estés escuchando.
-                    </p>
-
-                    <ul className="lvs-stream-list">
-                      {panelItems.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
+                    <span className="lvs-panel-kicker">Historial musical</span>
+                    <h3>Últimas canciones al aire</h3>
 
                     <div className="lvs-panel-actions">
                       <button className="lvs-primary-button" type="button" onClick={() => setPlaying((value) => !value)}>
-                        {playing ? 'Pausar reproduccion' : 'Escuchar en vivo'}
+                        {playing ? 'Pausar reproduccion' : 'Escuchar La Voz Salsa'}
                       </button>
-                      <a className="lvs-panel-link" href={ONE_LINK_URL}>
-                        Abrir la app
-                      </a>
-                      <a className="lvs-panel-link" href={LIVE_STREAMING_URL}>
-                        Ver streaming
-                      </a>
                     </div>
+
+                    <div className="lvs-radio-live-card">
+                      {radioNowPlaying ? (
+                        <>
+                          <span className="lvs-radio-live-tag">Ahora suena</span>
+
+                          <div className="lvs-radio-live-track">
+                            <div className="lvs-radio-live-art" aria-hidden="true">
+                              {radioNowPlaying.artUrl ? (
+                                <img src={radioNowPlaying.artUrl} alt="" />
+                              ) : (
+                                <span>♪</span>
+                              )}
+                            </div>
+
+                            <div className="lvs-radio-live-copy">
+                              <strong>{radioNowPlaying.title}</strong>
+                              <span>{radioNowPlaying.artist}</span>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="lvs-radio-history-empty">
+                          {radioHistoryStatus === 'error'
+                            ? 'No pudimos leer el historial musical en este momento.'
+                            : 'Estamos leyendo el historial musical de la señal.'}
+                        </div>
+                      )}
+                    </div>
+
+                    <ul className="lvs-radio-history-list" aria-label="Historial musical reciente">
+                      {radioHistory.length ? (
+                        radioHistory.map((item) => (
+                          <li key={item.key} className="lvs-radio-history-item">
+                            <div className="lvs-radio-history-art" aria-hidden="true">
+                              {item.artUrl ? <img src={item.artUrl} alt="" /> : <span>♪</span>}
+                            </div>
+
+                            <div className="lvs-radio-history-track">
+                              <strong>{item.title}</strong>
+                              <span>{item.artist}</span>
+                            </div>
+
+                            <time className="lvs-radio-history-time">{item.playedAtLabel}</time>
+                          </li>
+                        ))
+                      ) : (
+                        <li className="lvs-radio-history-empty">
+                          {radioHistoryStatus === 'error'
+                            ? 'En cuanto la señal vuelva, aquí aparecerán los temas recientes.'
+                            : 'Aún no hay canciones para mostrar.'}
+                        </li>
+                      )}
+                    </ul>
                   </aside>
                 </div>
               </section>
@@ -1710,6 +2470,63 @@ export default function App() {
                 </div>
               </section>
 
+              <section className="lvs-press-section">
+                <div className="lvs-shell">
+                  <div className="lvs-press-head">
+                    <div>
+                      <span className="lvs-section-kicker">Pulso Salsero</span>
+                      <h2>Noticias que mantienen viva la conversación salsera.</h2>
+                      <p>
+                        Una selección editorial de lo último que hemos publicado: lanzamientos, perfiles y memoria del género reunidos en una sala hecha para volver a leer la salsa con calma.
+                      </p>
+                    </div>
+
+                    <a className="lvs-primary-button" href={PRESS_URL}>
+                      Ir a Pulso Salsero
+                    </a>
+                  </div>
+
+                  <div className="lvs-press-grid">
+                    <a className="lvs-press-feature" href={pressHighlights[0].href} aria-label={pressHighlights[0].title}>
+                      <div className="lvs-press-feature-media">
+                        <img src={pressHighlights[0].image} alt={pressHighlights[0].alt} />
+                      </div>
+
+                      <div className="lvs-press-feature-body">
+                        <div className="lvs-press-chip-row">
+                          <span className="lvs-press-chip">{pressHighlights[0].label}</span>
+                          <span className="lvs-press-meta">{pressHighlights[0].meta}</span>
+                        </div>
+
+                        <h3>{pressHighlights[0].title}</h3>
+                        <p>{pressHighlights[0].excerpt}</p>
+                        <span className="lvs-press-card-arrow">Leer en Pulso Salsero →</span>
+                      </div>
+                    </a>
+
+                    <div className="lvs-press-side">
+                      {pressHighlights.slice(1).map((item) => (
+                        <a key={item.href} className="lvs-press-card" href={item.href} aria-label={item.title}>
+                          <div className="lvs-press-card-media">
+                            <img src={item.image} alt={item.alt} />
+                          </div>
+
+                          <div className="lvs-press-card-body">
+                            <div className="lvs-press-card-foot">
+                              <span className="lvs-press-chip">{item.label}</span>
+                              <span className="lvs-press-meta">{item.meta}</span>
+                            </div>
+                            <h3>{item.title}</h3>
+                            <p>{item.excerpt}</p>
+                            <span className="lvs-press-card-arrow">Leer historia →</span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               <section className="lvs-section-dark">
                 <div className="lvs-shell">
                   <span className="lvs-section-kicker">Preguntas frecuentes</span>
@@ -1726,7 +2543,7 @@ export default function App() {
                         <button
                           key={item.question}
                           type="button"
-                          className="lvs-faq-item"
+                          className={`lvs-faq-item${isOpen ? ' is-open' : ''}`}
                           onClick={() => setOpenFaqIndex(isOpen ? -1 : index)}
                         >
                           <div className="lvs-faq-head">
@@ -1782,7 +2599,9 @@ export default function App() {
                 <div className="lvs-footer-download" aria-label="Descargar la app">
                   {storeBadges.map((item) => (
                     <a key={item.label} className="lvs-store-badge" href={item.href}>
-                      <img className="lvs-store-badge-image" src={item.src} alt={item.alt} />
+                      <span className="lvs-store-badge-icon" aria-hidden="true">
+                        <img className="lvs-store-badge-image" src={item.src} alt={item.alt} />
+                      </span>
                       <span className="lvs-store-badge-copy">
                         <small>Descargar en</small>
                         <strong>{item.label}</strong>

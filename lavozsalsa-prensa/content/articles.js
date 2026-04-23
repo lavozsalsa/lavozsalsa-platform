@@ -658,8 +658,9 @@ const pressArticles = [
     readingTime: '11 min',
     archiveLabel: 'Historia recuperada',
     updatedLabel: 'Actualizado en abril de 2026',
-    coverImage: 'https://www.lavozsalsa.com/wp-content/uploads/2015/08/porfi-baloa.jpg',
-    coverAlt: 'Porfi Baloa en una foto histórica asociada a Adolescentes Orquesta',
+    coverImage: '/media/covers/adolescentes-orquesta-porfi-baloa-20-anos.jpg',
+    coverAlt: 'Portada de Porfi Baloa 20 años de historia asociada a Adolescentes Orquesta',
+    shareImage: '/media/covers/adolescentes-orquesta-porfi-baloa-20-anos.jpg',
     sections: [
       {
         title: 'Porfi Baloa y sus Adolescentes Orquesta',
@@ -1342,6 +1343,84 @@ const pressArticles = [
       },
     ],
   },
+  {
+    slug: 'nelson-nell-alvarez-esta-vez',
+    category: 'Salsa nueva',
+    title: 'Nelson “Nell” Álvarez presenta “Esta vez”, un sencillo que revive la salsa romántica de los años 90',
+    excerpt:
+      'Nell Álvarez presenta “Esta vez”, una propuesta cargada de sentimiento, romanticismo y cadencia que recupera el aire de la salsa romántica noventera con una producción actual.',
+    description:
+      'Nelson “Nell” Álvarez lanza “Esta vez”, un sencillo de salsa romántica con arreglos de Jorge Ramos, músicos de alto nivel y un sonido que dialoga con la esencia de los años 90.',
+    featuredRank: 2,
+    readingTime: '5 min',
+    archiveLabel: 'Nuevo lanzamiento',
+    updatedLabel: 'Publicado en abril de 2026',
+    coverImage: '/media/covers/nelson-nell-alvarez-esta-vez.jpg',
+    coverAlt: 'Nelson “Nell” Álvarez en una imagen promocional con chaqueta roja y gorra negra',
+    shareImage: '/media/covers/nelson-nell-alvarez-esta-vez.jpg',
+    sections: [
+      {
+        title: 'Una salsa nueva con alma romántica',
+        paragraphs: [
+          'El cantautor Nelson “Nell” Álvarez presenta su nuevo sencillo, “Esta vez”, una propuesta musical cargada de sentimiento, romanticismo y cadencia que busca conectar con el público salsero desde una sonoridad que remite a la esencia de la salsa romántica de los años 90.',
+          'Con este lanzamiento, Nell apuesta por una canción que combina emoción, elegancia y sabor bailable, rescatando un estilo que marcó una época dentro de la música tropical y que todavía conserva un enorme peso afectivo entre melómanos, bailadores y amantes del repertorio romántico.',
+        ],
+      },
+      {
+        title: 'Un puente entre nostalgia, actualidad y sabor',
+        paragraphs: [
+          'Los arreglos de “Esta vez” remiten a la riqueza melódica, la fuerza interpretativa y la atmósfera sentimental que distinguieron a muchas de las producciones salseras de aquella década, pero sin quedarse en la imitación. La canción se siente nostálgica en el mejor sentido y, al mismo tiempo, mantiene un aire fresco y contemporáneo.',
+          'El sencillo nace desde una intención profundamente emocional y deja ver la sensibilidad artística de Nell Álvarez como compositor. Es una pieza pensada tanto para quienes buscan letras con sentimiento como para quienes siguen encontrando en la salsa romántica un espacio para bailar, recordar y emocionarse.',
+          'El lanzamiento se realiza bajo el sello Nell Music, reafirmando el compromiso del artista con una propuesta musical de calidad y con una línea de trabajo que tiende un puente entre la tradición romántica de la salsa y una producción actual.',
+        ],
+      },
+      {
+        title: 'Ficha técnica de “Esta vez”',
+        paragraphs: [
+          'Para esta producción, Nell reunió a un equipo de músicos, arreglistas e ingenieros que aportan solidez interpretativa y nivel artístico al proyecto.',
+        ],
+        bullets: [
+          'Arreglista: Jorge Ramos',
+          'Piano: Willie Sotelo',
+          'Bajo: Pedro Pérez',
+          'Congas: Macho Conga',
+          'Timbal: Ángel Coito',
+          'Bongó: Richie Bastar',
+          'Maracas y güiro: Pichie Pérez',
+          'Trombones: Moisés Nogueras',
+          'Coros: Pichie Pérez, Pedro Brull y Luisito Carrión',
+          'Ingeniería de grabación: Willie Sotelo y Moisés Nogueras',
+          'Mezcla: Carlos Velázquez, Ramón / Playbach Studio P.R.',
+          'Masterización: Esteban Piñeiro',
+        ],
+      },
+      {
+        title: 'Dónde ver el video de “Esta vez”',
+        paragraphs: [
+          'Quienes quieran acercarse ya a esta nueva propuesta de Nelson “Nell” Álvarez pueden ver el video oficial de “Esta vez” en YouTube. Es una buena puerta de entrada para sentir el carácter romántico del tema y compartirlo con otros seguidores de la salsa.',
+          'Con esta canción, Nell presenta una obra hecha con alma, talento y respeto por un sonido clásico que conquistó a generaciones enteras y que hoy vuelve a encontrar una voz propia en el presente.',
+        ],
+        links: [
+          {
+            label: 'Ver el video oficial de “Esta vez” en YouTube',
+            href: 'https://youtu.be/CdKs771KYsM?si=2ygs_o_qa6WMDAeh',
+          },
+        ],
+        videoUrl: 'https://www.youtube.com/embed/CdKs771KYsM',
+      },
+      {
+        title: 'Contacto de prensa',
+        paragraphs: [
+          'Para entrevistas, información promocional y seguimiento del lanzamiento, estos son los contactos compartidos por el equipo de Nelson “Nell” Álvarez.',
+        ],
+        bullets: [
+          'Nelson “Nell” Álvarez: 787 646 4130',
+          'Nelly Hernández (manager): 787 559 9939',
+          'Promotor P.R. Ángel Ilarraza: 787 342 4662',
+        ],
+      },
+    ],
+  },
 ];
 
 const pressCollections = [
@@ -1350,6 +1429,17 @@ const pressCollections = [
     title: 'Guías esenciales',
     description: 'Grandes puertas de entrada para entender artistas, repertorios y conversaciones que siguen moviendo búsquedas dentro del universo salsero.',
     slugs: ['cantantes-de-salsa', 'exitos-de-la-salsa-romantica', 'salsa-baul'],
+  },
+  {
+    key: 'salsa-romantica-viva',
+    title: 'Salsa romántica viva',
+    description: 'Lanzamientos nuevos, memoria noventera y artistas que siguen manteniendo vigente la sensibilidad romántica dentro de la salsa.',
+    slugs: [
+      'nelson-nell-alvarez-esta-vez',
+      'exitos-de-la-salsa-romantica',
+      'mimi-ibarra-cantautora',
+      'tito-rojas',
+    ],
   },
   {
     key: 'archivo',
