@@ -7,8 +7,7 @@ const POLICY_ROUTE = '/politica-para-artistas/';
 const PROPOSAL_ROUTE = '/propuesta-comercial/';
 const MAIN_SITE_URL = 'https://lavozsalsa.com';
 const APP_URL = 'https://app.lavozsalsa.com';
-const PLAYLISTS_URL = 'https://app.lavozsalsa.com/playlists';
-const LIVE_STREAMING_URL = 'https://tv.lavozsalsa.com/';
+const LIVE_STREAMING_URL = 'https://tv.lavozsalsa.com';
 const PANEL_URL = 'https://panel.artistas.lavozsalsa.com';
 const APP_DOWNLOAD_URL = 'https://onelink.to/w5n2k9';
 const WHATSAPP_PROPOSAL_URL =
@@ -408,7 +407,6 @@ const footerColumns = [
     links: [
       { label: 'La Voz Salsa', href: MAIN_SITE_URL },
       { label: 'App', href: APP_URL },
-      { label: 'Playlists', href: PLAYLISTS_URL },
       { label: 'Live Streaming', href: LIVE_STREAMING_URL },
     ],
   },
@@ -714,7 +712,7 @@ function ArtistPage() {
             </p>
 
             <div className="lva-actions-row">
-              <a className="lva-button" href={APP_URL}>
+              <a className="lva-button" href={PANEL_URL}>
                 Únete como Artista
                 <ArrowIcon />
               </a>
@@ -821,7 +819,7 @@ function ArtistPage() {
               </p>
 
               <div className="lva-actions-row">
-                <a className="lva-button" href={APP_URL}>
+                <a className="lva-button" href={PANEL_URL}>
                   Únete como Artista
                   <ArrowIcon />
                 </a>
@@ -885,7 +883,7 @@ function ArtistPage() {
                 Conocer Impulso
                 <ArrowIcon />
               </a>
-              <a className="lva-button-secondary" href={APP_URL}>
+              <a className="lva-button-secondary" href={PANEL_URL}>
                 Únete como Artista
               </a>
               <a className="lva-text-link" href={WHATSAPP_PROPOSAL_URL}>
@@ -2933,7 +2931,7 @@ export default function App() {
             </nav>
 
             {!isProposalPage ? (
-              <a className="lva-header-action" href={isPolicyPage ? ROOT_ROUTE : isImpulsoPage ? WHATSAPP_PROPOSAL_URL : APP_URL}>
+              <a className="lva-header-action" href={isPolicyPage ? ROOT_ROUTE : isImpulsoPage ? WHATSAPP_PROPOSAL_URL : PANEL_URL}>
                 {isPolicyPage ? 'Volver al plan' : isImpulsoPage ? 'Hablemos de tu proyecto' : 'Únete ahora'}
               </a>
             ) : null}
